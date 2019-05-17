@@ -1,13 +1,12 @@
 //
-//  ViewController.swift
+//  Store.swift
 //  PinballMap
 //
 //  Created by Harlan Kellaway on 5/17/19.
 //  Copyright © 2019 Harlan Kellaway. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import ReSwift
 
-class ViewController: UIViewController {
-
-}
+var store = Store<State>(reducer: appReducer, state: nil)

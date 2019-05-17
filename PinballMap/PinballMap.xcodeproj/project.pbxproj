@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,11 @@
 		DC381E7C228F63360041D46F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E7B228F63360041D46F /* ViewController.swift */; };
 		DC381E7E228F63460041D46F /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E7D228F63460041D46F /* MVVMViewController.swift */; };
 		DC381E80228F63630041D46F /* ReduxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E7F228F63630041D46F /* ReduxViewController.swift */; };
+		DC381E83228F679D0041D46F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E82228F679D0041D46F /* Store.swift */; };
+		DC381E85228F67A70041D46F /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E84228F67A70041D46F /* State.swift */; };
+		DC381E89228F68090041D46F /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E88228F68090041D46F /* AppReducer.swift */; };
+		DC381E8B228F68730041D46F /* SetBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E8A228F68730041D46F /* SetBackgroundColor.swift */; };
+		DC381E8D228F68B00041D46F /* ColorReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E8C228F68B00041D46F /* ColorReducer.swift */; };
 		F3991DE9915E83517B4F7A66 /* Pods_PinballMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +39,11 @@
 		DC381E7B228F63360041D46F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC381E7D228F63460041D46F /* MVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
 		DC381E7F228F63630041D46F /* ReduxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxViewController.swift; sourceTree = "<group>"; };
+		DC381E82228F679D0041D46F /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		DC381E84228F67A70041D46F /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		DC381E88228F68090041D46F /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		DC381E8A228F68730041D46F /* SetBackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackgroundColor.swift; sourceTree = "<group>"; };
+		DC381E8C228F68B00041D46F /* ColorReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,7 @@
 		DC381E74228F62F60041D46F /* Redux */ = {
 			isa = PBXGroup;
 			children = (
+				DC381E81228F67800041D46F /* ReSwift */,
 				DC381E7F228F63630041D46F /* ReduxViewController.swift */,
 			);
 			path = Redux;
@@ -131,13 +142,40 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		DC381E81228F67800041D46F /* ReSwift */ = {
+			isa = PBXGroup;
+			children = (
+				DC381E87228F67F20041D46F /* Actions */,
+				DC381E86228F67F20041D46F /* Reducers */,
+				DC381E82228F679D0041D46F /* Store.swift */,
+				DC381E84228F67A70041D46F /* State.swift */,
+			);
+			path = ReSwift;
+			sourceTree = "<group>";
+		};
+		DC381E86228F67F20041D46F /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				DC381E88228F68090041D46F /* AppReducer.swift */,
+				DC381E8C228F68B00041D46F /* ColorReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		DC381E87228F67F20041D46F /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				DC381E8A228F68730041D46F /* SetBackgroundColor.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		F7A1429DC60617DDF11660C7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				CA10085353DE5456FAA46FE9 /* Pods-PinballMap.debug.xcconfig */,
 				35C37D399303B6FC12619040 /* Pods-PinballMap.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -256,12 +294,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC381E83228F679D0041D46F /* Store.swift in Sources */,
 				DC381E7C228F63360041D46F /* ViewController.swift in Sources */,
+				DC381E8D228F68B00041D46F /* ColorReducer.swift in Sources */,
 				DC381E7E228F63460041D46F /* MVVMViewController.swift in Sources */,
+				DC381E89228F68090041D46F /* AppReducer.swift in Sources */,
 				DC381E7A228F63210041D46F /* Navigator.swift in Sources */,
 				DC381E80228F63630041D46F /* ReduxViewController.swift in Sources */,
 				DC381E6E228F5E030041D46F /* DependencyManager.swift in Sources */,
 				DC381E5C228F5AFC0041D46F /* AppDelegate.swift in Sources */,
+				DC381E8B228F68730041D46F /* SetBackgroundColor.swift in Sources */,
+				DC381E85228F67A70041D46F /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
