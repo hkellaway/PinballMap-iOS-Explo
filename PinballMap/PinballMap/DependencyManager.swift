@@ -6,6 +6,7 @@
 //  Copyright © 2019 Harlan Kellaway. All rights reserved.
 //
 
+import ReSwift
 import UIKit
 
 final class DependencyManager {
@@ -15,11 +16,19 @@ final class DependencyManager {
     private var rootWindow: UIWindow?
     
     init(rootWindow: UIWindow? = UIApplication.shared.delegate?.window as? UIWindow,
-         architecture: Architecture = .mvvm) {
+         architecture: Architecture = .redux) {
         Navigator.shared.rootWindow = rootWindow
         Navigator.shared.architecture = architecture
         Navigator.shared.dependencyManager = self
     }
+    
+    // MARK: - Redux
+    
+    func store() -> Store<State> {
+        return StateStore.shared
+    }
+    
+    // MARK: - Shared
     
     func navigator() -> Navigator {
         return Navigator.shared

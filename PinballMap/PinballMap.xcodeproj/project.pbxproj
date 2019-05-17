@@ -20,7 +20,6 @@
 		DC381E85228F67A70041D46F /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E84228F67A70041D46F /* State.swift */; };
 		DC381E89228F68090041D46F /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E88228F68090041D46F /* AppReducer.swift */; };
 		DC381E8B228F68730041D46F /* SetBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E8A228F68730041D46F /* SetBackgroundColor.swift */; };
-		DC381E8D228F68B00041D46F /* ColorReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E8C228F68B00041D46F /* ColorReducer.swift */; };
 		F3991DE9915E83517B4F7A66 /* Pods_PinballMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +42,6 @@
 		DC381E84228F67A70041D46F /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		DC381E88228F68090041D46F /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		DC381E8A228F68730041D46F /* SetBackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackgroundColor.swift; sourceTree = "<group>"; };
-		DC381E8C228F68B00041D46F /* ColorReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				DC381E88228F68090041D46F /* AppReducer.swift */,
-				DC381E8C228F68B00041D46F /* ColorReducer.swift */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -296,7 +293,6 @@
 			files = (
 				DC381E83228F679D0041D46F /* Store.swift in Sources */,
 				DC381E7C228F63360041D46F /* ViewController.swift in Sources */,
-				DC381E8D228F68B00041D46F /* ColorReducer.swift in Sources */,
 				DC381E7E228F63460041D46F /* MVVMViewController.swift in Sources */,
 				DC381E89228F68090041D46F /* AppReducer.swift in Sources */,
 				DC381E7A228F63210041D46F /* Navigator.swift in Sources */,

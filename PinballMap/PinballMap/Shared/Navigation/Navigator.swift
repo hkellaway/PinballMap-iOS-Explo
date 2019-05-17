@@ -40,7 +40,9 @@ final class Navigator: ViewBuilder {
             view.viewModel = viewModel
             return view
         case .redux:
-            return ReduxViewController()
+            let view = ReduxViewController()
+            view.store = dependencyManager?.store()
+            return view
         }
     }
     
