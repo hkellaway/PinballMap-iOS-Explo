@@ -16,9 +16,13 @@
 		DC381E7C228F63360041D46F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E7B228F63360041D46F /* ViewController.swift */; };
 		DC381E7E228F63460041D46F /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E7D228F63460041D46F /* MVVMViewController.swift */; };
 		DC381E80228F63630041D46F /* ReduxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E7F228F63630041D46F /* ReduxViewController.swift */; };
+		F3991DE9915E83517B4F7A66 /* Pods_PinballMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35C37D399303B6FC12619040 /* Pods-PinballMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinballMap.release.xcconfig"; path = "Target Support Files/Pods-PinballMap/Pods-PinballMap.release.xcconfig"; sourceTree = "<group>"; };
+		7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinballMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA10085353DE5456FAA46FE9 /* Pods-PinballMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinballMap.debug.xcconfig"; path = "Target Support Files/Pods-PinballMap/Pods-PinballMap.debug.xcconfig"; sourceTree = "<group>"; };
 		DC381E58228F5AFB0041D46F /* PinballMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinballMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC381E5B228F5AFC0041D46F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC381E62228F5AFF0041D46F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3991DE9915E83517B4F7A66 /* Pods_PinballMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C9B503328BEA32D4E42A814 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC381E4F228F5AFB0041D46F = {
 			isa = PBXGroup;
 			children = (
 				DC381E5A228F5AFB0041D46F /* PinballMap */,
 				DC381E59228F5AFB0041D46F /* Products */,
+				F7A1429DC60617DDF11660C7 /* Pods */,
+				2C9B503328BEA32D4E42A814 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +131,16 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		F7A1429DC60617DDF11660C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA10085353DE5456FAA46FE9 /* Pods-PinballMap.debug.xcconfig */,
+				35C37D399303B6FC12619040 /* Pods-PinballMap.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC381E6A228F5AFF0041D46F /* Build configuration list for PBXNativeTarget "PinballMap" */;
 			buildPhases = (
+				6DB8787E9A0109A3C2923584 /* [CP] Check Pods Manifest.lock */,
 				DC381E54228F5AFB0041D46F /* Sources */,
 				DC381E55228F5AFB0041D46F /* Frameworks */,
 				DC381E56228F5AFB0041D46F /* Resources */,
+				30EDD9B7BCC47A4A86CC033A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +208,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30EDD9B7BCC47A4A86CC033A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinballMap/Pods-PinballMap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PinballMap/Pods-PinballMap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PinballMap/Pods-PinballMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DB8787E9A0109A3C2923584 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PinballMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DC381E54228F5AFB0041D46F /* Sources */ = {
@@ -328,6 +397,7 @@
 		};
 		DC381E6B228F5AFF0041D46F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA10085353DE5456FAA46FE9 /* Pods-PinballMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -345,6 +415,7 @@
 		};
 		DC381E6C228F5AFF0041D46F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35C37D399303B6FC12619040 /* Pods-PinballMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
