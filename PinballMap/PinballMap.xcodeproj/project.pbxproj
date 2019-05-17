@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		DC381E5C228F5AFC0041D46F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E5B228F5AFC0041D46F /* AppDelegate.swift */; };
-		DC381E5E228F5AFC0041D46F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E5D228F5AFC0041D46F /* ViewController.swift */; };
-		DC381E61228F5AFC0041D46F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC381E5F228F5AFC0041D46F /* Main.storyboard */; };
 		DC381E63228F5AFF0041D46F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC381E62228F5AFF0041D46F /* Assets.xcassets */; };
 		DC381E66228F5AFF0041D46F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC381E64228F5AFF0041D46F /* LaunchScreen.storyboard */; };
+		DC381E6E228F5E030041D46F /* DependencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E6D228F5E030041D46F /* DependencyManager.swift */; };
+		DC381E72228F622A0041D46F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC381E71228F622A0041D46F /* Main.storyboard */; };
+		DC381E7A228F63210041D46F /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E79228F63210041D46F /* Navigator.swift */; };
+		DC381E7C228F63360041D46F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E7B228F63360041D46F /* ViewController.swift */; };
+		DC381E7E228F63460041D46F /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E7D228F63460041D46F /* MVVMViewController.swift */; };
+		DC381E80228F63630041D46F /* ReduxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E7F228F63630041D46F /* ReduxViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC381E58228F5AFB0041D46F /* PinballMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinballMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC381E5B228F5AFC0041D46F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC381E5D228F5AFC0041D46F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DC381E60228F5AFC0041D46F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC381E62228F5AFF0041D46F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC381E65228F5AFF0041D46F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC381E67228F5AFF0041D46F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC381E6D228F5E030041D46F /* DependencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyManager.swift; sourceTree = "<group>"; };
+		DC381E71228F622A0041D46F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DC381E79228F63210041D46F /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		DC381E7B228F63360041D46F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC381E7D228F63460041D46F /* MVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
+		DC381E7F228F63630041D46F /* ReduxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,57 @@
 			isa = PBXGroup;
 			children = (
 				DC381E5B228F5AFC0041D46F /* AppDelegate.swift */,
-				DC381E5D228F5AFC0041D46F /* ViewController.swift */,
-				DC381E5F228F5AFC0041D46F /* Main.storyboard */,
+				DC381E6D228F5E030041D46F /* DependencyManager.swift */,
+				DC381E76228F62F60041D46F /* MVVM */,
+				DC381E74228F62F60041D46F /* Redux */,
+				DC381E75228F62F60041D46F /* Shared */,
 				DC381E62228F5AFF0041D46F /* Assets.xcassets */,
 				DC381E64228F5AFF0041D46F /* LaunchScreen.storyboard */,
+				DC381E71228F622A0041D46F /* Main.storyboard */,
 				DC381E67228F5AFF0041D46F /* Info.plist */,
 			);
 			path = PinballMap;
+			sourceTree = "<group>";
+		};
+		DC381E74228F62F60041D46F /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				DC381E7F228F63630041D46F /* ReduxViewController.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		DC381E75228F62F60041D46F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DC381E77228F63210041D46F /* Base View Controllers */,
+				DC381E78228F63210041D46F /* Navigation */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		DC381E76228F62F60041D46F /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				DC381E7D228F63460041D46F /* MVVMViewController.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		DC381E77228F63210041D46F /* Base View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC381E7B228F63360041D46F /* ViewController.swift */,
+			);
+			path = "Base View Controllers";
+			sourceTree = "<group>";
+		};
+		DC381E78228F63210041D46F /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				DC381E79228F63210041D46F /* Navigator.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +174,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC381E72228F622A0041D46F /* Main.storyboard in Resources */,
 				DC381E66228F5AFF0041D46F /* LaunchScreen.storyboard in Resources */,
 				DC381E63228F5AFF0041D46F /* Assets.xcassets in Resources */,
-				DC381E61228F5AFC0041D46F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +187,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC381E5E228F5AFC0041D46F /* ViewController.swift in Sources */,
+				DC381E7C228F63360041D46F /* ViewController.swift in Sources */,
+				DC381E7E228F63460041D46F /* MVVMViewController.swift in Sources */,
+				DC381E7A228F63210041D46F /* Navigator.swift in Sources */,
+				DC381E80228F63630041D46F /* ReduxViewController.swift in Sources */,
+				DC381E6E228F5E030041D46F /* DependencyManager.swift in Sources */,
 				DC381E5C228F5AFC0041D46F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +199,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DC381E5F228F5AFC0041D46F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC381E60228F5AFC0041D46F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DC381E64228F5AFF0041D46F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
