@@ -16,4 +16,8 @@ final class MVVMStateVisualizerViewController: StateVisualizerViewController {
         architectureTextField.text = "MVVM"
     }
     
+    override func architectureName() -> String {
+        return "MVVM"
+    }
+    
 }

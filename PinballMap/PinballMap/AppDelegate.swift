@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ArchitectureSwitcher {
     @discardableResult
     func startApp() -> Bool {
         return dependencyManager.navigator().installRootView()
-            && dependencyManager.navigator().selectTab(.locations)
+            && dependencyManager.navigator().selectTab(.stateVisualizer)
     }
     
     @discardableResult

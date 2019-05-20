@@ -24,6 +24,7 @@ final class Navigator: ViewBuilder {
     weak var dependencyManager: DependencyManager?
     var rootWindow: UIWindow?
     var architecture: Architecture?
+    var architectureSwitcher: ArchitectureSwitcher?
     
     private var rootTabBar: RootTabBarController?
     private var locationsNavigatonController: UINavigationController?
@@ -114,13 +115,13 @@ final class Navigator: ViewBuilder {
         
         switch architecture {
         case .mvvm:
-            return UIStoryboard(name: "Main", bundle: nil)
-                .instantiateViewController(withIdentifier: "MVVMStateVisualizerViewController")
-                as! MVVMStateVisualizerViewController
+            let view = MVVMStateVisualizerViewController()
+            view.architectureSwitcher = architectureSwitcher
+            return view
         case .redux:
-            return UIStoryboard(name: "Main", bundle: nil)
-                .instantiateViewController(withIdentifier: "ReduxStateVisualizerViewController")
-                as! ReduxStateVisualizerViewController
+            let view = ReduxStateVisualizerViewController()
+            view.architectureSwitcher = architectureSwitcher
+            return view
         }
     }
     

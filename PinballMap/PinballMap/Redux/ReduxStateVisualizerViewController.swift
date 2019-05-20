@@ -16,4 +16,8 @@ final class ReduxStateVisualizerViewController: StateVisualizerViewController {
         architectureTextField.text = "Redux"
     }
     
+    override func architectureName() -> String {
+        return "Redux"
+    }
+    
 }

@@ -11,7 +11,11 @@ import Foundation
 protocol ArchitectureSwitcher {
     
     var currentArchitecture: Architecture { get }
+    
+    @discardableResult
     func toggleArchitecture() -> Bool
+    
+    @discardableResult
     func switchArchitecture(to newArchitecture: Architecture) -> Bool
     
 }

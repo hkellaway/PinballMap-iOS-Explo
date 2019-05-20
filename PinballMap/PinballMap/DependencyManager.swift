@@ -21,9 +21,11 @@ final class DependencyManager {
     
     private var rootWindow: UIWindow?
     
-    init(rootWindow: UIWindow? = UIApplication.shared.delegate?.window as? UIWindow) {
-        Navigator.shared.rootWindow = rootWindow
-        Navigator.shared.dependencyManager = self
+    init(rootWindow: UIWindow? = UIApplication.shared.delegate?.window as? UIWindow,
+         architectureSwitcher: ArchitectureSwitcher? = UIApplication.shared.delegate as? AppDelegate) {
+        navigator().rootWindow = rootWindow
+        navigator().architectureSwitcher = architectureSwitcher
+        navigator().dependencyManager = self
     }
     
     // MARK: - Redux
