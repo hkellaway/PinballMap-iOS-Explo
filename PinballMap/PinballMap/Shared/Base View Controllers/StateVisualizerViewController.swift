@@ -10,10 +10,14 @@ import UIKit
 
 class StateVisualizerViewController: UIViewController {
     
+    @IBOutlet weak var architectureTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         title = "State Viz"
+        architectureTextField.isUserInteractionEnabled = false
+        architectureTextField.text = "Unknown"
     }
     
 }

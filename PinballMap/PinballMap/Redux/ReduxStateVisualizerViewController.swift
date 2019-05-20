@@ -10,4 +10,10 @@ import UIKit
 
 final class ReduxStateVisualizerViewController: StateVisualizerViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        architectureTextField.text = "Redux"
+    }
+    
 }

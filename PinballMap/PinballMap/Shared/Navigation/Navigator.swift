@@ -114,9 +114,13 @@ final class Navigator: ViewBuilder {
         
         switch architecture {
         case .mvvm:
-            return MVVMStateVisualizerViewController()
+            return UIStoryboard(name: "Main", bundle: nil)
+                .instantiateViewController(withIdentifier: "MVVMStateVisualizerViewController")
+                as! MVVMStateVisualizerViewController
         case .redux:
-            return ReduxStateVisualizerViewController()
+            return UIStoryboard(name: "Main", bundle: nil)
+                .instantiateViewController(withIdentifier: "ReduxStateVisualizerViewController")
+                as! ReduxStateVisualizerViewController
         }
     }
     

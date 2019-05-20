@@ -10,4 +10,10 @@ import UIKit
 
 final class MVVMStateVisualizerViewController: StateVisualizerViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        architectureTextField.text = "MVVM"
+    }
+    
 }
