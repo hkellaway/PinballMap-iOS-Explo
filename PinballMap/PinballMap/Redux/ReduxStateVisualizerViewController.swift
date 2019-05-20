@@ -14,13 +14,8 @@ final class ReduxStateVisualizerViewController: StateVisualizerViewController, S
     var store: Store<State>!
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+        super.viewWillAppear(animated)
         store.subscribe(self)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        architectureTextField.text = "Redux"
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -32,7 +27,10 @@ final class ReduxStateVisualizerViewController: StateVisualizerViewController, S
         return "Redux"
     }
     
-    override func refresh() { }
+    override func refresh() {
+        // Nothing needed to refresh as State and view
+        // are always in sync
+    }
     
     // MARK: - Protocol conformance
     

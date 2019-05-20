@@ -36,6 +36,7 @@
 		DC381EB5229334470041D46F /* LoadRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB4229334470041D46F /* LoadRegions.swift */; };
 		DC381EB722933BB00041D46F /* APIActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB622933BB00041D46F /* APIActions.swift */; };
 		DC381EB9229341260041D46F /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB8229341250041D46F /* ViewBuilder.swift */; };
+		DC381EC022936C3A0041D46F /* SelectRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EBF22936C3A0041D46F /* SelectRegion.swift */; };
 		F3991DE9915E83517B4F7A66 /* Pods_PinballMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		DC381EB4229334470041D46F /* LoadRegions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadRegions.swift; sourceTree = "<group>"; };
 		DC381EB622933BB00041D46F /* APIActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIActions.swift; sourceTree = "<group>"; };
 		DC381EB8229341250041D46F /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
+		DC381EBF22936C3A0041D46F /* SelectRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				DC381EB4229334470041D46F /* LoadRegions.swift */,
+				DC381EBF22936C3A0041D46F /* SelectRegion.swift */,
 				DC381EB622933BB00041D46F /* APIActions.swift */,
 			);
 			path = Actions;
@@ -375,6 +378,7 @@
 				DC381E5C228F5AFC0041D46F /* AppDelegate.swift in Sources */,
 				DC381EA1229304390041D46F /* MVVMStateVisualizerViewController.swift in Sources */,
 				DC381EAB229329030041D46F /* RegionList.swift in Sources */,
+				DC381EC022936C3A0041D46F /* SelectRegion.swift in Sources */,
 				DC381E95229303670041D46F /* StateVisualizerViewController.swift in Sources */,
 				DC381E85228F67A70041D46F /* State.swift in Sources */,
 				DC381EAD229329100041D46F /* Region.swift in Sources */,

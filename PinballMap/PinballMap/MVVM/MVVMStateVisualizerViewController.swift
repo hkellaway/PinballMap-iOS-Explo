@@ -10,10 +10,7 @@ import UIKit
 
 final class MVVMStateVisualizerViewController: StateVisualizerViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        architectureTextField.text = "MVVM"
-    }
+    var session: Session! = Session.shared
     
     override func architectureName() -> String {
         return "MVVM"
@@ -31,9 +28,11 @@ final class MVVMStateVisualizerViewController: StateVisualizerViewController {
         let locationsViewModel: LocationsViewModel? = locationsViewController?.viewModel
         
         if let regions = locationsViewModel?.regions {
-            return State(regionList: RegionList(regions: regions))
+            return State(selectedRegion: session.currentRegion,
+                         regionList: RegionList(regions: regions))
         } else {
-            return State(regionList: nil)
+            return State(selectedRegion: session.currentRegion,
+                         regionList: nil)
         }
     }
     

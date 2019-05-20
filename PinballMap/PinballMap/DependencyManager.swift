@@ -30,9 +30,10 @@ final class DependencyManager: ViewBuilder {
     func clearState() {
         switch architecture {
         case .redux:
-            store().state = State(regionList: nil)
+            store().state = State(selectedRegion: nil,
+                                  regionList: nil)
         case .mvvm:
-            return
+            Session.shared.clear()
         }
     }
     
@@ -82,7 +83,9 @@ final class DependencyManager: ViewBuilder {
         case .mvvm:
             return MVVMMachinesViewController()
         case .redux:
-            return ReduxMachinesViewController()
+            let view = ReduxMachinesViewController()
+            view.store = store()
+            return view
         }
     }
     

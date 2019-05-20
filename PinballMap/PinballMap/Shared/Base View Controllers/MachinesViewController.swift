@@ -10,10 +10,20 @@ import UIKit
 
 class MachinesViewController: UIViewController {
     
+    static var defaultTitle = "Machines"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Machines"
+        navigationItem.title = MachinesViewController.defaultTitle
+    }
+    
+    func updateTitle(withRegion region: Region?) {
+        if let region = region {
+            navigationItem.title = "Machines in \(region.fullName)"
+        } else {
+            navigationItem.title = MVVMMachinesViewController.defaultTitle
+        }
     }
     
 }

@@ -15,11 +15,21 @@ final class AppReducer {
     
     func execute(action: Action, state: State?) -> State {
         return State(
-            regionList: regionsReducer(state: state?.regionList, action: action)
+            selectedRegion: regionReducer(state: state?.selectedRegion, action: action),
+            regionList: regionListReducer(state: state?.regionList, action: action)
         )
     }
     
-    private func regionsReducer(state: RegionList?, action: Action) -> RegionList? {
+    private func regionReducer(state: Region?, action: Action) -> Region? {
+        switch action {
+        case let action as SelectRegion:
+            return action.region
+        default:
+            return state
+        }
+    }
+    
+    private func regionListReducer(state: RegionList?, action: Action) -> RegionList? {
         switch action {
         case let action as LoadRegions:
             return action.regions

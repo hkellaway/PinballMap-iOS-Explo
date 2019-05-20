@@ -8,12 +8,26 @@
 
 import Foundation
 
+final class Session {
+    
+    static var shared = Session()
+    
+    var currentRegion: Region?
+    
+    func clear() {
+        currentRegion = nil
+    }
+    
+}
+
 final class LocationsViewModel {
     
     // Dependencies
     
     weak var view: MVVMLocationsViewController?
     let httpClient: HTTPClient
+    let session = Session.shared
+    let notificationCenter: NotificationCenter = .default
     
     // State
     
@@ -35,6 +49,13 @@ final class LocationsViewModel {
                 self?.view?.errorOccurred(error)
             }
         }
+    }
+    
+    func didSelectRegion(atIndex indexPath: IndexPath) {
+        let region = regions[indexPath.row]
+        session.currentRegion = region
+        notificationCenter.post(name: Notification.Name(rawValue: "PinballMapRegionUpdated"),
+                                object: region)
     }
     
 }

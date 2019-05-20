@@ -16,6 +16,7 @@ final class MVVMLocationsViewController: LocationsViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
         
         viewModel.load()
     }
@@ -49,6 +50,16 @@ extension MVVMLocationsViewController: UITableViewDataSource {
         let region = viewModel.regions[indexPath.row]
         cell.textLabel?.text = region.fullName
         return cell
+    }
+    
+}
+
+// MARK: UITableViewDelegate
+
+extension MVVMLocationsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRegion(atIndex: indexPath)
     }
     
 }

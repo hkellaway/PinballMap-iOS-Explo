@@ -15,6 +15,7 @@ struct State: StateType {
         return regionList?.count ?? 0
     }
     
+    let selectedRegion: Region?
     let regionList: RegionList?
 }
 
@@ -25,7 +26,9 @@ struct State: StateType {
 extension State: CustomStringConvertible {
     
     var description: String {
+        let selectedRegionString = selectedRegion?.description ?? "NONE"
         return """
+        SELECTED REGION: \(selectedRegionString)
         NUM REGIONS: \(regionList?.count ?? 0)
         REGIONS: \(regionList?.description ?? [].description)
         """
@@ -36,7 +39,9 @@ extension State: CustomStringConvertible {
 // MARK: Equatable
 
 func ==(lhs: State, rhs: State) -> Bool {
-    return lhs.regionList == rhs.regionList
+    return
+        lhs.selectedRegion == rhs.selectedRegion &&
+        lhs.regionList == rhs.regionList
 }
 
 extension State: Equatable { }
