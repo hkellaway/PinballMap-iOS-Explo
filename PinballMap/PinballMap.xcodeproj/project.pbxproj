@@ -20,6 +20,16 @@
 		DC381E85228F67A70041D46F /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E84228F67A70041D46F /* State.swift */; };
 		DC381E89228F68090041D46F /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E88228F68090041D46F /* AppReducer.swift */; };
 		DC381E8B228F68730041D46F /* SetBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E8A228F68730041D46F /* SetBackgroundColor.swift */; };
+		DC381E8F229302300041D46F /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E8E229302300041D46F /* RootTabBarController.swift */; };
+		DC381E91229303350041D46F /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E90229303350041D46F /* LocationsViewController.swift */; };
+		DC381E932293034F0041D46F /* MachinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E922293034F0041D46F /* MachinesViewController.swift */; };
+		DC381E95229303670041D46F /* StateVisualizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E94229303670041D46F /* StateVisualizerViewController.swift */; };
+		DC381E97229303910041D46F /* MVVMLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E96229303910041D46F /* MVVMLocationsViewController.swift */; };
+		DC381E99229303AB0041D46F /* ReduxLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E98229303AB0041D46F /* ReduxLocationsViewController.swift */; };
+		DC381E9B229303BC0041D46F /* MVVMMachinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E9A229303BC0041D46F /* MVVMMachinesViewController.swift */; };
+		DC381E9F229304160041D46F /* ReduxMachinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E9E229304160041D46F /* ReduxMachinesViewController.swift */; };
+		DC381EA1229304390041D46F /* MVVMStateVisualizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EA0229304390041D46F /* MVVMStateVisualizerViewController.swift */; };
+		DC381EA3229304530041D46F /* ReduxStateVisualizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EA2229304530041D46F /* ReduxStateVisualizerViewController.swift */; };
 		F3991DE9915E83517B4F7A66 /* Pods_PinballMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +52,16 @@
 		DC381E84228F67A70041D46F /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		DC381E88228F68090041D46F /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		DC381E8A228F68730041D46F /* SetBackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackgroundColor.swift; sourceTree = "<group>"; };
+		DC381E8E229302300041D46F /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		DC381E90229303350041D46F /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		DC381E922293034F0041D46F /* MachinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesViewController.swift; sourceTree = "<group>"; };
+		DC381E94229303670041D46F /* StateVisualizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateVisualizerViewController.swift; sourceTree = "<group>"; };
+		DC381E96229303910041D46F /* MVVMLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMLocationsViewController.swift; sourceTree = "<group>"; };
+		DC381E98229303AB0041D46F /* ReduxLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxLocationsViewController.swift; sourceTree = "<group>"; };
+		DC381E9A229303BC0041D46F /* MVVMMachinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMMachinesViewController.swift; sourceTree = "<group>"; };
+		DC381E9E229304160041D46F /* ReduxMachinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxMachinesViewController.swift; sourceTree = "<group>"; };
+		DC381EA0229304390041D46F /* MVVMStateVisualizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMStateVisualizerViewController.swift; sourceTree = "<group>"; };
+		DC381EA2229304530041D46F /* ReduxStateVisualizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxStateVisualizerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +123,9 @@
 			children = (
 				DC381E81228F67800041D46F /* ReSwift */,
 				DC381E7F228F63630041D46F /* ReduxViewController.swift */,
+				DC381E98229303AB0041D46F /* ReduxLocationsViewController.swift */,
+				DC381E9E229304160041D46F /* ReduxMachinesViewController.swift */,
+				DC381EA2229304530041D46F /* ReduxStateVisualizerViewController.swift */,
 			);
 			path = Redux;
 			sourceTree = "<group>";
@@ -120,6 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				DC381E7D228F63460041D46F /* MVVMViewController.swift */,
+				DC381E96229303910041D46F /* MVVMLocationsViewController.swift */,
+				DC381E9A229303BC0041D46F /* MVVMMachinesViewController.swift */,
+				DC381EA0229304390041D46F /* MVVMStateVisualizerViewController.swift */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -127,6 +153,10 @@
 		DC381E77228F63210041D46F /* Base View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC381E8E229302300041D46F /* RootTabBarController.swift */,
+				DC381E90229303350041D46F /* LocationsViewController.swift */,
+				DC381E922293034F0041D46F /* MachinesViewController.swift */,
+				DC381E94229303670041D46F /* StateVisualizerViewController.swift */,
 				DC381E7B228F63360041D46F /* ViewController.swift */,
 			);
 			path = "Base View Controllers";
@@ -291,16 +321,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC381E99229303AB0041D46F /* ReduxLocationsViewController.swift in Sources */,
+				DC381EA3229304530041D46F /* ReduxStateVisualizerViewController.swift in Sources */,
+				DC381E97229303910041D46F /* MVVMLocationsViewController.swift in Sources */,
 				DC381E83228F679D0041D46F /* Store.swift in Sources */,
 				DC381E7C228F63360041D46F /* ViewController.swift in Sources */,
 				DC381E7E228F63460041D46F /* MVVMViewController.swift in Sources */,
+				DC381E932293034F0041D46F /* MachinesViewController.swift in Sources */,
+				DC381E9B229303BC0041D46F /* MVVMMachinesViewController.swift in Sources */,
+				DC381E9F229304160041D46F /* ReduxMachinesViewController.swift in Sources */,
 				DC381E89228F68090041D46F /* AppReducer.swift in Sources */,
 				DC381E7A228F63210041D46F /* Navigator.swift in Sources */,
 				DC381E80228F63630041D46F /* ReduxViewController.swift in Sources */,
 				DC381E6E228F5E030041D46F /* DependencyManager.swift in Sources */,
 				DC381E5C228F5AFC0041D46F /* AppDelegate.swift in Sources */,
 				DC381E8B228F68730041D46F /* SetBackgroundColor.swift in Sources */,
+				DC381EA1229304390041D46F /* MVVMStateVisualizerViewController.swift in Sources */,
+				DC381E95229303670041D46F /* StateVisualizerViewController.swift in Sources */,
 				DC381E85228F67A70041D46F /* State.swift in Sources */,
+				DC381E8F229302300041D46F /* RootTabBarController.swift in Sources */,
+				DC381E91229303350041D46F /* LocationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

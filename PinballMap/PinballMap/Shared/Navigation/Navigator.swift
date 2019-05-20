@@ -11,6 +11,10 @@ import UIKit
 protocol ViewBuilder {
     
     func rootViewController() -> ViewController
+    func rootTabBarController() -> RootTabBarController
+    func locationsViewController() -> LocationsViewController
+    func machinesViewController() -> MachinesViewController
+    func stateVisualizerViewController() -> StateVisualizerViewController
     
 }
 
@@ -43,6 +47,37 @@ final class Navigator: ViewBuilder {
             let view = ReduxViewController()
             view.store = dependencyManager?.store()
             return view
+        }
+    }
+    
+    func rootTabBarController() -> RootTabBarController {
+        return RootTabBarController()
+    }
+    
+    func locationsViewController() -> LocationsViewController {
+        switch architecture! {
+        case .mvvm:
+            return MVVMLocationsViewController()
+        case .redux:
+            return ReduxLocationsViewController()
+        }
+    }
+    
+    func machinesViewController() -> MachinesViewController {
+        switch architecture! {
+        case .mvvm:
+            return MVVMMachinesViewController()
+        case .redux:
+            return ReduxMachinesViewController()
+        }
+    }
+    
+    func stateVisualizerViewController() -> StateVisualizerViewController {
+        switch architecture! {
+        case .mvvm:
+            return MVVMStateVisualizerViewController()
+        case .redux:
+            return ReduxStateVisualizerViewController()
         }
     }
     
