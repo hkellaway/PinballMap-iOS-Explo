@@ -9,9 +9,9 @@
 import Foundation
 import ReSwift
 
-final class StateStore: Store<State> {
+final class MyStore: Store<State> {
     
-    static var shared = StateStore()
+    static var shared = MyStore()
     
     convenience init(appReducer: AppReducer = AppReducer.shared) {
         self.init(reducer: appReducer.execute, state: nil)

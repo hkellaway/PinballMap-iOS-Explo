@@ -16,7 +16,7 @@ final class DependencyManager {
     private var rootWindow: UIWindow?
     
     init(rootWindow: UIWindow? = UIApplication.shared.delegate?.window as? UIWindow,
-         architecture: Architecture = .redux) {
+         architecture: Architecture = .mvvm) {
         Navigator.shared.rootWindow = rootWindow
         Navigator.shared.architecture = architecture
         Navigator.shared.dependencyManager = self
@@ -25,7 +25,7 @@ final class DependencyManager {
     // MARK: - Redux
     
     func store() -> Store<State> {
-        return StateStore.shared
+        return MyStore.shared
     }
     
     // MARK: - Shared
