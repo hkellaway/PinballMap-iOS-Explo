@@ -10,4 +10,10 @@ import UIKit
 
 class StateVisualizerViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        title = "State Viz"
+    }
+    
 }

@@ -11,9 +11,13 @@ import UIKit
 final class RootTabBarController: UITabBarController {
     
     enum Tab: Int {
-        case locations
-        case machines
-        case stateVisualizer
+        case locations = 0
+        case machines = 1
+        case stateVisualizer = 2
+    }
+    
+    func selectTab(_ tab: Tab) {
+        selectedIndex = tab.rawValue
     }
     
 }

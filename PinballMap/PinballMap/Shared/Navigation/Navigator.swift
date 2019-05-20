@@ -10,7 +10,6 @@ import UIKit
 
 protocol ViewBuilder {
     
-    func rootViewController() -> ViewController
     func rootTabBarController() -> RootTabBarController
     func locationsViewController() -> LocationsViewController
     func machinesViewController() -> MachinesViewController
@@ -26,29 +25,57 @@ final class Navigator: ViewBuilder {
     var rootWindow: UIWindow?
     var architecture: Architecture!
     
+    private var rootTabBar: RootTabBarController?
+    private var locationsNavigatonController: UINavigationController?
+    private var machinesNavigationController: UINavigationController?
+    private var stateNavigationController: UINavigationController?
+    
+    @discardableResult
     func installRootView() -> Bool {
-        rootWindow?.rootViewController = rootViewController()
+        let locationsView = locationsViewController()
+        let locationsTab = UINavigationController()
+        locationsTab.tabBarItem = UITabBarItem(title: "Locations",
+                                               image: nil,
+                                               selectedImage: nil)
+        locationsTab.pushViewController(locationsView, animated: false)
+        self.locationsNavigatonController = locationsTab
+        
+        let machinesView = machinesViewController()
+        let machinesTab = UINavigationController()
+        machinesTab.tabBarItem = UITabBarItem(title: "Machines",
+                                              image: nil,
+                                              selectedImage: nil)
+        machinesTab.pushViewController(machinesView, animated: false)
+        self.machinesNavigationController = machinesTab
+        
+        let stateView = stateVisualizerViewController()
+        let stateTab = UINavigationController()
+        stateTab.tabBarItem = UITabBarItem(title: "State Viz",
+                                           image: nil,
+                                           selectedImage: nil)
+        stateTab.pushViewController(stateView, animated: false)
+        self.stateNavigationController = stateTab
+        
+        let rootTabBar = rootTabBarController()
+        rootTabBar.viewControllers = [locationsTab, machinesTab, stateTab]
+        self.rootTabBar = rootTabBar
+        
+        rootWindow?.rootViewController = rootTabBar
+        return true
+    }
+    
+    @discardableResult
+    func selectTab(_ tab: RootTabBarController.Tab) -> Bool {
+        guard let rootTabBar = rootTabBar else {
+            return false
+        }
+        rootTabBar.selectTab(tab)
         return true
     }
     
     // MARK: - Protocol conformance
     
     // MARK: ViewBuilder
-    
-    func rootViewController() -> ViewController {
-        switch architecture! {
-        case .mvvm:
-            let viewModel = ViewModel()
-            let view = MVVMViewController()
-            viewModel.view = view
-            view.viewModel = viewModel
-            return view
-        case .redux:
-            let view = ReduxViewController()
-            view.store = dependencyManager?.store()
-            return view
-        }
-    }
     
     func rootTabBarController() -> RootTabBarController {
         return RootTabBarController()

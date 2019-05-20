@@ -8,11 +8,6 @@
 
 import UIKit
 
-enum Architecture {
-    case mvvm
-    case redux
-}
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -21,11 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupDependencyManager()
-        return dependencyManager.navigator().installRootView()
+        dependencyManager.navigator().installRootView()
+        return dependencyManager.navigator().selectTab(.locations)
     }
 
     private func setupDependencyManager() {
-        self.dependencyManager = DependencyManager.shared
+        let dependencyManager = DependencyManager.shared
+        dependencyManager.navigator().architecture = .mvvm
+        self.dependencyManager = dependencyManager
     }
 
 }
