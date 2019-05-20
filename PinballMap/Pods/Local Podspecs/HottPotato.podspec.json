@@ -1,0 +1,24 @@
+{
+  "name": "HottPotato",
+  "version": "0.1.0",
+  "summary": "Delicious HTTP requests",
+  "description": "Delicious HTTP requests.",
+  "homepage": "https://github.com/hkellaway/HottPotato",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Harlan Kellaway": "hello@harlankellaway.com"
+  },
+  "source": {
+    "git": "https://github.com/hkellaway/HottPotato.git",
+    "tag": "0.1.0"
+  },
+  "swift_versions": "5.0",
+  "platforms": {
+    "ios": "12.0"
+  },
+  "requires_arc": true,
+  "source_files": "Sources/*.{swift}"
+}
