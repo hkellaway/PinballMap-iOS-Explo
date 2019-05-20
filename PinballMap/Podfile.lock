@@ -4,7 +4,7 @@ PODS:
   - TinyConstraints (4.0.0)
 
 DEPENDENCIES:
-  - HottPotato (from `https://github.com/hkellaway/HottPotato.git`, tag `0.1.0`)
+  - HottPotato (from `https://github.com/hkellaway/HottPotato.git`, commit `ea6f8015f7a80ce2d9cf7929fb1d5255f6c5b6e1`)
   - ReSwift (= 4.1.1)
   - TinyConstraints (= 4.0.0)
 
@@ -15,19 +15,19 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   HottPotato:
+    :commit: ea6f8015f7a80ce2d9cf7929fb1d5255f6c5b6e1
     :git: https://github.com/hkellaway/HottPotato.git
-    :tag: 0.1.0
 
 CHECKOUT OPTIONS:
   HottPotato:
+    :commit: ea6f8015f7a80ce2d9cf7929fb1d5255f6c5b6e1
     :git: https://github.com/hkellaway/HottPotato.git
-    :tag: 0.1.0
 
 SPEC CHECKSUMS:
   HottPotato: f954b954ee29403bc89b46e701757621addd5a9e
   ReSwift: d925be0033558f55bd73d92869961230dfe19d52
   TinyConstraints: 03bc091844b98c18dbaead8b1153242a42721b56
 
-PODFILE CHECKSUM: 4d3e558c9d7253f61116b80d80c025d321f81c00
+PODFILE CHECKSUM: 49f62b296bb26bb87dd55cb37de96d8814c7f2b0
 
 COCOAPODS: 1.7.0.beta.3

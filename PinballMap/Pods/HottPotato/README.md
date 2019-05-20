@@ -74,11 +74,13 @@ httpClient.sendRequest(for: resource) { result in
 
 ### Discussion
 
-HottPotato simply wraps `URLSession` and leverages some preferred context and patterns. Namely, it assumes we're making HTTP requests and that we're receiving JSON back. Additionally, it uses the `Result` type in its response.
+HottPotato simply wraps `URLSession` and leverages some preferred context and patterns. Namely, it assumes we're making HTTP requests, we're receiving JSON back, and our requested models conform to`Decodable`. Additionally, it uses the `Result` type in its response.
+
+Why? Because this is a typical setup for applications & libraries I've worked on. Plus, I'm a big fan of the `Result` type.
 
 #### Retrieving JSON
 
-Internally, HottPotato retrieves JSON - if you'd rather used it to query this data, simply:
+Internally, HottPotato retrieves JSON - if you'd rather use it to retrieve JSON, simply:
 
 ```swift
 guard let request = resource.toHTTPRequest() else {
@@ -94,9 +96,8 @@ httpClient.sendJSONRequest(with: request, success: { (_, json) in
 
 #### Retrieving Raw Data and HTTPURLResponse
 
-At its very heart, HottPotato simply makes a `URLRequest` using `URLSession` and returns the retrieved `Data` and `HTTPURLResponse`. If you'd rather use it to query this data, simply: 
+At its very heart, HottPotato simply makes a `URLRequest` using `URLSession` and returns the retrieved `Data` and `HTTPURLResponse`. If you'd rather use it to get back the raw response, simply: 
 
-```swift
 ```swift
 httpClient.sendHTTPRequest(with: request, success: { (_, response) in
 	print(response.statusCode)

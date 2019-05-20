@@ -23,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ArchitectureSwitcher {
         setupDependencyManager(architecture: initialArchitecture)
         
         assert(
-            dependencyManager.architecture == initialArchitecture &&
-            dependencyManager.navigator().architecture == initialArchitecture,
+            dependencyManager.architecture == initialArchitecture,
             "Invalid launch state"
         )
         

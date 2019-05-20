@@ -29,6 +29,11 @@
 		DC381EA3229304530041D46F /* ReduxStateVisualizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EA2229304530041D46F /* ReduxStateVisualizerViewController.swift */; };
 		DC381EA52293099E0041D46F /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EA42293099E0041D46F /* Architecture.swift */; };
 		DC381EA722930FB00041D46F /* ArchitectureSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EA622930FB00041D46F /* ArchitectureSwitcher.swift */; };
+		DC381EAB229329030041D46F /* RegionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EAA229329030041D46F /* RegionList.swift */; };
+		DC381EAD229329100041D46F /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EAC229329100041D46F /* Region.swift */; };
+		DC381EAF229329A10041D46F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EAE229329A10041D46F /* HTTPClient.swift */; };
+		DC381EB122932F350041D46F /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB022932F350041D46F /* LocationsViewModel.swift */; };
+		DC381EB3229330EB0041D46F /* PinballMapHTTPResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB2229330EB0041D46F /* PinballMapHTTPResource.swift */; };
 		F3991DE9915E83517B4F7A66 /* Pods_PinballMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +65,11 @@
 		DC381EA2229304530041D46F /* ReduxStateVisualizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxStateVisualizerViewController.swift; sourceTree = "<group>"; };
 		DC381EA42293099E0041D46F /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
 		DC381EA622930FB00041D46F /* ArchitectureSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureSwitcher.swift; sourceTree = "<group>"; };
+		DC381EAA229329030041D46F /* RegionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionList.swift; sourceTree = "<group>"; };
+		DC381EAC229329100041D46F /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		DC381EAE229329A10041D46F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		DC381EB022932F350041D46F /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		DC381EB2229330EB0041D46F /* PinballMapHTTPResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinballMapHTTPResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				DC381E77228F63210041D46F /* Base View Controllers */,
+				DC381EA9229328D10041D46F /* Models */,
 				DC381E78228F63210041D46F /* Navigation */,
+				DC381EA8229328C60041D46F /* Networking */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -142,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				DC381E96229303910041D46F /* MVVMLocationsViewController.swift */,
+				DC381EB022932F350041D46F /* LocationsViewModel.swift */,
 				DC381E9A229303BC0041D46F /* MVVMMachinesViewController.swift */,
 				DC381EA0229304390041D46F /* MVVMStateVisualizerViewController.swift */,
 			);
@@ -192,6 +205,24 @@
 				DC381E8A228F68730041D46F /* SetBackgroundColor.swift */,
 			);
 			path = Actions;
+			sourceTree = "<group>";
+		};
+		DC381EA8229328C60041D46F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DC381EAE229329A10041D46F /* HTTPClient.swift */,
+				DC381EB2229330EB0041D46F /* PinballMapHTTPResource.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DC381EA9229328D10041D46F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC381EAC229329100041D46F /* Region.swift */,
+				DC381EAA229329030041D46F /* RegionList.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F7A1429DC60617DDF11660C7 /* Pods */ = {
@@ -324,6 +355,8 @@
 				DC381E83228F679D0041D46F /* Store.swift in Sources */,
 				DC381EA52293099E0041D46F /* Architecture.swift in Sources */,
 				DC381E932293034F0041D46F /* MachinesViewController.swift in Sources */,
+				DC381EAF229329A10041D46F /* HTTPClient.swift in Sources */,
+				DC381EB3229330EB0041D46F /* PinballMapHTTPResource.swift in Sources */,
 				DC381E9B229303BC0041D46F /* MVVMMachinesViewController.swift in Sources */,
 				DC381EA722930FB00041D46F /* ArchitectureSwitcher.swift in Sources */,
 				DC381E9F229304160041D46F /* ReduxMachinesViewController.swift in Sources */,
@@ -333,10 +366,13 @@
 				DC381E5C228F5AFC0041D46F /* AppDelegate.swift in Sources */,
 				DC381E8B228F68730041D46F /* SetBackgroundColor.swift in Sources */,
 				DC381EA1229304390041D46F /* MVVMStateVisualizerViewController.swift in Sources */,
+				DC381EAB229329030041D46F /* RegionList.swift in Sources */,
 				DC381E95229303670041D46F /* StateVisualizerViewController.swift in Sources */,
 				DC381E85228F67A70041D46F /* State.swift in Sources */,
+				DC381EAD229329100041D46F /* Region.swift in Sources */,
 				DC381E8F229302300041D46F /* RootTabBarController.swift in Sources */,
 				DC381E91229303350041D46F /* LocationsViewController.swift in Sources */,
+				DC381EB122932F350041D46F /* LocationsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

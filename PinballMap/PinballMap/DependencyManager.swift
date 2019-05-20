@@ -6,6 +6,7 @@
 //  Copyright © 2019 Harlan Kellaway. All rights reserved.
 //
 
+import HottPotato
 import ReSwift
 import UIKit
 
@@ -13,19 +14,19 @@ final class DependencyManager {
     
     static var shared = DependencyManager()
     
-    var architecture: Architecture = .mvvm {
-        didSet {
-            navigator().architecture = architecture
-        }
-    }
-    
-    private var rootWindow: UIWindow?
+    var architecture: Architecture = .mvvm
     
     init(rootWindow: UIWindow? = UIApplication.shared.delegate?.window as? UIWindow,
          architectureSwitcher: ArchitectureSwitcher? = UIApplication.shared.delegate as? AppDelegate) {
         navigator().rootWindow = rootWindow
         navigator().architectureSwitcher = architectureSwitcher
         navigator().dependencyManager = self
+    }
+    
+    // MARK: - Shared
+    
+    func httpClient() -> HTTPClient {
+        return HTTPClient.shared
     }
     
     // MARK: - Redux

@@ -23,7 +23,6 @@ final class Navigator: ViewBuilder {
     
     weak var dependencyManager: DependencyManager?
     var rootWindow: UIWindow?
-    var architecture: Architecture?
     var architectureSwitcher: ArchitectureSwitcher?
     
     private var rootTabBar: RootTabBarController?
@@ -83,24 +82,28 @@ final class Navigator: ViewBuilder {
     }
     
     func locationsViewController() -> LocationsViewController {
-        guard let architecture = architecture else {
+        guard let dependencyManager = dependencyManager else {
             return LocationsViewController()
         }
         
-        switch architecture {
+        switch dependencyManager.architecture {
         case .mvvm:
-            return MVVMLocationsViewController()
+            let view = MVVMLocationsViewController()
+            let viewModel = LocationsViewModel(httpClient: dependencyManager.httpClient())
+            view.viewModel = viewModel
+            viewModel.view = view
+            return view
         case .redux:
             return ReduxLocationsViewController()
         }
     }
     
     func machinesViewController() -> MachinesViewController {
-        guard let architecture = architecture else {
+        guard let dependencyManager = dependencyManager else {
             return MachinesViewController()
         }
         
-        switch architecture {
+        switch dependencyManager.architecture {
         case .mvvm:
             return MVVMMachinesViewController()
         case .redux:
@@ -109,11 +112,11 @@ final class Navigator: ViewBuilder {
     }
     
     func stateVisualizerViewController() -> StateVisualizerViewController {
-        guard let architecture = architecture else {
+        guard let dependencyManager = dependencyManager else {
             return StateVisualizerViewController()
         }
         
-        switch architecture {
+        switch dependencyManager.architecture {
         case .mvvm:
             let view = MVVMStateVisualizerViewController()
             view.architectureSwitcher = architectureSwitcher
@@ -121,7 +124,7 @@ final class Navigator: ViewBuilder {
         case .redux:
             let view = ReduxStateVisualizerViewController()
             view.architectureSwitcher = architectureSwitcher
-            view.store = dependencyManager?.store()
+            view.store = dependencyManager.store()
             return view
         }
     }
