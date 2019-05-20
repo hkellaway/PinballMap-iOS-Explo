@@ -13,12 +13,16 @@ final class DependencyManager {
     
     static var shared = DependencyManager()
     
+    var architecture: Architecture = .mvvm {
+        didSet {
+            navigator().architecture = architecture
+        }
+    }
+    
     private var rootWindow: UIWindow?
     
-    init(rootWindow: UIWindow? = UIApplication.shared.delegate?.window as? UIWindow,
-         architecture: Architecture = .mvvm) {
+    init(rootWindow: UIWindow? = UIApplication.shared.delegate?.window as? UIWindow) {
         Navigator.shared.rootWindow = rootWindow
-        Navigator.shared.architecture = architecture
         Navigator.shared.dependencyManager = self
     }
     

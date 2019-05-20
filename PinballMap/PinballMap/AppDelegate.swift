@@ -17,7 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupDependencyManager()
         dependencyManager.navigator().installRootView()
-        return dependencyManager.navigator().selectTab(.locations)
+        dependencyManager.navigator().selectTab(.locations)
+        
+        assert(dependencyManager.navigator().architecture != nil,
+               "Invalid launch state")
+        
+        return true
     }
 
     private func setupDependencyManager() {

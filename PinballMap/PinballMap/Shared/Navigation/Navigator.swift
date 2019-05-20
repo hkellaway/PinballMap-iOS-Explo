@@ -23,7 +23,7 @@ final class Navigator: ViewBuilder {
     
     weak var dependencyManager: DependencyManager?
     var rootWindow: UIWindow?
-    var architecture: Architecture!
+    var architecture: Architecture?
     
     private var rootTabBar: RootTabBarController?
     private var locationsNavigatonController: UINavigationController?
@@ -82,7 +82,11 @@ final class Navigator: ViewBuilder {
     }
     
     func locationsViewController() -> LocationsViewController {
-        switch architecture! {
+        guard let architecture = architecture else {
+            return LocationsViewController()
+        }
+        
+        switch architecture {
         case .mvvm:
             return MVVMLocationsViewController()
         case .redux:
@@ -91,7 +95,11 @@ final class Navigator: ViewBuilder {
     }
     
     func machinesViewController() -> MachinesViewController {
-        switch architecture! {
+        guard let architecture = architecture else {
+            return MachinesViewController()
+        }
+        
+        switch architecture {
         case .mvvm:
             return MVVMMachinesViewController()
         case .redux:
@@ -100,7 +108,11 @@ final class Navigator: ViewBuilder {
     }
     
     func stateVisualizerViewController() -> StateVisualizerViewController {
-        switch architecture! {
+        guard let architecture = architecture else {
+            return StateVisualizerViewController()
+        }
+        
+        switch architecture {
         case .mvvm:
             return MVVMStateVisualizerViewController()
         case .redux:
