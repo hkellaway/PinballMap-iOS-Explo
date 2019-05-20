@@ -14,7 +14,7 @@ final class ReduxLocationsViewController: LocationsViewController, StoreSubscrib
     var apiActions: APIActions!
     var store: Store<State>!
     
-    private var regions: [Region]?
+    private var regions: [Region] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -39,7 +39,7 @@ final class ReduxLocationsViewController: LocationsViewController, StoreSubscrib
     // MARK: StoreSubscriber
     
     func newState(state: State) {
-        self.regions = state.regionList?.alphabetized
+        self.regions = state.regionList?.alphabetized ?? []
         tableView.reloadData()
     }
     
@@ -56,13 +56,13 @@ extension ReduxLocationsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return regions?.count ?? 0
+        return regions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let region = regions?[indexPath.row]
-        cell.textLabel?.text = region?.fullName ?? "NO NAME"
+        let region = regions[indexPath.row]
+        cell.textLabel?.text = region.fullName
         return cell
     }
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ArchitectureSwitcher {
+protocol ArchitectureSwitcher: class {
     
     var currentArchitecture: Architecture { get }
     

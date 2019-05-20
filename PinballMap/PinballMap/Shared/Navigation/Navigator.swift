@@ -8,20 +8,11 @@
 
 import UIKit
 
-protocol ViewBuilder {
-    
-    func rootTabBarController() -> RootTabBarController
-    func locationsViewController() -> LocationsViewController
-    func machinesViewController() -> MachinesViewController
-    func stateVisualizerViewController() -> StateVisualizerViewController
-    
-}
-
-final class Navigator: ViewBuilder {
+final class Navigator {
     
     static var shared = Navigator()
     
-    weak var dependencyManager: DependencyManager?
+    weak var viewBuilder: ViewBuilder?
     var rootWindow: UIWindow?
     var architectureSwitcher: ArchitectureSwitcher?
     
@@ -32,7 +23,14 @@ final class Navigator: ViewBuilder {
     
     @discardableResult
     func installRootView() -> Bool {
-        let locationsView = locationsViewController()
+        guard
+            let locationsView = viewBuilder?.locationsViewController(),
+            let machinesView = viewBuilder?.machinesViewController(),
+            let stateView = viewBuilder?.stateVisualizerViewController(),
+            let rootTabBar = viewBuilder?.rootTabBarController() else {
+            return false
+        }
+        
         let locationsTab = UINavigationController()
         locationsTab.tabBarItem = UITabBarItem(title: "Locations",
                                                image: nil,
@@ -40,7 +38,6 @@ final class Navigator: ViewBuilder {
         locationsTab.pushViewController(locationsView, animated: false)
         self.locationsNavigatonController = locationsTab
         
-        let machinesView = machinesViewController()
         let machinesTab = UINavigationController()
         machinesTab.tabBarItem = UITabBarItem(title: "Machines",
                                               image: nil,
@@ -48,7 +45,6 @@ final class Navigator: ViewBuilder {
         machinesTab.pushViewController(machinesView, animated: false)
         self.machinesNavigationController = machinesTab
         
-        let stateView = stateVisualizerViewController()
         let stateTab = UINavigationController()
         stateTab.tabBarItem = UITabBarItem(title: "State Viz",
                                            image: nil,
@@ -56,7 +52,6 @@ final class Navigator: ViewBuilder {
         stateTab.pushViewController(stateView, animated: false)
         self.stateNavigationController = stateTab
         
-        let rootTabBar = rootTabBarController()
         rootTabBar.viewControllers = [locationsTab, machinesTab, stateTab]
         self.rootTabBar = rootTabBar
         
@@ -71,66 +66,6 @@ final class Navigator: ViewBuilder {
         }
         rootTabBar.selectTab(tab)
         return true
-    }
-    
-    // MARK: - Protocol conformance
-    
-    // MARK: ViewBuilder
-    
-    func rootTabBarController() -> RootTabBarController {
-        return RootTabBarController()
-    }
-    
-    func locationsViewController() -> LocationsViewController {
-        guard let dependencyManager = dependencyManager else {
-            return LocationsViewController()
-        }
-        
-        switch dependencyManager.architecture {
-        case .mvvm:
-            let view = MVVMLocationsViewController()
-            let viewModel = LocationsViewModel(httpClient: dependencyManager.httpClient())
-            view.viewModel = viewModel
-            viewModel.view = view
-            return view
-        case .redux:
-            let view = ReduxLocationsViewController()
-            view.apiActions = APIActions(httpClient: dependencyManager.httpClient(),
-                                         store: dependencyManager.store())
-            view.store = dependencyManager.store()
-            return view
-        }
-    }
-    
-    func machinesViewController() -> MachinesViewController {
-        guard let dependencyManager = dependencyManager else {
-            return MachinesViewController()
-        }
-        
-        switch dependencyManager.architecture {
-        case .mvvm:
-            return MVVMMachinesViewController()
-        case .redux:
-            return ReduxMachinesViewController()
-        }
-    }
-    
-    func stateVisualizerViewController() -> StateVisualizerViewController {
-        guard let dependencyManager = dependencyManager else {
-            return StateVisualizerViewController()
-        }
-        
-        switch dependencyManager.architecture {
-        case .mvvm:
-            let view = MVVMStateVisualizerViewController()
-            view.architectureSwitcher = architectureSwitcher
-            return view
-        case .redux:
-            let view = ReduxStateVisualizerViewController()
-            view.architectureSwitcher = architectureSwitcher
-            view.store = dependencyManager.store()
-            return view
-        }
     }
     
 }
