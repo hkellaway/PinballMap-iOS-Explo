@@ -9,27 +9,59 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, ArchitectureSwitcher {
 
     var window: UIWindow?
     var dependencyManager: DependencyManager!
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        setupDependencyManager()
-        dependencyManager.navigator().installRootView()
-        dependencyManager.navigator().selectTab(.locations)
-        
-        assert(dependencyManager.navigator().architecture != nil,
-               "Invalid launch state")
-        
-        return true
+    
+    var currentArchitecture: Architecture {
+        return dependencyManager.architecture
     }
 
-    private func setupDependencyManager() {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let initialArchitecture: Architecture = .mvvm
+        setupDependencyManager(architecture: initialArchitecture)
+        
+        assert(
+            dependencyManager.architecture == initialArchitecture &&
+            dependencyManager.navigator().architecture == initialArchitecture,
+            "Invalid launch state"
+        )
+        
+        return startApp()
+    }
+    
+    @discardableResult
+    func startApp() -> Bool {
+        return dependencyManager.navigator().installRootView()
+            && dependencyManager.navigator().selectTab(.locations)
+    }
+    
+    @discardableResult
+    func restartApp(architecture: Architecture) -> Bool {
+        dependencyManager.architecture = architecture
+        return startApp()
+    }
+
+    private func setupDependencyManager(architecture: Architecture) {
         let dependencyManager = DependencyManager.shared
-        dependencyManager.navigator().architecture = .mvvm
+        dependencyManager.architecture = architecture
         self.dependencyManager = dependencyManager
     }
 
 }
 
+// MARK: - Protocol conformance
+
+// MARK: ArchitectureSwitcher
+
+extension AppDelegate {
+    
+    func switchArchitecture(to newArchitecture: Architecture) -> Bool {
+        guard newArchitecture != currentArchitecture else {
+            return true
+        }
+        return restartApp(architecture: newArchitecture)
+    }
+    
+}
