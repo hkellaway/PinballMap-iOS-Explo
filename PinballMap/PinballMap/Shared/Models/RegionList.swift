@@ -18,3 +18,23 @@ struct RegionList: Codable {
     
     let regions: [Region]
 }
+
+// MARK: - Protocol conformance
+
+// MARK: CustomStringConvertible
+
+extension RegionList: CustomStringConvertible {
+    
+    var description: String {
+        return alphabetized.description
+    }
+    
+}
+
+// MARK: Equatable
+
+func ==(lhs: RegionList, rhs: RegionList) -> Bool {
+    return lhs.regions == rhs.regions
+}
+
+extension RegionList: Equatable { }
