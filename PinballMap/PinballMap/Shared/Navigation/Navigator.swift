@@ -121,6 +121,7 @@ final class Navigator: ViewBuilder {
         case .redux:
             let view = ReduxStateVisualizerViewController()
             view.architectureSwitcher = architectureSwitcher
+            view.store = dependencyManager?.store()
             return view
         }
     }

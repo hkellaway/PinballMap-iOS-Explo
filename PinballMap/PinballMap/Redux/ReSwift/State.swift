@@ -12,3 +12,13 @@ import UIKit
 struct State: StateType {
     let backgroundColor: UIColor
 }
+
+extension State: CustomStringConvertible {
+    
+    var description: String {
+        return """
+        backgroundColor: \(backgroundColor)
+        """
+    }
+    
+}

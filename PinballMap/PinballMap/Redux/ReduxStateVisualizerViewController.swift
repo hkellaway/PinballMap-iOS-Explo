@@ -6,9 +6,12 @@
 //  Copyright © 2019 Harlan Kellaway. All rights reserved.
 //
 
+import ReSwift
 import UIKit
 
 final class ReduxStateVisualizerViewController: StateVisualizerViewController {
+    
+    var store: Store<State>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,10 @@ final class ReduxStateVisualizerViewController: StateVisualizerViewController {
     
     override func architectureName() -> String {
         return "Redux"
+    }
+    
+    override func stateToString() -> String {
+        return store?.state?.description ?? "ERROR: No state :("
     }
     
 }

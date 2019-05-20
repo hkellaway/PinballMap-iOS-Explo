@@ -20,6 +20,8 @@ class StateVisualizerViewController: UIViewController {
     var architectureLabel = UILabel()
     var architectureTextField = UITextField()
     var toggleArchitectureButton = UIButton()
+    var stateLabel = UILabel()
+    var stateTextView = UITextView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,10 @@ class StateVisualizerViewController: UIViewController {
     }
     
     func architectureName() -> String {
+        fatalError("Should be overridden by sub-class")
+    }
+    
+    func stateToString() -> String {
         fatalError("Should be overridden by sub-class")
     }
     
@@ -53,6 +59,17 @@ class StateVisualizerViewController: UIViewController {
         toggleArchitectureButton.leadingToTrailing(of: architectureTextField,
                                                    offset: 8)
         toggleArchitectureButton.width(100)
+        
+        view.addSubview(stateLabel)
+        stateLabel.leading(to: architectureLabel)
+        stateLabel.trailing(to: architectureLabel)
+        stateLabel.topToBottom(of: architectureTextField, offset: 20)
+        
+        view.addSubview(stateTextView)
+        stateTextView.leading(to: stateLabel)
+        stateTextView.trailingToSuperview(offset: 20)
+        stateTextView.topToBottom(of: stateLabel, offset: 8)
+        stateTextView.bottomToSuperview(offset: -100)
     }
     
     private func setupDesign() {
@@ -63,6 +80,10 @@ class StateVisualizerViewController: UIViewController {
         toggleArchitectureButton.setTitleColor(.white, for: .normal)
         toggleArchitectureButton.backgroundColor = .lightGray
         toggleArchitectureButton.addTarget(self, action: #selector(didToggleArchitecture), for: .touchUpInside)
+        stateLabel.text = "STATE:"
+        stateTextView.layer.borderColor = UIColor.black.cgColor
+        stateTextView.layer.borderWidth = 2
+        stateTextView.text = stateToString()
     }
     
 }

@@ -20,4 +20,8 @@ final class MVVMStateVisualizerViewController: StateVisualizerViewController {
         return "MVVM"
     }
     
+    override func stateToString() -> String {
+        return "Unknown"
+    }
+    
 }
