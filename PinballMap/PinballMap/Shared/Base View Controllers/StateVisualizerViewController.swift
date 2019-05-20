@@ -21,6 +21,7 @@ class StateVisualizerViewController: UIViewController {
     var architectureTextField = UITextField()
     var toggleArchitectureButton = UIButton()
     var stateLabel = UILabel()
+    var stateScrollView = UIScrollView()
     var stateTextView = UITextView()
     
     override func viewDidLoad() {
@@ -65,11 +66,14 @@ class StateVisualizerViewController: UIViewController {
         stateLabel.trailing(to: architectureLabel)
         stateLabel.topToBottom(of: architectureTextField, offset: 20)
         
+        view.addSubview(stateScrollView)
+        stateScrollView.leading(to: stateLabel)
+        stateScrollView.trailingToSuperview(offset: 20)
+        stateScrollView.topToBottom(of: stateLabel, offset: 8)
+        stateScrollView.bottomToSuperview(offset: -100)
+        
         view.addSubview(stateTextView)
-        stateTextView.leading(to: stateLabel)
-        stateTextView.trailingToSuperview(offset: 20)
-        stateTextView.topToBottom(of: stateLabel, offset: 8)
-        stateTextView.bottomToSuperview(offset: -100)
+        stateTextView.edges(to: stateScrollView)
     }
     
     private func setupDesign() {
@@ -81,7 +85,6 @@ class StateVisualizerViewController: UIViewController {
         toggleArchitectureButton.backgroundColor = .lightGray
         toggleArchitectureButton.addTarget(self, action: #selector(didToggleArchitecture), for: .touchUpInside)
         stateLabel.text = "STATE:"
-        stateTextView.isUserInteractionEnabled = false
         stateTextView.layer.borderColor = UIColor.black.cgColor
         stateTextView.layer.borderWidth = 2
         stateTextView.text = "Unknown"
