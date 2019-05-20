@@ -32,6 +32,8 @@ final class ReduxStateVisualizerViewController: StateVisualizerViewController, S
         return "Redux"
     }
     
+    override func refresh() { }
+    
     // MARK: - Protocol conformance
     
     // MARK: StoreSubscriber

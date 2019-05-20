@@ -10,6 +10,11 @@ import Foundation
 import ReSwift
 
 struct State: StateType {
+    
+    var numRegions: Int {
+        return regionList?.count ?? 0
+    }
+    
     let regionList: RegionList?
 }
 
@@ -21,7 +26,8 @@ extension State: CustomStringConvertible {
     
     var description: String {
         return """
-        regions: \(regionList?.description ?? [].description)
+        NUM REGIONS: \(regionList?.count ?? 0)
+        REGIONS: \(regionList?.description ?? [].description)
         """
     }
     

@@ -16,6 +16,10 @@ struct RegionList: Codable {
         }
     }
     
+    var count: Int {
+        return regions.count
+    }
+    
     let regions: [Region]
 }
 

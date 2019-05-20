@@ -23,6 +23,7 @@ class StateVisualizerViewController: UIViewController {
     var stateLabel = UILabel()
     var stateScrollView = UIScrollView()
     var stateTextView = UITextView()
+    var refreshButton = UIBarButtonItem()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class StateVisualizerViewController: UIViewController {
         title = "State Visualizer"
         setupConstraints()
         setupDesign()
+        refresh()
     }
     
     func architectureName() -> String {
@@ -38,6 +40,14 @@ class StateVisualizerViewController: UIViewController {
     
     func stateToString() -> String {
         fatalError("Should be overridden by sub-class")
+    }
+    
+    func refresh() {
+        fatalError("Should be overridden by sub-class")
+    }
+    
+    @objc private func didTapRefresh(sender: UIBarButtonItem) {
+        refresh()
     }
     
     @objc private func didToggleArchitecture(sender: UIButton) {
@@ -88,6 +98,10 @@ class StateVisualizerViewController: UIViewController {
         stateTextView.layer.borderColor = UIColor.black.cgColor
         stateTextView.layer.borderWidth = 2
         stateTextView.text = "Unknown"
+        refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh,
+                                        target: self,
+                                        action: #selector(didTapRefresh))
+        navigationItem.rightBarButtonItem = refreshButton
     }
     
 }
