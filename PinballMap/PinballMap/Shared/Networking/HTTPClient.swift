@@ -25,7 +25,11 @@ final class HTTPClient {
             method: .GET,
             path: "/regions.json"
         )
-        hottPotato.sendRequest(for: regionList, completion: completion)
+        hottPotato.sendRequest(for: regionList) { result in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                completion(result)
+            }
+        }
     }
     
 }

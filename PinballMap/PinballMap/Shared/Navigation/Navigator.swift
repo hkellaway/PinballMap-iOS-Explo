@@ -94,7 +94,11 @@ final class Navigator: ViewBuilder {
             viewModel.view = view
             return view
         case .redux:
-            return ReduxLocationsViewController()
+            let view = ReduxLocationsViewController()
+            view.apiActions = APIActions(httpClient: dependencyManager.httpClient(),
+                                         store: dependencyManager.store())
+            view.store = dependencyManager.store()
+            return view
         }
     }
     

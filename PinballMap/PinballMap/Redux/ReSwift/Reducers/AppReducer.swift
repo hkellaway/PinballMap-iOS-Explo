@@ -15,16 +15,16 @@ final class AppReducer {
     
     func execute(action: Action, state: State?) -> State {
         return State(
-            backgroundColor: colorReducer(state: state?.backgroundColor, action: action)
+            regionList: regionsReducer(state: state?.regionList, action: action)
         )
     }
     
-    private func colorReducer(state: UIColor?, action: Action) -> UIColor {
+    private func regionsReducer(state: RegionList?, action: Action) -> RegionList? {
         switch action {
-        case let action as SetBackgroundColor:
-            return action.color
+        case let action as LoadRegions:
+            return action.regions
         default:
-            return .black
+            return state
         }
     }
     

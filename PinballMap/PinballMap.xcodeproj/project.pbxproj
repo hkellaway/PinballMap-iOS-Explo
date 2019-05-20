@@ -16,7 +16,6 @@
 		DC381E83228F679D0041D46F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E82228F679D0041D46F /* Store.swift */; };
 		DC381E85228F67A70041D46F /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E84228F67A70041D46F /* State.swift */; };
 		DC381E89228F68090041D46F /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E88228F68090041D46F /* AppReducer.swift */; };
-		DC381E8B228F68730041D46F /* SetBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E8A228F68730041D46F /* SetBackgroundColor.swift */; };
 		DC381E8F229302300041D46F /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E8E229302300041D46F /* RootTabBarController.swift */; };
 		DC381E91229303350041D46F /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E90229303350041D46F /* LocationsViewController.swift */; };
 		DC381E932293034F0041D46F /* MachinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E922293034F0041D46F /* MachinesViewController.swift */; };
@@ -34,6 +33,8 @@
 		DC381EAF229329A10041D46F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EAE229329A10041D46F /* HTTPClient.swift */; };
 		DC381EB122932F350041D46F /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB022932F350041D46F /* LocationsViewModel.swift */; };
 		DC381EB3229330EB0041D46F /* PinballMapHTTPResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB2229330EB0041D46F /* PinballMapHTTPResource.swift */; };
+		DC381EB5229334470041D46F /* LoadRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB4229334470041D46F /* LoadRegions.swift */; };
+		DC381EB722933BB00041D46F /* APIActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB622933BB00041D46F /* APIActions.swift */; };
 		F3991DE9915E83517B4F7A66 /* Pods_PinballMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +53,6 @@
 		DC381E82228F679D0041D46F /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		DC381E84228F67A70041D46F /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		DC381E88228F68090041D46F /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
-		DC381E8A228F68730041D46F /* SetBackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBackgroundColor.swift; sourceTree = "<group>"; };
 		DC381E8E229302300041D46F /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		DC381E90229303350041D46F /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		DC381E922293034F0041D46F /* MachinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +70,8 @@
 		DC381EAE229329A10041D46F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		DC381EB022932F350041D46F /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		DC381EB2229330EB0041D46F /* PinballMapHTTPResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinballMapHTTPResource.swift; sourceTree = "<group>"; };
+		DC381EB4229334470041D46F /* LoadRegions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadRegions.swift; sourceTree = "<group>"; };
+		DC381EB622933BB00041D46F /* APIActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +204,8 @@
 		DC381E87228F67F20041D46F /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				DC381E8A228F68730041D46F /* SetBackgroundColor.swift */,
+				DC381EB4229334470041D46F /* LoadRegions.swift */,
+				DC381EB622933BB00041D46F /* APIActions.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC381EB722933BB00041D46F /* APIActions.swift in Sources */,
 				DC381E99229303AB0041D46F /* ReduxLocationsViewController.swift in Sources */,
 				DC381EA3229304530041D46F /* ReduxStateVisualizerViewController.swift in Sources */,
 				DC381E97229303910041D46F /* MVVMLocationsViewController.swift in Sources */,
@@ -360,11 +364,11 @@
 				DC381E9B229303BC0041D46F /* MVVMMachinesViewController.swift in Sources */,
 				DC381EA722930FB00041D46F /* ArchitectureSwitcher.swift in Sources */,
 				DC381E9F229304160041D46F /* ReduxMachinesViewController.swift in Sources */,
+				DC381EB5229334470041D46F /* LoadRegions.swift in Sources */,
 				DC381E89228F68090041D46F /* AppReducer.swift in Sources */,
 				DC381E7A228F63210041D46F /* Navigator.swift in Sources */,
 				DC381E6E228F5E030041D46F /* DependencyManager.swift in Sources */,
 				DC381E5C228F5AFC0041D46F /* AppDelegate.swift in Sources */,
-				DC381E8B228F68730041D46F /* SetBackgroundColor.swift in Sources */,
 				DC381EA1229304390041D46F /* MVVMStateVisualizerViewController.swift in Sources */,
 				DC381EAB229329030041D46F /* RegionList.swift in Sources */,
 				DC381E95229303670041D46F /* StateVisualizerViewController.swift in Sources */,

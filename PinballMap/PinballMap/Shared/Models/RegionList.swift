@@ -9,5 +9,12 @@
 import Foundation
 
 struct RegionList: Codable {
+    
+    var alphabetized: [Region] {
+        return regions.sorted {
+            return $0.fullName < $1.fullName
+        }
+    }
+    
     let regions: [Region]
 }

@@ -10,14 +10,14 @@ import ReSwift
 import UIKit
 
 struct State: StateType {
-    let backgroundColor: UIColor
+    let regionList: RegionList?
 }
 
 extension State: CustomStringConvertible {
     
     var description: String {
         return """
-        backgroundColor: \(backgroundColor)
+        regions: \(regionList?.alphabetized ?? [])
         """
     }
     

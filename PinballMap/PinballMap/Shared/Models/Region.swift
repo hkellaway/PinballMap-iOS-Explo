@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct Region: Codable {
+struct Region: Codable, CustomStringConvertible {
     let id: Int
     let name: String
     let fullName: String
+    
+    var description: String {
+        return "\n\(fullName)"
+    }
 }

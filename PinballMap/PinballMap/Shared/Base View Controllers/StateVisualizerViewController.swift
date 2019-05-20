@@ -81,9 +81,10 @@ class StateVisualizerViewController: UIViewController {
         toggleArchitectureButton.backgroundColor = .lightGray
         toggleArchitectureButton.addTarget(self, action: #selector(didToggleArchitecture), for: .touchUpInside)
         stateLabel.text = "STATE:"
+        stateTextView.isUserInteractionEnabled = false
         stateTextView.layer.borderColor = UIColor.black.cgColor
         stateTextView.layer.borderWidth = 2
-        stateTextView.text = stateToString()
+        stateTextView.text = "Unknown"
     }
     
 }

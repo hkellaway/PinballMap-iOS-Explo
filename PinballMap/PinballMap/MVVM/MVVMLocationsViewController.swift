@@ -15,15 +15,40 @@ final class MVVMLocationsViewController: LocationsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.dataSource = self
+        
         viewModel.load()
     }
     
-    func didLoadRegions(_ regions: [Region]) {
-        print(regions.count)
+    func didLoadRegions() {
+        tableView.reloadData()
     }
     
     func errorOccurred(_ error: Error) {
         print(error.localizedDescription)
+    }
+    
+}
+
+// MARK: - Protocol conformance
+
+// MARK: UITableViewDataSources
+
+extension MVVMLocationsViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.regions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let region = viewModel.regions[indexPath.row]
+        cell.textLabel?.text = region.fullName
+        return cell
     }
     
 }
