@@ -34,22 +34,33 @@ final class DependencyManager: ViewBuilder {
         navigator().viewBuilder = self
     }
     
-    // MARK: - Shared
+    // MARK: - Instance functions
+    
+    func clearState() {
+        switch architecture {
+        case .redux:
+            store().state = State(regionList: nil)
+        case .mvvm:
+            return
+        }
+    }
+    
+    // MARK: - Dependencies
+    
+    // MARK: Shared
     
     func httpClient() -> HTTPClient {
         return HTTPClient.shared
     }
     
-    // MARK: - Redux
+    func navigator() -> Navigator {
+        return Navigator.shared
+    }
+    
+    // MARK: Redux
     
     func store() -> Store<State> {
         return MyStore.shared
-    }
-    
-    // MARK: - Shared
-    
-    func navigator() -> Navigator {
-        return Navigator.shared
     }
     
     // MARK: ViewBuilder

@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ArchitectureSwitcher {
     
     @discardableResult
     func restartApp(architecture: Architecture) -> Bool {
+        dependencyManager.clearState()
         dependencyManager.architecture = architecture
         return startApp()
     }
