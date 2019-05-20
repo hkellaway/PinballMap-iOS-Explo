@@ -10,15 +10,6 @@ import HottPotato
 import ReSwift
 import UIKit
 
-protocol ViewBuilder: class {
-    
-    func rootTabBarController() -> RootTabBarController
-    func locationsViewController() -> LocationsViewController
-    func machinesViewController() -> MachinesViewController
-    func stateVisualizerViewController() -> StateVisualizerViewController
-    
-}
-
 final class DependencyManager: ViewBuilder {
     
     static var shared = DependencyManager()
@@ -47,6 +38,12 @@ final class DependencyManager: ViewBuilder {
     
     // MARK: - Dependencies
     
+    // MARK: Redux-specific
+    
+    func store() -> Store<State> {
+        return MyStore.shared
+    }
+    
     // MARK: Shared
     
     func httpClient() -> HTTPClient {
@@ -55,12 +52,6 @@ final class DependencyManager: ViewBuilder {
     
     func navigator() -> Navigator {
         return Navigator.shared
-    }
-    
-    // MARK: Redux
-    
-    func store() -> Store<State> {
-        return MyStore.shared
     }
     
     // MARK: ViewBuilder
