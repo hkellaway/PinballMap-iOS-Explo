@@ -120,8 +120,8 @@ final class DependencyManager: ViewBuilder {
         case .mvvm:
             return MVVMMachinesViewController()
         case .redux:
-            let view = ReduxMachinesViewController()
-            view.store = store()
+            let view = ReduxMachinesViewController(store: store(),
+                                                   navigator: navigator())
             return view
         }
     }

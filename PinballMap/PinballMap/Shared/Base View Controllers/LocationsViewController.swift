@@ -11,11 +11,11 @@ import UIKit
 
 class LocationsViewController: UIViewController {
     
-    // DEPENDENCIES
+    // Dependencyes
     
     var region: Region!
     
-    // UI ELEMENTS
+    // UI Elements
     
     var tableView = UITableView()
     

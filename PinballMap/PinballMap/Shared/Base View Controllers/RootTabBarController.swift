@@ -20,4 +20,14 @@ final class RootTabBarController: UITabBarController {
         selectedIndex = tab.rawValue
     }
     
+    func setBadge(value: Int, forTab tab: Tab) {
+        let tabBarItem = tabBar.items?[tab.rawValue]
+        switch value {
+        case 0:
+            tabBarItem?.badgeValue = nil
+        default:
+            tabBarItem?.badgeValue = String(value)
+        }
+    }
+    
 }

@@ -51,7 +51,7 @@ func ==(lhs: State, rhs: State) -> Bool {
         lhs.selectedLocation == rhs.selectedLocation &&
         lhs.selectedMachine == rhs.selectedMachine &&
         lhs.regionList == rhs.regionList &&
-        lhs.locationList == rhs.locationList
+        lhs.locationList == rhs.locationList &&
         lhs.machineList == rhs.machineList
 }
 

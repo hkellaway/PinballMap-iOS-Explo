@@ -16,7 +16,7 @@ final class Navigator {
     var rootWindow: UIWindow?
     var architectureSwitcher: ArchitectureSwitcher?
     
-    private var rootTabBar: RootTabBarController?
+    var rootTabBar: RootTabBarController?
     private var locationsNavigatonController: UINavigationController?
     private var machinesNavigationController: UINavigationController?
     private var stateNavigationController: UINavigationController?
@@ -30,6 +30,8 @@ final class Navigator {
             let rootTabBar = viewBuilder?.rootTabBarController() else {
             return false
         }
+        
+        self.rootTabBar = rootTabBar
         
         let locationsTab = UINavigationController()
         locationsTab.tabBarItem = UITabBarItem(title: "Locations",
@@ -53,7 +55,6 @@ final class Navigator {
         self.stateNavigationController = stateTab
         
         rootTabBar.viewControllers = [locationsTab, machinesTab, stateTab]
-        self.rootTabBar = rootTabBar
         
         rootWindow?.rootViewController = rootTabBar
         return true
@@ -65,6 +66,12 @@ final class Navigator {
             return false
         }
         rootTabBar.selectTab(tab)
+        return true
+    }
+    
+    @discardableResult
+    func setTabBadge(tab: RootTabBarController.Tab, value: Int) -> Bool {
+        rootTabBar?.setBadge(value: value, forTab: tab)
         return true
     }
     
