@@ -18,13 +18,14 @@ final class ReduxStateVisualizerViewController: StateVisualizerViewController, S
         store.subscribe(self)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        architectureTextField.text = "Redux"
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         store.unsubscribe(self)
-    }
-    
-    override func architectureName() -> String {
-        return "Redux"
     }
     
     override func refresh() {

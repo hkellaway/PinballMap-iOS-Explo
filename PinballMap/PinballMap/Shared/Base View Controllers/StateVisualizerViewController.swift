@@ -34,14 +34,6 @@ class StateVisualizerViewController: UIViewController {
         refresh()
     }
     
-    func architectureName() -> String {
-        fatalError("Should be overridden by sub-class")
-    }
-    
-    func stateToString() -> String {
-        fatalError("Should be overridden by sub-class")
-    }
-    
     func refresh() {
         fatalError("Should be overridden by sub-class")
     }
@@ -89,7 +81,7 @@ class StateVisualizerViewController: UIViewController {
     private func setupDesign() {
         architectureLabel.text = "ARCHITECTURE:"
         architectureTextField.isUserInteractionEnabled = false
-        architectureTextField.text = architectureName()
+        architectureTextField.text = "Unknown"
         toggleArchitectureButton.setTitle("Toggle", for: .normal)
         toggleArchitectureButton.setTitleColor(.white, for: .normal)
         toggleArchitectureButton.backgroundColor = .lightGray

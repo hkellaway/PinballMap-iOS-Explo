@@ -31,6 +31,7 @@ final class DependencyManager: ViewBuilder {
         switch architecture {
         case .redux:
             store().state = State(selectedRegion: nil,
+                                  selectedLocation: nil,
                                   regionList: nil,
                                   locationList: nil)
         case .mvvm:
@@ -94,6 +95,19 @@ final class DependencyManager: ViewBuilder {
                                          store: store())
             view.store = store()
             view.navigator = navigator()
+            return view
+        }
+    }
+    
+    func locationDetailViewController(location: Location) -> LocationDetailViewController {
+        switch architecture {
+        case .mvvm:
+            let view = MVVMLocationDetailViewController()
+            view.location = location
+            return view
+        case .redux:
+            let view = ReduxLocationDetailViewController()
+            view.location = location
             return view
         }
     }

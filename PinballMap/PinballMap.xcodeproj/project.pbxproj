@@ -45,6 +45,10 @@
 		DC381ECE22937AA90041D46F /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381ECD22937AA90041D46F /* LocationsViewController.swift */; };
 		DC381ED022937B080041D46F /* MVVMLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381ECF22937B080041D46F /* MVVMLocationsViewController.swift */; };
 		DC381ED222937C020041D46F /* ReduxLocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381ED122937C020041D46F /* ReduxLocationsViewController.swift */; };
+		DC381ED422947D730041D46F /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381ED322947D730041D46F /* LocationDetailViewController.swift */; };
+		DC381ED622947DAE0041D46F /* MVVMLocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381ED522947DAE0041D46F /* MVVMLocationDetailViewController.swift */; };
+		DC381ED822947DD30041D46F /* ReduxLocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381ED722947DD30041D46F /* ReduxLocationDetailViewController.swift */; };
+		DC381EDC2294803B0041D46F /* SelectLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EDB2294803B0041D46F /* SelectLocation.swift */; };
 		F3991DE9915E83517B4F7A66 /* Pods_PinballMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +96,10 @@
 		DC381ECD22937AA90041D46F /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		DC381ECF22937B080041D46F /* MVVMLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMLocationsViewController.swift; sourceTree = "<group>"; };
 		DC381ED122937C020041D46F /* ReduxLocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxLocationsViewController.swift; sourceTree = "<group>"; };
+		DC381ED322947D730041D46F /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
+		DC381ED522947DAE0041D46F /* MVVMLocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMLocationDetailViewController.swift; sourceTree = "<group>"; };
+		DC381ED722947DD30041D46F /* ReduxLocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxLocationDetailViewController.swift; sourceTree = "<group>"; };
+		DC381EDB2294803B0041D46F /* SelectLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,7 @@
 				DC381E81228F67800041D46F /* ReSwift */,
 				DC381E98229303AB0041D46F /* ReduxRegionsViewController.swift */,
 				DC381ED122937C020041D46F /* ReduxLocationsViewController.swift */,
+				DC381ED722947DD30041D46F /* ReduxLocationDetailViewController.swift */,
 				DC381E9E229304160041D46F /* ReduxMachinesViewController.swift */,
 				DC381EA2229304530041D46F /* ReduxStateVisualizerViewController.swift */,
 			);
@@ -181,6 +190,7 @@
 				DC381E96229303910041D46F /* MVVMRegionsViewController.swift */,
 				DC381EB022932F350041D46F /* MVVMRegionViewModel.swift */,
 				DC381ECF22937B080041D46F /* MVVMLocationsViewController.swift */,
+				DC381ED522947DAE0041D46F /* MVVMLocationDetailViewController.swift */,
 				DC381E9A229303BC0041D46F /* MVVMMachinesViewController.swift */,
 				DC381EA0229304390041D46F /* MVVMStateVisualizerViewController.swift */,
 			);
@@ -193,6 +203,7 @@
 				DC381E8E229302300041D46F /* RootTabBarController.swift */,
 				DC381E90229303350041D46F /* RegionsViewController.swift */,
 				DC381ECD22937AA90041D46F /* LocationsViewController.swift */,
+				DC381ED322947D730041D46F /* LocationDetailViewController.swift */,
 				DC381E922293034F0041D46F /* MachinesViewController.swift */,
 				DC381E94229303670041D46F /* StateVisualizerViewController.swift */,
 			);
@@ -233,6 +244,7 @@
 				DC381EB4229334470041D46F /* LoadRegions.swift */,
 				DC381EBF22936C3A0041D46F /* SelectRegion.swift */,
 				DC381EC1229377300041D46F /* LoadLocations.swift */,
+				DC381EDB2294803B0041D46F /* SelectLocation.swift */,
 				DC381EB622933BB00041D46F /* APIActions.swift */,
 			);
 			path = Actions;
@@ -402,14 +414,18 @@
 				DC381E99229303AB0041D46F /* ReduxRegionsViewController.swift in Sources */,
 				DC381EA3229304530041D46F /* ReduxStateVisualizerViewController.swift in Sources */,
 				DC381E97229303910041D46F /* MVVMRegionsViewController.swift in Sources */,
+				DC381ED422947D730041D46F /* LocationDetailViewController.swift in Sources */,
 				DC381E83228F679D0041D46F /* Store.swift in Sources */,
 				DC381EA52293099E0041D46F /* Architecture.swift in Sources */,
+				DC381ED822947DD30041D46F /* ReduxLocationDetailViewController.swift in Sources */,
+				DC381ED622947DAE0041D46F /* MVVMLocationDetailViewController.swift in Sources */,
 				DC381EC42293779D0041D46F /* Location.swift in Sources */,
 				DC381E932293034F0041D46F /* MachinesViewController.swift in Sources */,
 				DC381EAF229329A10041D46F /* HTTPClient.swift in Sources */,
 				DC381EB3229330EB0041D46F /* PinballMapHTTPResource.swift in Sources */,
 				DC381E9B229303BC0041D46F /* MVVMMachinesViewController.swift in Sources */,
 				DC381EA722930FB00041D46F /* ArchitectureSwitcher.swift in Sources */,
+				DC381EDC2294803B0041D46F /* SelectLocation.swift in Sources */,
 				DC381ECC22937A2D0041D46F /* Session.swift in Sources */,
 				DC381E9F229304160041D46F /* ReduxMachinesViewController.swift in Sources */,
 				DC381EB5229334470041D46F /* LoadRegions.swift in Sources */,

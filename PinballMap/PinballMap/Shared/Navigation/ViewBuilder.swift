@@ -13,6 +13,7 @@ protocol ViewBuilder: class {
     func rootTabBarController() -> RootTabBarController
     func regionsViewController() -> RegionsViewController
     func locationsViewController(region: Region) -> LocationsViewController
+    func locationDetailViewController(location: Location) -> LocationDetailViewController
     func machinesViewController() -> MachinesViewController
     func stateVisualizerViewController() -> StateVisualizerViewController
     

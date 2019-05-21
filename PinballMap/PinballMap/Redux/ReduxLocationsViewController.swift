@@ -26,6 +26,7 @@ final class ReduxLocationsViewController: LocationsViewController, StoreSubscrib
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
         
         store.dispatch(apiActions.fetchLocations)
     }
@@ -65,6 +66,23 @@ extension ReduxLocationsViewController: UITableViewDataSource {
         let location = locations[indexPath.row]
         cell.textLabel?.text = location.name
         return cell
+    }
+    
+}
+
+// MARK: UITableViewDataSource
+
+extension ReduxLocationsViewController: UITableViewDelegate {
+ 
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let location = locations[indexPath.row]
+        cell.isSelected = store.state.selectedLocation == location
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let location = locations[indexPath.row]
+        store.dispatch(SelectLocation(location: location))
+        navigator.navigateToLocationDetail(forLocation: location)
     }
     
 }

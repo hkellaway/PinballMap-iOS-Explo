@@ -12,8 +12,9 @@ final class MVVMStateVisualizerViewController: StateVisualizerViewController {
     
     var session: Session! = Session.shared
     
-    override func architectureName() -> String {
-        return "MVVM"
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        architectureTextField.text = "MVVM"
     }
     
     override func refresh() {
@@ -29,10 +30,12 @@ final class MVVMStateVisualizerViewController: StateVisualizerViewController {
         
         if let regions = locationsViewModel?.regions {
             return State(selectedRegion: session.currentRegion,
+                         selectedLocation: nil,
                          regionList: RegionList(regions: regions),
                          locationList: nil)
         } else {
             return State(selectedRegion: session.currentRegion,
+                         selectedLocation: nil,
                          regionList: nil,
                          locationList: nil)
         }
