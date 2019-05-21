@@ -62,8 +62,8 @@ final class AppReducer {
         switch action {
         case let action as LoadMachines:
             return action.machineList
-        case is SelectRegion, is SelectLocation:
-            // Clear locations if new Region or Location selected
+        case is SelectRegion:
+            // Clear machines if new Region selected
             return nil
         default:
             return state

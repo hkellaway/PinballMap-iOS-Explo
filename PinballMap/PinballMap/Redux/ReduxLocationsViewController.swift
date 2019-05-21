@@ -64,7 +64,7 @@ extension ReduxLocationsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let location = locations[indexPath.row]
-        cell.textLabel?.text = location.name
+        cell.textLabel?.text = "\(location.name) (\(location.numMachines))"
         return cell
     }
     

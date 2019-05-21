@@ -23,6 +23,8 @@ class LocationDetailViewController: UIViewController {
         return label
     }()
     
+    var tableView = UITableView(frame: .zero, style: .grouped)
+    
     // MARK: -
     
     override func viewDidLoad() {
@@ -42,6 +44,12 @@ class LocationDetailViewController: UIViewController {
         view.addSubview(addressStreetLabel)
         addressStreetLabel.topToSuperview(offset: 100)
         addressStreetLabel.leadingToSuperview(offset:20)
+        
+        view.addSubview(tableView)
+        tableView.leadingToSuperview()
+        tableView.trailingToSuperview()
+        tableView.bottomToSuperview()
+        tableView.topToBottom(of: addressStreetLabel, offset: 20)
     }
     
 }

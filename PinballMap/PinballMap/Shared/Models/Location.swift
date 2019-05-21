@@ -9,9 +9,29 @@
 import Foundation
 
 struct Location: Codable {
+    
+    struct MachineXRef: Codable {
+        let machineId: Int
+    }
+    
+    var numMachines: Int {
+        return machineIds.count
+    }
+    
+    var machineIds: [Int] {
+        return locationMachineXrefs.map { $0.machineId }
+    }
+    
     let id: Int
     let name: String
     let street: String?
+    let locationMachineXrefs: [MachineXRef]
+    
+    func machinesInCommon(with machineList: MachineList) -> MachineList {
+        let machines = machineList.machines.filter { machineIds.contains($0.id) }
+        return MachineList(machines: machines)
+    }
+    
 }
 
 // MARK: - Protocol conformance

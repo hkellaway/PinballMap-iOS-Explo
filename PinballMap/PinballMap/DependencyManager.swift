@@ -110,6 +110,7 @@ final class DependencyManager: ViewBuilder {
         case .redux:
             let view = ReduxLocationDetailViewController()
             view.location = location
+            view.store = store()
             return view
         }
     }
