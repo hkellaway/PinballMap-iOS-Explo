@@ -32,7 +32,7 @@ final class AppReducer {
     private func regionListReducer(state: RegionList?, action: Action) -> RegionList? {
         switch action {
         case let action as LoadRegions:
-            return action.regions
+            return action.regionList
         default:
             return state
         }

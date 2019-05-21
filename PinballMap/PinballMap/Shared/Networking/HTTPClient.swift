@@ -21,11 +21,23 @@ final class HTTPClient {
     }
     
     func getRegions(completion: @escaping (Result<RegionList, HottPotatoError>) -> ()) {
-        let regionList = PinballMapHTTPResource<RegionList>(
+        let resource = PinballMapHTTPResource<RegionList>(
             method: .GET,
             path: "/regions.json"
         )
-        hottPotato.sendRequest(for: regionList) { result in
+        hottPotato.sendRequest(for: resource) { result in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                completion(result)
+            }
+        }
+    }
+    
+    func getLocations(inRegion region: Region, completion: @escaping (Result<LocationList, HottPotatoError>) -> ()) {
+        let resource = PinballMapHTTPResource<LocationList>(
+            method: .GET,
+            path: "/region/\(region.name)/locatons.json"
+        )
+        hottPotato.sendRequest(for: resource) { result in
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 completion(result)
             }

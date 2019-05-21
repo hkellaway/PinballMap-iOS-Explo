@@ -37,6 +37,9 @@
 		DC381EB722933BB00041D46F /* APIActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB622933BB00041D46F /* APIActions.swift */; };
 		DC381EB9229341260041D46F /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB8229341250041D46F /* ViewBuilder.swift */; };
 		DC381EC022936C3A0041D46F /* SelectRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EBF22936C3A0041D46F /* SelectRegion.swift */; };
+		DC381EC2229377310041D46F /* LoadLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EC1229377300041D46F /* LoadLocations.swift */; };
+		DC381EC42293779D0041D46F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EC32293779D0041D46F /* Location.swift */; };
+		DC381EC6229377CE0041D46F /* LocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EC5229377CE0041D46F /* LocationList.swift */; };
 		F3991DE9915E83517B4F7A66 /* Pods_PinballMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +79,9 @@
 		DC381EB622933BB00041D46F /* APIActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIActions.swift; sourceTree = "<group>"; };
 		DC381EB8229341250041D46F /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		DC381EBF22936C3A0041D46F /* SelectRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRegion.swift; sourceTree = "<group>"; };
+		DC381EC1229377300041D46F /* LoadLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadLocations.swift; sourceTree = "<group>"; };
+		DC381EC32293779D0041D46F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DC381EC5229377CE0041D46F /* LocationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +217,7 @@
 			children = (
 				DC381EB4229334470041D46F /* LoadRegions.swift */,
 				DC381EBF22936C3A0041D46F /* SelectRegion.swift */,
+				DC381EC1229377300041D46F /* LoadLocations.swift */,
 				DC381EB622933BB00041D46F /* APIActions.swift */,
 			);
 			path = Actions;
@@ -228,6 +235,8 @@
 		DC381EA9229328D10041D46F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DC381EC32293779D0041D46F /* Location.swift */,
+				DC381EC5229377CE0041D46F /* LocationList.swift */,
 				DC381EAC229329100041D46F /* Region.swift */,
 				DC381EAA229329030041D46F /* RegionList.swift */,
 			);
@@ -364,6 +373,7 @@
 				DC381E97229303910041D46F /* MVVMLocationsViewController.swift in Sources */,
 				DC381E83228F679D0041D46F /* Store.swift in Sources */,
 				DC381EA52293099E0041D46F /* Architecture.swift in Sources */,
+				DC381EC42293779D0041D46F /* Location.swift in Sources */,
 				DC381E932293034F0041D46F /* MachinesViewController.swift in Sources */,
 				DC381EAF229329A10041D46F /* HTTPClient.swift in Sources */,
 				DC381EB3229330EB0041D46F /* PinballMapHTTPResource.swift in Sources */,
@@ -376,10 +386,12 @@
 				DC381E6E228F5E030041D46F /* DependencyManager.swift in Sources */,
 				DC381EB9229341260041D46F /* ViewBuilder.swift in Sources */,
 				DC381E5C228F5AFC0041D46F /* AppDelegate.swift in Sources */,
+				DC381EC2229377310041D46F /* LoadLocations.swift in Sources */,
 				DC381EA1229304390041D46F /* MVVMStateVisualizerViewController.swift in Sources */,
 				DC381EAB229329030041D46F /* RegionList.swift in Sources */,
 				DC381EC022936C3A0041D46F /* SelectRegion.swift in Sources */,
 				DC381E95229303670041D46F /* StateVisualizerViewController.swift in Sources */,
+				DC381EC6229377CE0041D46F /* LocationList.swift in Sources */,
 				DC381E85228F67A70041D46F /* State.swift in Sources */,
 				DC381EAD229329100041D46F /* Region.swift in Sources */,
 				DC381E8F229302300041D46F /* RootTabBarController.swift in Sources */,

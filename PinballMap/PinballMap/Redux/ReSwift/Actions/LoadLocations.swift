@@ -1,5 +1,5 @@
 //
-//  LoadRegions.swift
+//  LoadLocations.swift
 //  PinballMap
 //
 //  Created by Harlan Kellaway on 5/20/19.
@@ -9,6 +9,6 @@
 import Foundation
 import ReSwift
 
-struct LoadRegions: Action {
-    let regionList: RegionList
+struct LoadLocations: Action {
+    let locationList: LocationList
 }
