@@ -37,7 +37,7 @@ extension State: CustomStringConvertible {
         REGIONS: \(regionList?.description ?? [].description)
         NUM LOCATONS: \(locationList?.count ?? 0)
         LOCATIONS: \(locationList?.description ?? [].description)
-        NUM MACHIENS: \(machineList?.count ?? 0)
+        NUM MACHINES: \(machineList?.count ?? 0)
         MACHINES: \(machineList?.description ?? [].description)
         """
     }

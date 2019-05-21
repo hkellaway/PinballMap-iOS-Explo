@@ -16,57 +16,75 @@ final class AppReducer {
     func execute(action: Action, state: State?) -> State {
         return State(
             selectedRegion: regionReducer(state: state?.selectedRegion, action: action),
-            selectedLocation: locationReducer(state: state?.selectedLocation, action: action),
-            selectedMachine: machineReducer(state: state?.selectedMachine, action: action),
+            selectedLocation: locationReducer(state: state, action: action),
+            selectedMachine: machineReducer(state: state, action: action),
             regionList: regionListReducer(state: state?.regionList, action: action),
-            locationList: locationListReducer(state: state?.locationList, action: action),
-            machineList: machineListReducer(state: state?.machineList, action: action)
+            locationList: locationListReducer(state: state, action: action),
+            machineList: machineListReducer(state: state, action: action)
         )
     }
     
-    private func locationReducer(state: Location?, action: Action) -> Location? {
+    private func locationReducer(state: State?, action: Action) -> Location? {
         switch action {
         case let action as SelectLocation:
             return action.location
-        case is LoadLocations, is LoadRegions, is SelectRegion:
+        case let action as SelectRegion:
+            // If new Region, clear Locations
+            if let currentRegion = state?.selectedRegion,
+                currentRegion == action.region {
+                return state?.selectedLocation
+            }
             return nil
         default:
-            return state
+            return state?.selectedLocation
         }
     }
     
-    private func locationListReducer(state: LocationList?, action: Action) -> LocationList? {
+    private func locationListReducer(state: State?, action: Action) -> LocationList? {
         switch action {
         case let action as LoadLocations:
             return action.locationList
-        case is SelectRegion:
-            // Clear locations if new Region selected
+        case let action as SelectRegion:
+            // If new Region, clear Locations
+            if let currentRegion = state?.selectedRegion,
+                currentRegion == action.region {
+                return state?.locationList
+            }
             return nil
         default:
-            return state
+            return state?.locationList
         }
     }
     
-    private func machineReducer(state: Machine?, action: Action) -> Machine? {
+    private func machineReducer(state: State?, action: Action) -> Machine? {
         switch action {
         case let action as SelectMachine:
             return action.machine
-        case is SelectLocation, is SelectRegion:
+        case let action as SelectRegion:
+            // If new Region, clear Locations
+            if let currentRegion = state?.selectedRegion,
+                currentRegion == action.region {
+                return state?.selectedMachine
+            }
             return nil
         default:
-            return state
+            return state?.selectedMachine
         }
     }
     
-    private func machineListReducer(state: MachineList?, action: Action) -> MachineList? {
+    private func machineListReducer(state: State?, action: Action) -> MachineList? {
         switch action {
         case let action as LoadMachines:
             return action.machineList
-        case is SelectRegion:
-            // Clear machines if new Region selected
+        case let action as SelectRegion:
+            // If new Region, clear Locations
+            if let currentRegion = state?.selectedRegion,
+                currentRegion == action.region {
+                return state?.machineList
+            }
             return nil
         default:
-            return state
+            return state?.machineList
         }
     }
     
