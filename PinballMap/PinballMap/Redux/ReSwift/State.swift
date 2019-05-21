@@ -15,6 +15,10 @@ struct State: StateType {
         return regionList?.count ?? 0
     }
     
+    var numLocations: Int {
+        return locationList?.count ?? 0
+    }
+    
     let selectedRegion: Region?
     let regionList: RegionList?
     let locationList: LocationList?
@@ -31,8 +35,9 @@ extension State: CustomStringConvertible {
         let selectedRegionString = selectedRegion?.description ?? "NONE"
         return """
         SELECTED REGION: \(selectedRegionString)
-        NUM REGIONS: \(regionList?.count ?? 0)
+        NUM REGIONS: \(numRegions)
         REGIONS: \(regionList?.description ?? [].description)
+        NUM LOCATONS: \(numLocations)
         LOCATIONS: \(locationList?.description ?? [].description)
         """
     }
