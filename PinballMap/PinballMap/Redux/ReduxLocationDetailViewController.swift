@@ -12,13 +12,9 @@ import UIKit
 final class ReduxLocationDetailViewController: LocationDetailViewController, StoreSubscriber {
     
     var store: Store<State>!
+    var navigator: Navigator!
     
-    var machines: [Machine] {
-        guard let allMachines = store.state.machineList else {
-            return []
-        }
-        return location.machinesInCommon(with: allMachines).alphabetized
-    }
+    private var machines: [Machine] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,6 +25,7 @@ final class ReduxLocationDetailViewController: LocationDetailViewController, Sto
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
         
         tableView.reloadData()
     }
@@ -43,6 +40,9 @@ final class ReduxLocationDetailViewController: LocationDetailViewController, Sto
     // MARK: StoreSubscriber
     
     func newState(state: State) {
+        machines = state.machineList == nil
+            ? []
+            : location.machinesInCommon(with: state.machineList!).alphabetized
         tableView.reloadData()
     }
     
@@ -76,6 +76,22 @@ extension ReduxLocationDetailViewController: UITableViewDataSource {
         default:
             return nil
         }
+    }
+    
+}
+
+// MARK: UITableViewDelegate
+
+extension ReduxLocationDetailViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let machine = machines[indexPath.row]
+        cell.isSelected = store.state.selectedMachine == machine
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let machine = machines[indexPath.row]
+        navigator.navigateToMachineDetail(forMachine: machine)
     }
     
 }

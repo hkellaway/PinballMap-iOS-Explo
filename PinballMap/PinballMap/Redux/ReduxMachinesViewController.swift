@@ -33,6 +33,7 @@ final class ReduxMachinesViewController: MachinesViewController, StoreSubscriber
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
     }
 
     deinit {
@@ -54,6 +55,8 @@ final class ReduxMachinesViewController: MachinesViewController, StoreSubscriber
 
 // MARK: - Protocol conformance
 
+// MARK: UITableViewDataSource
+
 extension ReduxMachinesViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -69,6 +72,22 @@ extension ReduxMachinesViewController: UITableViewDataSource {
         let machine = machines[indexPath.row]
         cell.textLabel?.text = machine.name
         return cell
+    }
+    
+}
+
+// MARK: UITableViewDelegate
+
+extension ReduxMachinesViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let machine = machines[indexPath.row]
+        cell.isSelected = store.state.selectedMachine == machine
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let machine = machines[indexPath.row]
+        navigator.navigateToMachineDetail(forMachine: machine)
     }
     
 }

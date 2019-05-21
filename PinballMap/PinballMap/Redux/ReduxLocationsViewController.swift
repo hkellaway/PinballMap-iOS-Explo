@@ -81,7 +81,6 @@ extension ReduxLocationsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let location = locations[indexPath.row]
-        store.dispatch(SelectLocation(location: location))
         navigator.navigateToLocationDetail(forLocation: location)
     }
     

@@ -14,7 +14,16 @@ final class DependencyManager: ViewBuilder {
     
     static var shared = DependencyManager()
     
-    var architecture: Architecture = .mvvm
+    var architecture: Architecture = .mvvm {
+        didSet {
+            switch architecture {
+            case .redux:
+                navigator().store = store()
+            default:
+                navigator().store = nil
+            }
+        }
+    }
     weak var architectureSwitcher: ArchitectureSwitcher?
     
     init(rootWindow: UIWindow? = UIApplication.shared.delegate?.window as? UIWindow,
@@ -111,6 +120,7 @@ final class DependencyManager: ViewBuilder {
             let view = ReduxLocationDetailViewController()
             view.location = location
             view.store = store()
+            view.navigator = navigator()
             return view
         }
     }
@@ -122,6 +132,19 @@ final class DependencyManager: ViewBuilder {
         case .redux:
             let view = ReduxMachinesViewController(store: store(),
                                                    navigator: navigator())
+            return view
+        }
+    }
+    
+    func machineDetailViewController(machine: Machine) -> MachineDetailViewController {
+        switch architecture {
+        case .mvvm:
+            let view = MVVMMachineDetailViewController()
+            view.machine = machine
+            return view
+        case .redux:
+            let view = ReduxMachineDetailViewController()
+            view.machine = machine
             return view
         }
     }

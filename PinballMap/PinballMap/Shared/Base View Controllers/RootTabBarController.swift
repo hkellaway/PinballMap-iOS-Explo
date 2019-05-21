@@ -16,6 +16,10 @@ final class RootTabBarController: UITabBarController {
         case stateVisualizer = 2
     }
     
+    var selectedTab: Tab? {
+        return Tab(rawValue: selectedIndex)
+    }
+    
     func selectTab(_ tab: Tab) {
         selectedIndex = tab.rawValue
     }

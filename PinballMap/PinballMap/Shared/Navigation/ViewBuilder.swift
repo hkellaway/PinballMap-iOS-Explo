@@ -15,6 +15,7 @@ protocol ViewBuilder: class {
     func locationsViewController(region: Region) -> LocationsViewController
     func locationDetailViewController(location: Location) -> LocationDetailViewController
     func machinesViewController() -> MachinesViewController
+    func machineDetailViewController(machine: Machine) -> MachineDetailViewController
     func stateVisualizerViewController() -> StateVisualizerViewController
     
 }

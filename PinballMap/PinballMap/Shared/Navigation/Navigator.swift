@@ -6,6 +6,7 @@
 //  Copyright © 2019 Harlan Kellaway. All rights reserved.
 //
 
+import ReSwift
 import UIKit
 
 final class Navigator {
@@ -15,6 +16,7 @@ final class Navigator {
     weak var viewBuilder: ViewBuilder?
     var rootWindow: UIWindow?
     var architectureSwitcher: ArchitectureSwitcher?
+    var store: Store<State>?
     
     var rootTabBar: RootTabBarController?
     private var locationsNavigatonController: UINavigationController?
@@ -78,23 +80,49 @@ final class Navigator {
     @discardableResult
     func navigateToLocations(forRegion region: Region) -> Bool {
         guard
-            let locationsNavigatonController = locationsNavigatonController,
-            let locationView = viewBuilder?.locationsViewController(region: region) else {
+            let navController = locationsNavigatonController,
+            let view = viewBuilder?.locationsViewController(region: region) else {
             return false
         }
         
-        locationsNavigatonController.pushViewController(locationView, animated: true)
+        store?.dispatch(SelectRegion(region: region))
+        
+        navController.pushViewController(view, animated: true)
+        return true
+    }
+
+    @discardableResult
+    func navigateToLocationDetail(forLocation location: Location) -> Bool {
+        guard
+            let navController = locationsNavigatonController,
+            let view = viewBuilder?.locationDetailViewController(location: location) else {
+                return false
+        }
+        
+        store?.dispatch(SelectLocation(location: location))
+        
+        navController.pushViewController(view, animated: true)
         return true
     }
     
     @discardableResult
-    func navigateToLocationDetail(forLocation location: Location) -> Bool {
+    func navigateToMachineDetail(forMachine machine: Machine) -> Bool {
         guard
-            let locationsNavigatonController = locationsNavigatonController,
-            let locationDetailView = viewBuilder?.locationDetailViewController(location: location) else {
-                return false
+            let selectedTab = rootTabBar?.selectedTab,
+            let navController = machinesNavigationController,
+            let view = viewBuilder?.machineDetailViewController(machine: machine) else {
+            return false
         }
-        locationsNavigatonController.pushViewController(locationDetailView, animated: true)
+        
+        switch selectedTab {
+        case .machines:
+            store?.dispatch(SelectMachine(machine: machine))
+            navController.pushViewController(view, animated: true)
+        default:
+            navController.popToRootViewController(animated: false)
+            selectTab(.machines)
+            navigateToMachineDetail(forMachine: machine)
+        }
         return true
     }
     

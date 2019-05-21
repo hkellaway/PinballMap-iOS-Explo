@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ArchitectureSwitcher {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let initialArchitecture: Architecture = .mvvm
+        let initialArchitecture: Architecture = .redux
         setupDependencyManager(architecture: initialArchitecture)
         
         assert(
