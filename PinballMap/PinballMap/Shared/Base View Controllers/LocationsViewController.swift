@@ -9,7 +9,7 @@
 import TinyConstraints
 import UIKit
 
-class RegionsViewController: UIViewController {
+class LocationsViewController: UIViewController {
     
     // UI ELEMENTS
     
@@ -18,8 +18,12 @@ class RegionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Regions"
+        title = "Locations for \(regionName())"
         setupConstraints()
+    }
+    
+    func regionName() -> String {
+        fatalError("Should be overridden by sub-class")
     }
     
     private func setupConstraints() {

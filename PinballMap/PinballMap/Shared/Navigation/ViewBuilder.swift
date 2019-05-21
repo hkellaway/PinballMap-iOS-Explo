@@ -11,7 +11,8 @@ import Foundation
 protocol ViewBuilder: class {
     
     func rootTabBarController() -> RootTabBarController
-    func locationsViewController() -> RegionsViewController
+    func regionsViewController() -> RegionsViewController
+    func locationsViewController() -> LocationsViewController
     func machinesViewController() -> MachinesViewController
     func stateVisualizerViewController() -> StateVisualizerViewController
     

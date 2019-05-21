@@ -24,7 +24,7 @@ final class Navigator {
     @discardableResult
     func installRootView() -> Bool {
         guard
-            let locationsView = viewBuilder?.locationsViewController(),
+            let regionsView = viewBuilder?.regionsViewController(),
             let machinesView = viewBuilder?.machinesViewController(),
             let stateView = viewBuilder?.stateVisualizerViewController(),
             let rootTabBar = viewBuilder?.rootTabBarController() else {
@@ -35,7 +35,7 @@ final class Navigator {
         locationsTab.tabBarItem = UITabBarItem(title: "Locations",
                                                image: nil,
                                                selectedImage: nil)
-        locationsTab.pushViewController(locationsView, animated: false)
+        locationsTab.pushViewController(regionsView, animated: false)
         self.locationsNavigatonController = locationsTab
         
         let machinesTab = UINavigationController()

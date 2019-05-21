@@ -10,7 +10,7 @@ import UIKit
 
 final class MVVMRegionsViewController: RegionsViewController {
     
-    var viewModel: RegionViewModel!
+    var viewModel: RegionsViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

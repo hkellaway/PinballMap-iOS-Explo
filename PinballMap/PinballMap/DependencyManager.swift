@@ -61,11 +61,11 @@ final class DependencyManager: ViewBuilder {
         return RootTabBarController()
     }
     
-    func locationsViewController() -> RegionsViewController {
+    func regionsViewController() -> RegionsViewController {
         switch architecture {
         case .mvvm:
             let view = MVVMRegionsViewController()
-            let viewModel = RegionViewModel(httpClient: httpClient())
+            let viewModel = RegionsViewModel(httpClient: httpClient())
             view.viewModel = viewModel
             viewModel.view = view
             return view
@@ -73,6 +73,17 @@ final class DependencyManager: ViewBuilder {
             let view = ReduxRegionsViewController()
             view.apiActions = APIActions(httpClient: httpClient(),
                                          store: store())
+            view.store = store()
+            return view
+        }
+    }
+    
+    func locationsViewController() -> LocationsViewController {
+        switch architecture {
+        case .mvvm:
+            return MVVMLocationsViewController()
+        case .redux:
+            let view = ReduxLocationsViewController()
             view.store = store()
             return view
         }

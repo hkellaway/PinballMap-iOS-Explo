@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class RegionViewModel {
+final class RegionsViewModel {
     
     // Dependencies
     
