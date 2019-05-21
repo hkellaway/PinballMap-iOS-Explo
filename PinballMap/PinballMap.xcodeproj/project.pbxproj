@@ -52,6 +52,7 @@
 		DC381EDE229488310041D46F /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EDD229488310041D46F /* Machine.swift */; };
 		DC381EE022948AAB0041D46F /* LoadMachines.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EDF22948AAB0041D46F /* LoadMachines.swift */; };
 		DC381EE222948ADD0041D46F /* MachineList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EE122948ADD0041D46F /* MachineList.swift */; };
+		DC381EE422948FC70041D46F /* SelectMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EE322948FC70041D46F /* SelectMachine.swift */; };
 		F3991DE9915E83517B4F7A66 /* Pods_PinballMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		DC381EDD229488310041D46F /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
 		DC381EDF22948AAB0041D46F /* LoadMachines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMachines.swift; sourceTree = "<group>"; };
 		DC381EE122948ADD0041D46F /* MachineList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineList.swift; sourceTree = "<group>"; };
+		DC381EE322948FC70041D46F /* SelectMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMachine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 				DC381EC1229377300041D46F /* LoadLocations.swift */,
 				DC381EDB2294803B0041D46F /* SelectLocation.swift */,
 				DC381EDF22948AAB0041D46F /* LoadMachines.swift */,
+				DC381EE322948FC70041D46F /* SelectMachine.swift */,
 				DC381EB622933BB00041D46F /* APIActions.swift */,
 			);
 			path = Actions;
@@ -429,6 +432,7 @@
 				DC381EA52293099E0041D46F /* Architecture.swift in Sources */,
 				DC381ED822947DD30041D46F /* ReduxLocationDetailViewController.swift in Sources */,
 				DC381ED622947DAE0041D46F /* MVVMLocationDetailViewController.swift in Sources */,
+				DC381EE422948FC70041D46F /* SelectMachine.swift in Sources */,
 				DC381EC42293779D0041D46F /* Location.swift in Sources */,
 				DC381E932293034F0041D46F /* MachinesViewController.swift in Sources */,
 				DC381EAF229329A10041D46F /* HTTPClient.swift in Sources */,

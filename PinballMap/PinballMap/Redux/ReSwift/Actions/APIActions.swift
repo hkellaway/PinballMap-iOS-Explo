@@ -19,7 +19,7 @@ final class APIActions {
         self.store = store
     }
     
-    func getRegions(state: State, store: Store<State>) -> Action? {
+    func loadRegions(state: State, store: Store<State>) -> Action? {
         httpClient.getRegions { [weak self] result in
             switch result {
             case .success(let regionList):
@@ -32,7 +32,7 @@ final class APIActions {
         return nil
     }
     
-    func getLocations(state: State, store: Store<State>) -> Action? {
+    func loadLocations(state: State, store: Store<State>) -> Action? {
         guard let selectedRegion = state.selectedRegion else {
             return nil
         }
@@ -48,7 +48,7 @@ final class APIActions {
         return nil
     }
     
-    func getMachines(state: State, store: Store<State>) -> Action? {
+    func loadMachines(state: State, store: Store<State>) -> Action? {
         guard let selectedRegion = state.selectedRegion else {
             return nil
         }

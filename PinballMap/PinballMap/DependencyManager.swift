@@ -32,8 +32,10 @@ final class DependencyManager: ViewBuilder {
         case .redux:
             store().state = State(selectedRegion: nil,
                                   selectedLocation: nil,
+                                  selectedMachine: nil,
                                   regionList: nil,
-                                  locationList: nil)
+                                  locationList: nil,
+                                  machineList: nil)
         case .mvvm:
             Session.shared.clear()
         }
