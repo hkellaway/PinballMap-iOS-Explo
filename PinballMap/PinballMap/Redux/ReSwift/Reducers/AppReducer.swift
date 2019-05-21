@@ -16,8 +16,21 @@ final class AppReducer {
     func execute(action: Action, state: State?) -> State {
         return State(
             selectedRegion: regionReducer(state: state?.selectedRegion, action: action),
-            regionList: regionListReducer(state: state?.regionList, action: action)
+            regionList: regionListReducer(state: state?.regionList, action: action),
+            locationList: locationListReducer(state: state?.locationList, action: action)
         )
+    }
+    
+    private func locationListReducer(state: LocationList?, action: Action) -> LocationList? {
+        switch action {
+        case let action as LoadLocations:
+            return action.locationList
+        case is SelectRegion:
+            // Clear locations if new Region selected
+            return nil
+        default:
+            return state
+        }
     }
     
     private func regionReducer(state: Region?, action: Action) -> Region? {

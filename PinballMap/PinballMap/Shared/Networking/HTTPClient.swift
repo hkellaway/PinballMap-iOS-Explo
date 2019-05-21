@@ -35,7 +35,7 @@ final class HTTPClient {
     func getLocations(inRegion region: Region, completion: @escaping (Result<LocationList, HottPotatoError>) -> ()) {
         let resource = PinballMapHTTPResource<LocationList>(
             method: .GET,
-            path: "/region/\(region.name)/locatons.json"
+            path: "/region/\(region.name)/locations.json"
         )
         hottPotato.sendRequest(for: resource) { result in
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

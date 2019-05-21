@@ -17,6 +17,8 @@ struct State: StateType {
     
     let selectedRegion: Region?
     let regionList: RegionList?
+    let locationList: LocationList?
+    
 }
 
 // MARK: - Protocol conformance
@@ -31,6 +33,7 @@ extension State: CustomStringConvertible {
         SELECTED REGION: \(selectedRegionString)
         NUM REGIONS: \(regionList?.count ?? 0)
         REGIONS: \(regionList?.description ?? [].description)
+        LOCATIONS: \(locationList?.description ?? [].description)
         """
     }
     
@@ -39,9 +42,9 @@ extension State: CustomStringConvertible {
 // MARK: Equatable
 
 func ==(lhs: State, rhs: State) -> Bool {
-    return
-        lhs.selectedRegion == rhs.selectedRegion &&
-        lhs.regionList == rhs.regionList
+    return lhs.selectedRegion == rhs.selectedRegion &&
+        lhs.regionList == rhs.regionList &&
+        lhs.locationList == rhs.locationList
 }
 
 extension State: Equatable { }

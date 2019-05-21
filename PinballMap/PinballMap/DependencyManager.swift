@@ -31,7 +31,8 @@ final class DependencyManager: ViewBuilder {
         switch architecture {
         case .redux:
             store().state = State(selectedRegion: nil,
-                                  regionList: nil)
+                                  regionList: nil,
+                                  locationList: nil)
         case .mvvm:
             Session.shared.clear()
         }
@@ -89,7 +90,10 @@ final class DependencyManager: ViewBuilder {
         case .redux:
             let view = ReduxLocationsViewController()
             view.region = region
+            view.apiActions = APIActions(httpClient: httpClient(),
+                                         store: store())
             view.store = store()
+            view.navigator = navigator()
             return view
         }
     }
