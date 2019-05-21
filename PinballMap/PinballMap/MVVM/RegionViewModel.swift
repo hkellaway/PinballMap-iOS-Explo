@@ -8,18 +8,6 @@
 
 import Foundation
 
-final class Session {
-    
-    static var shared = Session()
-    
-    var currentRegion: Region?
-    
-    func clear() {
-        currentRegion = nil
-    }
-    
-}
-
 final class RegionViewModel {
     
     // Dependencies
@@ -54,7 +42,7 @@ final class RegionViewModel {
     func didSelectRegion(atIndex indexPath: IndexPath) {
         let region = regions[indexPath.row]
         session.currentRegion = region
-        notificationCenter.post(name: Notification.Name(rawValue: "PinballMapRegionUpdated"),
+        notificationCenter.post(name: .regionUpdated,
                                 object: region)
     }
     

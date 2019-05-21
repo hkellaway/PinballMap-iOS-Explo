@@ -17,14 +17,14 @@ final class MVVMMachinesViewController: MachinesViewController {
         super.viewWillAppear(animated)
         notificationCenter.addObserver(self,
                                        selector: #selector(regionUpdated(notification:)),
-                                       name: Notification.Name(rawValue: "PinballMapRegionUpdated"),
+                                       name: .regionUpdated,
                                        object: nil)
         updateTitle(withRegion: session.currentRegion)
     }
     
     deinit {
         notificationCenter.removeObserver(self,
-                                          name: Notification.Name(rawValue: "PinballMapRegionUpdated"),
+                                          name: .regionUpdated,
                                           object: nil)
     }
     

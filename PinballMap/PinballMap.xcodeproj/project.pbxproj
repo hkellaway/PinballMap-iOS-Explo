@@ -40,6 +40,8 @@
 		DC381EC2229377310041D46F /* LoadLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EC1229377300041D46F /* LoadLocations.swift */; };
 		DC381EC42293779D0041D46F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EC32293779D0041D46F /* Location.swift */; };
 		DC381EC6229377CE0041D46F /* LocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EC5229377CE0041D46F /* LocationList.swift */; };
+		DC381ECA229379D30041D46F /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EC9229379D30041D46F /* Notifications.swift */; };
+		DC381ECC22937A2D0041D46F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381ECB22937A2D0041D46F /* Session.swift */; };
 		F3991DE9915E83517B4F7A66 /* Pods_PinballMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		DC381EC1229377300041D46F /* LoadLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadLocations.swift; sourceTree = "<group>"; };
 		DC381EC32293779D0041D46F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		DC381EC5229377CE0041D46F /* LocationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationList.swift; sourceTree = "<group>"; };
+		DC381EC9229379D30041D46F /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		DC381ECB22937A2D0041D46F /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,8 @@
 		DC381E76228F62F60041D46F /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				DC381EC7229379BC0041D46F /* Notifications */,
+				DC381EC8229379C60041D46F /* Session */,
 				DC381E96229303910041D46F /* MVVMRegionsViewController.swift */,
 				DC381EB022932F350041D46F /* RegionViewModel.swift */,
 				DC381E9A229303BC0041D46F /* MVVMMachinesViewController.swift */,
@@ -241,6 +247,22 @@
 				DC381EAA229329030041D46F /* RegionList.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DC381EC7229379BC0041D46F /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				DC381EC9229379D30041D46F /* Notifications.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		DC381EC8229379C60041D46F /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				DC381ECB22937A2D0041D46F /* Session.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		F7A1429DC60617DDF11660C7 /* Pods */ = {
@@ -379,6 +401,7 @@
 				DC381EB3229330EB0041D46F /* PinballMapHTTPResource.swift in Sources */,
 				DC381E9B229303BC0041D46F /* MVVMMachinesViewController.swift in Sources */,
 				DC381EA722930FB00041D46F /* ArchitectureSwitcher.swift in Sources */,
+				DC381ECC22937A2D0041D46F /* Session.swift in Sources */,
 				DC381E9F229304160041D46F /* ReduxMachinesViewController.swift in Sources */,
 				DC381EB5229334470041D46F /* LoadRegions.swift in Sources */,
 				DC381E89228F68090041D46F /* AppReducer.swift in Sources */,
@@ -395,6 +418,7 @@
 				DC381E85228F67A70041D46F /* State.swift in Sources */,
 				DC381EAD229329100041D46F /* Region.swift in Sources */,
 				DC381E8F229302300041D46F /* RootTabBarController.swift in Sources */,
+				DC381ECA229379D30041D46F /* Notifications.swift in Sources */,
 				DC381E91229303350041D46F /* RegionsViewController.swift in Sources */,
 				DC381EB122932F350041D46F /* RegionViewModel.swift in Sources */,
 			);
