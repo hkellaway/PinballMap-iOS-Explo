@@ -28,7 +28,7 @@ final class ReduxRegionsViewController: RegionsViewController, StoreSubscriber {
         tableView.dataSource = self
         tableView.delegate = self
         
-        store.dispatch(apiActions.fetchRegions)
+        store.dispatch(apiActions.getRegions)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -83,6 +83,7 @@ extension ReduxRegionsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let region = regions[indexPath.row]
         store.dispatch(SelectRegion(region: region))
+        store.dispatch(apiActions.getMachines)
         navigator.navigateToLocations(forRegion: region)
     }
     

@@ -25,11 +25,7 @@ final class HTTPClient {
             method: .GET,
             path: "/regions.json"
         )
-        hottPotato.sendRequest(for: resource) { result in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                completion(result)
-            }
-        }
+        sendRequest(forResource: resource, completion: completion)
     }
     
     func getLocations(inRegion region: Region, completion: @escaping (Result<LocationList, HottPotatoError>) -> ()) {
@@ -37,7 +33,20 @@ final class HTTPClient {
             method: .GET,
             path: "/region/\(region.name)/locations.json"
         )
+        sendRequest(forResource: resource, completion: completion)
+    }
+    
+    func getMachines(inRegion region: Region, completion: @escaping (Result<MachineList, HottPotatoError>) -> ()) {
+        let resource = PinballMapHTTPResource<MachineList>(
+            method: .GET,
+            path: "/machines.json?region_id=\(region.id)"
+        )
+        sendRequest(forResource: resource, completion: completion)
+    }
+    
+    private func sendRequest<T>(forResource resource: PinballMapHTTPResource<T>, completion: @escaping (Result<T, HottPotatoError>) -> ()) {
         hottPotato.sendRequest(for: resource) { result in
+            // Delay to simulate latency
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 completion(result)
             }

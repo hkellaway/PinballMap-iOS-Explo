@@ -28,7 +28,7 @@ final class ReduxLocationsViewController: LocationsViewController, StoreSubscrib
         tableView.dataSource = self
         tableView.delegate = self
         
-        store.dispatch(apiActions.fetchLocations)
+        store.dispatch(apiActions.getLocations)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
