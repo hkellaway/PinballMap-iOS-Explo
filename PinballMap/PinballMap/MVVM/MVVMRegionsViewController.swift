@@ -8,9 +8,9 @@
 
 import UIKit
 
-final class MVVMLocationsViewController: LocationsViewController {
+final class MVVMRegionsViewController: RegionsViewController {
     
-    var viewModel: LocationsViewModel!
+    var viewModel: RegionViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ final class MVVMLocationsViewController: LocationsViewController {
 
 // MARK: UITableViewDataSources
 
-extension MVVMLocationsViewController: UITableViewDataSource {
+extension MVVMRegionsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -56,7 +56,7 @@ extension MVVMLocationsViewController: UITableViewDataSource {
 
 // MARK: UITableViewDelegate
 
-extension MVVMLocationsViewController: UITableViewDelegate {
+extension MVVMRegionsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectRegion(atIndex: indexPath)

@@ -9,7 +9,7 @@
 import ReSwift
 import UIKit
 
-final class ReduxLocationsViewController: LocationsViewController, StoreSubscriber {
+final class ReduxRegionsViewController: RegionsViewController, StoreSubscriber {
     
     var apiActions: APIActions!
     var store: Store<State>!
@@ -50,7 +50,7 @@ final class ReduxLocationsViewController: LocationsViewController, StoreSubscrib
 
 // MARK: UITableViewDataSources
 
-extension ReduxLocationsViewController: UITableViewDataSource {
+extension ReduxRegionsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -71,7 +71,7 @@ extension ReduxLocationsViewController: UITableViewDataSource {
 
 // MARK: UITableViewDelegate
 
-extension ReduxLocationsViewController: UITableViewDelegate {
+extension ReduxRegionsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let region = regions[indexPath.row]

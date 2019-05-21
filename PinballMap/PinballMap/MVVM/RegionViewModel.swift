@@ -20,11 +20,11 @@ final class Session {
     
 }
 
-final class LocationsViewModel {
+final class RegionViewModel {
     
     // Dependencies
     
-    weak var view: MVVMLocationsViewController?
+    weak var view: MVVMRegionsViewController?
     let httpClient: HTTPClient
     let session = Session.shared
     let notificationCenter: NotificationCenter = .default

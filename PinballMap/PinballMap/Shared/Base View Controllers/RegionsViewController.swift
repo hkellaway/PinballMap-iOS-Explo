@@ -9,9 +9,10 @@
 import TinyConstraints
 import UIKit
 
-class LocationsViewController: UIViewController {
+class RegionsViewController: UIViewController {
     
     // UI ELEMENTS
+    
     var tableView = UITableView()
     
     override func viewDidLoad() {

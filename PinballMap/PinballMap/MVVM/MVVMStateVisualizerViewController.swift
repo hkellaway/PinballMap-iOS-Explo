@@ -24,8 +24,8 @@ final class MVVMStateVisualizerViewController: StateVisualizerViewController {
     private func determineStateFromViewObjects() -> State {
         let rootTabBarController: RootTabBarController? = UIApplication.shared.delegate?.window??.rootViewController as? RootTabBarController
         let locationsNavController: UINavigationController? = rootTabBarController?.viewControllers?[0] as? UINavigationController
-        let locationsViewController: MVVMLocationsViewController? = locationsNavController?.viewControllers[0] as? MVVMLocationsViewController
-        let locationsViewModel: LocationsViewModel? = locationsViewController?.viewModel
+        let locationsViewController: MVVMRegionsViewController? = locationsNavController?.viewControllers[0] as? MVVMRegionsViewController
+        let locationsViewModel: RegionViewModel? = locationsViewController?.viewModel
         
         if let regions = locationsViewModel?.regions {
             return State(selectedRegion: session.currentRegion,
