@@ -13,8 +13,4 @@ final class ReduxLocationsViewController: LocationsViewController {
     
     var store: Store<State>!
     
-    override func regionName() -> String {
-        return store.state.selectedRegion?.fullName ?? "UNKNOWN"
-    }
-    
 }

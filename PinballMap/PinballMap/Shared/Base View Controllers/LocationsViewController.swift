@@ -11,6 +11,10 @@ import UIKit
 
 class LocationsViewController: UIViewController {
     
+    // DEPENDENCIES
+    
+    var region: Region!
+    
     // UI ELEMENTS
     
     var tableView = UITableView()
@@ -18,12 +22,8 @@ class LocationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Locations for \(regionName())"
+        title = "Locations for \(region.fullName)"
         setupConstraints()
-    }
-    
-    func regionName() -> String {
-        fatalError("Should be overridden by sub-class")
     }
     
     private func setupConstraints() {

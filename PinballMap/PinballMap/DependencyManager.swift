@@ -65,7 +65,8 @@ final class DependencyManager: ViewBuilder {
         switch architecture {
         case .mvvm:
             let view = MVVMRegionsViewController()
-            let viewModel = RegionsViewModel(httpClient: httpClient())
+            let viewModel = RegionsViewModel(httpClient: httpClient(),
+                                             navigator: navigator())
             view.viewModel = viewModel
             viewModel.view = view
             return view
@@ -74,16 +75,20 @@ final class DependencyManager: ViewBuilder {
             view.apiActions = APIActions(httpClient: httpClient(),
                                          store: store())
             view.store = store()
+            view.navigator = navigator()
             return view
         }
     }
     
-    func locationsViewController() -> LocationsViewController {
+    func locationsViewController(region: Region) -> LocationsViewController {
         switch architecture {
         case .mvvm:
-            return MVVMLocationsViewController()
+            let view = MVVMLocationsViewController()
+            view.region = region
+            return view
         case .redux:
             let view = ReduxLocationsViewController()
+            view.region = region
             view.store = store()
             return view
         }

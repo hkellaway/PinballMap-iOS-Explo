@@ -10,10 +10,4 @@ import UIKit
 
 final class MVVMLocationsViewController: LocationsViewController {
     
-    var session: Session! = Session.shared
-    
-    override func regionName() -> String {
-        return session.currentRegion?.fullName ?? "UNKNOWN"
-    }
-    
 }

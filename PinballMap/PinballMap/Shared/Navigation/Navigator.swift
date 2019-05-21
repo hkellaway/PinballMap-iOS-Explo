@@ -68,4 +68,16 @@ final class Navigator {
         return true
     }
     
+    @discardableResult
+    func navigateToLocations(forRegion region: Region) -> Bool {
+        guard
+            let locationsNavigatonController = locationsNavigatonController,
+            let locationView = viewBuilder?.locationsViewController(region: region) else {
+            return false
+        }
+        
+        locationsNavigatonController.pushViewController(locationView, animated: true)
+        return true
+    }
+    
 }

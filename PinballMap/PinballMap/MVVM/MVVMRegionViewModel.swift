@@ -16,6 +16,7 @@ final class RegionsViewModel {
     let httpClient: HTTPClient
     let session = Session.shared
     let notificationCenter: NotificationCenter = .default
+    let navigator: Navigator
     
     // State
     
@@ -23,8 +24,9 @@ final class RegionsViewModel {
     
     // MARK -
     
-    init(httpClient: HTTPClient) {
+    init(httpClient: HTTPClient, navigator: Navigator) {
         self.httpClient = httpClient
+        self.navigator = navigator
     }
     
     func load() {
@@ -44,6 +46,7 @@ final class RegionsViewModel {
         session.currentRegion = region
         notificationCenter.post(name: .regionUpdated,
                                 object: region)
+        navigator.navigateToLocations(forRegion: region)
     }
     
 }

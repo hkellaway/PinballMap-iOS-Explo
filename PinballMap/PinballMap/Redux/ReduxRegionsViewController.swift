@@ -13,6 +13,7 @@ final class ReduxRegionsViewController: RegionsViewController, StoreSubscriber {
     
     var apiActions: APIActions!
     var store: Store<State>!
+    var navigator: Navigator!
     
     private var regions: [Region] = []
     
@@ -81,6 +82,7 @@ extension ReduxRegionsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let region = regions[indexPath.row]
         store.dispatch(SelectRegion(region: region))
+        navigator.navigateToLocations(forRegion: region)
     }
     
 }
