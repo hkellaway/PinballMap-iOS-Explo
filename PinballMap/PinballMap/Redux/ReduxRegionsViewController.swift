@@ -82,8 +82,8 @@ extension ReduxRegionsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let region = regions[indexPath.row]
-        store.dispatch(apiActions.loadMachines)
         navigator.navigateToLocations(forRegion: region)
+        store.dispatch(apiActions.loadMachines)
     }
     
 }
