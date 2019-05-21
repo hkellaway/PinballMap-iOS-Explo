@@ -15,7 +15,7 @@ class MachinesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        navigationItem.title = MachinesViewController.defaultTitle
+        updateTitle(withRegion: nil)
     }
     
     func updateTitle(withRegion region: Region?) {

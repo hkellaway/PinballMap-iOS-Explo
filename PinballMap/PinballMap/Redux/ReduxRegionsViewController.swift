@@ -42,6 +42,7 @@ final class ReduxRegionsViewController: RegionsViewController, StoreSubscriber {
     
     func newState(state: State) {
         self.regions = state.regionList?.alphabetized ?? []
+        updateTitle(withRegions: regions)
         tableView.reloadData()
     }
     

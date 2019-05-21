@@ -22,6 +22,7 @@ final class MVVMRegionsViewController: RegionsViewController {
     }
     
     func didLoadRegions() {
+        updateTitle(withRegions: viewModel.regions)
         tableView.reloadData()
     }
     

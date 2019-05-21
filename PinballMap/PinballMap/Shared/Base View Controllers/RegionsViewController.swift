@@ -11,6 +11,8 @@ import UIKit
 
 class RegionsViewController: UIViewController {
     
+    static var defaultTitle = "Regions"
+    
     // UI ELEMENTS
     
     var tableView = UITableView()
@@ -18,8 +20,16 @@ class RegionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Regions"
         setupConstraints()
+        updateTitle(withRegions: [])
+    }
+    
+    func updateTitle(withRegions regions: [Region]) {
+        if regions.isEmpty {
+            navigationItem.title = RegionsViewController.defaultTitle
+        } else {
+            navigationItem.title = "Regions (\(regions.count))"
+        }
     }
     
     private func setupConstraints() {
