@@ -57,6 +57,8 @@
 		DC381EF22294B6170041D46F /* ReduxMachineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EF12294B6160041D46F /* ReduxMachineDetailViewController.swift */; };
 		DC381EF42294B6340041D46F /* MVVMMachineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EF32294B6340041D46F /* MVVMMachineDetailViewController.swift */; };
 		DC381EF62294C8400041D46F /* APIResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EF52294C8400041D46F /* APIResponseStatus.swift */; };
+		DC381EF92294CCC60041D46F /* UIView+PinballMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EF82294CCC60041D46F /* UIView+PinballMap.swift */; };
+		DC381EFB2294CCDF0041D46F /* UIViewController+PinballMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EFA2294CCDF0041D46F /* UIViewController+PinballMap.swift */; };
 		F3991DE9915E83517B4F7A66 /* Pods_PinballMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +118,8 @@
 		DC381EF12294B6160041D46F /* ReduxMachineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxMachineDetailViewController.swift; sourceTree = "<group>"; };
 		DC381EF32294B6340041D46F /* MVVMMachineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMMachineDetailViewController.swift; sourceTree = "<group>"; };
 		DC381EF52294C8400041D46F /* APIResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseStatus.swift; sourceTree = "<group>"; };
+		DC381EF82294CCC60041D46F /* UIView+PinballMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinballMap.swift"; sourceTree = "<group>"; };
+		DC381EFA2294CCDF0041D46F /* UIViewController+PinballMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PinballMap.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				DC381E77228F63210041D46F /* Base View Controllers */,
+				DC381EF72294CCBB0041D46F /* Extensions */,
 				DC381EA9229328D10041D46F /* Models */,
 				DC381E78228F63210041D46F /* Navigation */,
 				DC381EA8229328C60041D46F /* Networking */,
@@ -308,6 +313,15 @@
 				DC381ECB22937A2D0041D46F /* Session.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		DC381EF72294CCBB0041D46F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC381EF82294CCC60041D46F /* UIView+PinballMap.swift */,
+				DC381EFA2294CCDF0041D46F /* UIViewController+PinballMap.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F7A1429DC60617DDF11660C7 /* Pods */ = {
@@ -440,6 +454,7 @@
 				DC381E97229303910041D46F /* MVVMRegionsViewController.swift in Sources */,
 				DC381EDE229488310041D46F /* Machine.swift in Sources */,
 				DC381ED422947D730041D46F /* LocationDetailViewController.swift in Sources */,
+				DC381EF92294CCC60041D46F /* UIView+PinballMap.swift in Sources */,
 				DC381E83228F679D0041D46F /* Store.swift in Sources */,
 				DC381EF22294B6170041D46F /* ReduxMachineDetailViewController.swift in Sources */,
 				DC381EA52293099E0041D46F /* Architecture.swift in Sources */,
@@ -472,6 +487,7 @@
 				DC381EC6229377CE0041D46F /* LocationList.swift in Sources */,
 				DC381ECE22937AA90041D46F /* LocationsViewController.swift in Sources */,
 				DC381ED222937C020041D46F /* ReduxLocationsViewController.swift in Sources */,
+				DC381EFB2294CCDF0041D46F /* UIViewController+PinballMap.swift in Sources */,
 				DC381E85228F67A70041D46F /* State.swift in Sources */,
 				DC381EAD229329100041D46F /* Region.swift in Sources */,
 				DC381E8F229302300041D46F /* RootTabBarController.swift in Sources */,

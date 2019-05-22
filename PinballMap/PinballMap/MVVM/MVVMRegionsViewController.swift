@@ -18,16 +18,19 @@ final class MVVMRegionsViewController: RegionsViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        view.showActivityIndicator()
         viewModel.load()
     }
     
     func didLoadRegions() {
+        view.hideActivityIndicator()
         updateTitle(withRegions: viewModel.regions)
         tableView.reloadData()
     }
     
     func errorOccurred(_ error: Error) {
-        print(error.localizedDescription)
+        view.hideActivityIndicator()
+        displayError(error)
     }
     
 }

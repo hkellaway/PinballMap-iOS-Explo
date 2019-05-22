@@ -32,11 +32,13 @@ extension State: CustomStringConvertible {
         SELECTED REGION: \(selectedRegionString)
         SELECTED LOCATION: \(selectedLocationString)
         SELECTED MACHINE: \(selectedMachineString)
-        \n
+        \n\n
         NUM REGIONS: \(regionList?.value?.count ?? 0)
         REGIONS: \(regionList?.description ?? [].description)
+        \n
         NUM LOCATONS: \(locationList?.count ?? 0)
         LOCATIONS: \(locationList?.description ?? [].description)
+        \n
         NUM MACHINES: \(machineList?.count ?? 0)
         MACHINES: \(machineList?.description ?? [].description)
         """
