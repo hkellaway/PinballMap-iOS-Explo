@@ -97,7 +97,7 @@ final class AppReducer {
         }
     }
     
-    private func regionListReducer(state: RegionList?, action: Action) -> RegionList? {
+    private func regionListReducer(state: APIResponseStatus<RegionList>?, action: Action) -> APIResponseStatus<RegionList>? {
         switch action {
         case let action as LoadRegions:
             return action.regionList

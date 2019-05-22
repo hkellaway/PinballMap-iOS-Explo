@@ -23,13 +23,12 @@ final class APIActions {
         httpClient.getRegions { [weak self] result in
             switch result {
             case .success(let regionList):
-                self?.store.dispatch(LoadRegions(regionList: regionList))
+                self?.store.dispatch(LoadRegions(regionList: .loaded(success: regionList)))
             case .failure(let error):
-                // TODO
-                print(error.localizedDescription)
+                self?.store.dispatch(LoadRegions(regionList: .errored(failure: error)))
             }
         }
-        return nil
+        return LoadRegions(regionList: .loading)
     }
     
     func loadLocations(state: State, store: Store<State>) -> Action? {

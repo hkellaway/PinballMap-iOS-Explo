@@ -10,5 +10,5 @@ import Foundation
 import ReSwift
 
 struct LoadRegions: Action {
-    let regionList: RegionList
+    let regionList: APIResponseStatus<RegionList>
 }

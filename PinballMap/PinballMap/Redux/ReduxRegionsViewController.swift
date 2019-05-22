@@ -41,9 +41,27 @@ final class ReduxRegionsViewController: RegionsViewController, StoreSubscriber {
     // MARK: StoreSubscriber
     
     func newState(state: State) {
-        self.regions = state.regionList?.alphabetized ?? []
-        updateTitle(withRegions: regions)
-        tableView.reloadData()
+//        self.regions = state.regionList?.alphabetized ?? []
+//        updateTitle(withRegions: regions)
+//        tableView.reloadData()
+        
+        guard let regionList = state.regionList else {
+            return
+        }
+        
+        switch regionList {
+        case .loading:
+            // TODO: Show loading spinner
+            return
+        case .loaded(let regionList):
+            self.regions = regionList.alphabetized
+            updateTitle(withRegions: regions)
+            tableView.reloadData()
+        case .errored(_):
+            // TODO: Display error
+            print(regionList.description)
+            return
+        }
     }
     
 }

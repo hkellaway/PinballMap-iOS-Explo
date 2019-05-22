@@ -32,7 +32,7 @@ final class MVVMStateVisualizerViewController: StateVisualizerViewController {
             return State(selectedRegion: session.currentRegion,
                          selectedLocation: nil,
                          selectedMachine: nil,
-                         regionList: RegionList(regions: regions),
+                         regionList: .loaded(success: RegionList(regions: regions)),
                          locationList: nil,
                          machineList: nil)
         } else {
