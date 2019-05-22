@@ -10,5 +10,5 @@ import Foundation
 import ReSwift
 
 struct LoadMachines: Action {
-    let machineList: MachineList
+    let machineList: APIResponseStatus<MachineList>?
 }

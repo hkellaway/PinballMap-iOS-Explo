@@ -54,13 +54,12 @@ final class APIActions {
         httpClient.getMachines(inRegion: selectedRegion) { [weak self] result in
             switch result {
             case .success(let machineList):
-                self?.store.dispatch(LoadMachines(machineList: machineList))
+                self?.store.dispatch(LoadMachines(machineList: .loaded(success: machineList)))
             case .failure(let error):
-                // TODO
-                print(error.localizedDescription)
+                self?.store.dispatch(LoadMachines(machineList: .errored(failure: error)))
             }
         }
-        return nil
+        return LoadMachines(machineList: .loading)
     }
     
 }

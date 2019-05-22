@@ -78,7 +78,7 @@ final class AppReducer {
         }
     }
     
-    private func machineListReducer(state: State?, action: Action) -> MachineList? {
+    private func machineListReducer(state: State?, action: Action) -> APIResponseStatus<MachineList>? {
         switch action {
         case is Clear:
             return nil

@@ -45,10 +45,28 @@ final class ReduxMachinesViewController: MachinesViewController, StoreSubscriber
     // MARK: StoreSubscriber
     
     func newState(state: State) {
-        updateTitle(withRegion: state.selectedRegion)
-        self.machines = state.machineList?.alphabetized ?? []
-        navigator.setTabBadge(tab: .machines, value: state.machineList?.count ?? 0)
-        tableView.reloadData()
+        guard let machineList = state.machineList else {
+            view.hideActivityIndicator()
+            updateTitle(withRegion: state.selectedRegion)
+            self.machines = []
+            navigator.setTabBadge(tab: .machines, value: 0)
+            tableView.reloadData()
+            return
+        }
+        
+        switch machineList {
+        case .loading:
+            view.showActivityIndicator()
+        case .loaded(let machineList):
+            view.hideActivityIndicator()
+            updateTitle(withRegion: state.selectedRegion)
+            self.machines = machineList.alphabetized
+            navigator.setTabBadge(tab: .machines, value: machineList.count)
+            tableView.reloadData()
+        case .errored(let error):
+            view.hideActivityIndicator()
+            displayError(error)
+        }
     }
     
 }

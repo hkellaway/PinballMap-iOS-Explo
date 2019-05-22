@@ -15,7 +15,7 @@ struct State: StateType {
     let selectedMachine: Machine?
     let regionList: APIResponseStatus<RegionList>?
     let locationList: LocationList?
-    let machineList: MachineList?
+    let machineList: APIResponseStatus<MachineList>?
 }
 
 // MARK: - Protocol conformance
@@ -39,7 +39,7 @@ extension State: CustomStringConvertible {
         NUM LOCATONS: \(locationList?.count ?? 0)
         LOCATIONS: \(locationList?.description ?? [].description)
         \n
-        NUM MACHINES: \(machineList?.count ?? 0)
+        NUM MACHINES: \(machineList?.value?.count ?? 0)
         MACHINES: \(machineList?.description ?? [].description)
         """
     }

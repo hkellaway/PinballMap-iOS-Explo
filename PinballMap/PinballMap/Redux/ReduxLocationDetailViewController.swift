@@ -41,9 +41,10 @@ final class ReduxLocationDetailViewController: LocationDetailViewController, Sto
     
     func newState(state: State) {
         self.location = state.selectedLocation
-        machines = state.machineList == nil
+        machines = state.machineList?.value == nil
             ? []
-            : location?.machinesInCommon(with: state.machineList!).alphabetized ?? []
+            : location?.machinesInCommon(with: state.machineList!.value!).alphabetized
+            ?? []
         tableView.reloadData()
         
         if location == nil {
