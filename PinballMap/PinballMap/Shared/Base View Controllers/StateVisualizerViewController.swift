@@ -24,6 +24,7 @@ class StateVisualizerViewController: UIViewController {
     var stateScrollView = UIScrollView()
     var stateTextView = UITextView()
     var refreshButton = UIBarButtonItem()
+    var clearButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,10 @@ class StateVisualizerViewController: UIViewController {
         architectureSwitcher?.toggleArchitecture()
     }
     
+    @objc private func didClearState(sender: UIButton) {
+        architectureSwitcher?.clearState()
+    }
+    
     private func setupConstraints() {
         view.addSubview(architectureLabel)
         architectureLabel.leadingToSuperview(offset: 8)
@@ -66,7 +71,7 @@ class StateVisualizerViewController: UIViewController {
         view.addSubview(stateLabel)
         stateLabel.leading(to: architectureLabel)
         stateLabel.trailing(to: architectureLabel)
-        stateLabel.topToBottom(of: architectureTextField, offset: 20)
+        stateLabel.topToBottom(of: architectureTextField, offset: 30)
         
         view.addSubview(stateScrollView)
         stateScrollView.leading(to: stateLabel)
@@ -76,6 +81,12 @@ class StateVisualizerViewController: UIViewController {
         
         view.addSubview(stateTextView)
         stateTextView.edges(to: stateScrollView)
+        
+        view.addSubview(clearButton)
+        clearButton.trailingToSuperview(offset: 8)
+        clearButton.centerX(to: toggleArchitectureButton)
+        clearButton.topToBottom(of: toggleArchitectureButton, offset: 8)
+        clearButton.width(100)
     }
     
     private func setupDesign() {
@@ -94,6 +105,10 @@ class StateVisualizerViewController: UIViewController {
                                         target: self,
                                         action: #selector(didTapRefresh))
         navigationItem.rightBarButtonItem = refreshButton
+        clearButton.setTitle("Clear State", for: .normal)
+        clearButton.setTitleColor(.black, for: .normal)
+        clearButton.backgroundColor = .yellow
+        clearButton.addTarget(self, action: #selector(didClearState), for: .touchUpInside)
     }
     
 }

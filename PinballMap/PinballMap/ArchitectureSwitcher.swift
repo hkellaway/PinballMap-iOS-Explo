@@ -18,6 +18,8 @@ protocol ArchitectureSwitcher: class {
     @discardableResult
     func switchArchitecture(to newArchitecture: Architecture) -> Bool
     
+    func clearState()
+    
 }
 
 extension ArchitectureSwitcher {

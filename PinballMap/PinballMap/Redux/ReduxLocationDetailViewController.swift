@@ -40,10 +40,15 @@ final class ReduxLocationDetailViewController: LocationDetailViewController, Sto
     // MARK: StoreSubscriber
     
     func newState(state: State) {
+        self.location = state.selectedLocation
         machines = state.machineList == nil
             ? []
-            : location.machinesInCommon(with: state.machineList!).alphabetized
+            : location?.machinesInCommon(with: state.machineList!).alphabetized ?? []
         tableView.reloadData()
+        
+        if location == nil {
+            clear()
+        }
     }
     
 }
@@ -72,7 +77,7 @@ extension ReduxLocationDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Pinball Machines (\(location.numMachines))"
+            return location == nil ? nil : "Pinball Machines (\(location!.numMachines))"
         default:
             return nil
         }

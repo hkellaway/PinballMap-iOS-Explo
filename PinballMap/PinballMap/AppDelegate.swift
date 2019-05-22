@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ArchitectureSwitcher {
     
     @discardableResult
     func restartApp(architecture: Architecture) -> Bool {
-        dependencyManager.clearState()
+        clearState()
         dependencyManager.architecture = architecture
         return startApp()
     }
@@ -62,6 +62,17 @@ extension AppDelegate {
             return true
         }
         return restartApp(architecture: newArchitecture)
+    }
+    
+    func clearState() {
+        dependencyManager.navigator().popAllTabsToRoot()
+        
+        switch currentArchitecture {
+        case .redux:
+            dependencyManager.store().dispatch(Clear())
+        case .mvvm:
+            Session.shared.clear()
+        }
     }
     
 }

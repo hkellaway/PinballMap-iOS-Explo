@@ -34,22 +34,6 @@ final class DependencyManager: ViewBuilder {
         navigator().viewBuilder = self
     }
     
-    // MARK: - Instance functions
-    
-    func clearState() {
-        switch architecture {
-        case .redux:
-            store().state = State(selectedRegion: nil,
-                                  selectedLocation: nil,
-                                  selectedMachine: nil,
-                                  regionList: nil,
-                                  locationList: nil,
-                                  machineList: nil)
-        case .mvvm:
-            Session.shared.clear()
-        }
-    }
-    
     // MARK: - Dependencies
     
     // MARK: Redux-specific

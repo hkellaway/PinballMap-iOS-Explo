@@ -63,6 +63,20 @@ final class Navigator {
     }
     
     @discardableResult
+    func popAllTabsToRoot(animated: Bool = false) -> Bool {
+        guard
+            let locationsNav = locationsNavigatonController,
+            let machinesNav = machinesNavigationController,
+            let stateNav = stateNavigationController else {
+            return false
+        }
+        locationsNav.popToRootViewController(animated: animated)
+        machinesNav.popToRootViewController(animated: animated)
+        stateNav.popToRootViewController(animated: animated)
+        return true
+    }
+    
+    @discardableResult
     func selectTab(_ tab: RootTabBarController.Tab) -> Bool {
         guard let rootTabBar = rootTabBar else {
             return false

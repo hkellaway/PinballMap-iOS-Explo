@@ -26,6 +26,8 @@ final class AppReducer {
     
     private func locationReducer(state: State?, action: Action) -> Location? {
         switch action {
+        case is Clear:
+            return nil
         case let action as SelectLocation:
             return action.location
         case let action as SelectRegion:
@@ -42,6 +44,8 @@ final class AppReducer {
     
     private func locationListReducer(state: State?, action: Action) -> LocationList? {
         switch action {
+        case is Clear:
+            return nil
         case let action as LoadLocations:
             return action.locationList
         case let action as SelectRegion:
@@ -58,6 +62,8 @@ final class AppReducer {
     
     private func machineReducer(state: State?, action: Action) -> Machine? {
         switch action {
+        case is Clear:
+            return nil
         case let action as SelectMachine:
             return action.machine
         case let action as SelectRegion:
@@ -74,6 +80,8 @@ final class AppReducer {
     
     private func machineListReducer(state: State?, action: Action) -> MachineList? {
         switch action {
+        case is Clear:
+            return nil
         case let action as LoadMachines:
             return action.machineList
         case let action as SelectRegion:
@@ -90,6 +98,8 @@ final class AppReducer {
     
     private func regionReducer(state: Region?, action: Action) -> Region? {
         switch action {
+        case is Clear:
+            return nil
         case let action as SelectRegion:
             return action.region
         default:
@@ -99,6 +109,8 @@ final class AppReducer {
     
     private func regionListReducer(state: APIResponseStatus<RegionList>?, action: Action) -> APIResponseStatus<RegionList>? {
         switch action {
+        case is Clear:
+            return nil
         case let action as LoadRegions:
             return action.regionList
         default:

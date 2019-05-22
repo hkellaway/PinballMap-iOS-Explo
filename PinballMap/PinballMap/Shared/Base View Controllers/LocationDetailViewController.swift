@@ -13,7 +13,7 @@ class LocationDetailViewController: UIViewController {
     
     // Dependencies
     
-    var location: Location!
+    var location: Location?
     
     // UI Elements
     
@@ -30,14 +30,19 @@ class LocationDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        navigationItem.title = location.name
+        navigationItem.title = location?.name ?? "NONE"
         setupConstraints()
         
-        let streetString = location.street ?? "NONE"
+        let streetString = location?.street ?? "NONE"
         addressStreetLabel.text = """
         Street:\n
         \(streetString)
         """
+    }
+    
+    func clear() {
+        navigationItem.title = nil
+        addressStreetLabel.text = nil
     }
     
     private func setupConstraints() {
