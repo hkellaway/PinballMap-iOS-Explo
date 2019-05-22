@@ -116,7 +116,11 @@ final class DependencyManager: ViewBuilder {
     func machinesViewController() -> MachinesViewController {
         switch architecture {
         case .mvvm:
-            return MVVMMachinesViewController()
+            let viewModel = MachinesViewModel(httpClient: httpClient())
+            let view = MVVMMachinesViewController(viewModel: viewModel,
+                                                  navigator: navigator())
+            viewModel.view = view
+            return view
         case .redux:
             let view = ReduxMachinesViewController(store: store(),
                                                    navigator: navigator())
