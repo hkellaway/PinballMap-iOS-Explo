@@ -46,11 +46,8 @@ final class ReduxMachinesViewController: MachinesViewController, StoreSubscriber
     
     func newState(state: State) {
         guard let machineList = state.machineList else {
-            view.hideActivityIndicator()
-            updateTitle(withRegion: state.selectedRegion)
-            self.machines = []
-            navigator.setTabBadge(tab: .machines, value: 0)
-            tableView.reloadData()
+            let noMachines = MachineList(machines: [])
+            displayMachines(noMachines, forRegion: state.selectedRegion)
             return
         }
         
@@ -58,15 +55,20 @@ final class ReduxMachinesViewController: MachinesViewController, StoreSubscriber
         case .loading:
             view.showActivityIndicator()
         case .loaded(let machineList):
-            view.hideActivityIndicator()
-            updateTitle(withRegion: state.selectedRegion)
-            self.machines = machineList.alphabetized
-            navigator.setTabBadge(tab: .machines, value: machineList.count)
-            tableView.reloadData()
+            displayMachines(machineList, forRegion: state.selectedRegion)
         case .errored(let error):
             view.hideActivityIndicator()
             displayError(error)
         }
+    }
+    
+    private func displayMachines(_ machineList: MachineList,
+                                 forRegion region: Region?) {
+        view.hideActivityIndicator()
+        updateTitle(withRegion: region)
+        self.machines = machineList.alphabetized
+        navigator.setTabBadge(tab: .machines, value: machineList.count)
+        tableView.reloadData()
     }
     
 }
