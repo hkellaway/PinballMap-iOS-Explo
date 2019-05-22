@@ -10,5 +10,5 @@ import Foundation
 import ReSwift
 
 struct LoadLocations: Action {
-    let locationList: LocationList
+    let locationList: APIResponseStatus<LocationList>
 }

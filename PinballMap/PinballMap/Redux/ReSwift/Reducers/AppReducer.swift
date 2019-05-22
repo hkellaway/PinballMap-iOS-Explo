@@ -42,7 +42,7 @@ final class AppReducer {
         }
     }
     
-    private func locationListReducer(state: State?, action: Action) -> LocationList? {
+    private func locationListReducer(state: State?, action: Action) -> APIResponseStatus<LocationList>? {
         switch action {
         case is Clear:
             return nil

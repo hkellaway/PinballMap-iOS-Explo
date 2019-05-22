@@ -41,8 +41,23 @@ final class ReduxLocationsViewController: LocationsViewController, StoreSubscrib
     // MARK: StoreSubscriber
     
     func newState(state: State) {
-        self.locations = state.locationList?.alphabetized ?? []
-        tableView.reloadData()
+        guard let locationList = state.locationList else {
+            self.locations = []
+            tableView.reloadData()
+            return
+        }
+        
+        switch locationList {
+        case .loading:
+            view.showActivityIndicator()
+        case .loaded(let locationList):
+            view.hideActivityIndicator()
+            self.locations = locationList.alphabetized
+            tableView.reloadData()
+        case .errored(let error):
+            view.hideActivityIndicator()
+            displayError(error)
+        }
     }
     
 }

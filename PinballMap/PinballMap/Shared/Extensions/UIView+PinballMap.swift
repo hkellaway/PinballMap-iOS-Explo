@@ -15,6 +15,14 @@ extension UIView {
     /// - Parameters:
     ///   - color: Activity indicator color.
     open func showActivityIndicator(color: UIColor = .black) {
+        // Could have a more elegant solution than this, but thats not
+        // the point of this demo!
+        for view in subviews {
+            if let _ = view as? UIActivityIndicatorView {
+                return
+            }
+        }
+        
         let indicator = UIActivityIndicatorView()
         
         indicator.color = color

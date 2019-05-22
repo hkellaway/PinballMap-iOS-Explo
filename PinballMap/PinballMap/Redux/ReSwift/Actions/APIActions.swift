@@ -38,13 +38,12 @@ final class APIActions {
         httpClient.getLocations(inRegion: selectedRegion) { [weak self] result in
             switch result {
             case .success(let locationList):
-                self?.store.dispatch(LoadLocations(locationList: locationList))
+                self?.store.dispatch(LoadLocations(locationList: .loaded(success: locationList)))
             case .failure(let error):
-                // TODO
-                print(error.localizedDescription)
+                self?.store.dispatch(LoadLocations(locationList: .errored(failure: error)))
             }
         }
-        return nil
+        return LoadLocations(locationList: .loading)
     }
     
     func loadMachines(state: State, store: Store<State>) -> Action? {

@@ -14,7 +14,7 @@ struct State: StateType {
     let selectedLocation: Location?
     let selectedMachine: Machine?
     let regionList: APIResponseStatus<RegionList>?
-    let locationList: LocationList?
+    let locationList: APIResponseStatus<LocationList>?
     let machineList: APIResponseStatus<MachineList>?
 }
 
@@ -36,7 +36,7 @@ extension State: CustomStringConvertible {
         NUM REGIONS: \(regionList?.value?.count ?? 0)
         REGIONS: \(regionList?.description ?? [].description)
         \n
-        NUM LOCATONS: \(locationList?.count ?? 0)
+        NUM LOCATONS: \(locationList?.value?.count ?? 0)
         LOCATIONS: \(locationList?.description ?? [].description)
         \n
         NUM MACHINES: \(machineList?.value?.count ?? 0)
