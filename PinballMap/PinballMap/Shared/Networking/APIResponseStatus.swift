@@ -26,7 +26,7 @@ enum APIResponseStatus<T: Decodable & Equatable & CustomStringConvertible>: Cust
     var description: String {
         switch self {
         case .loading:
-            return "Loading..."
+            return "LOADING..."
         case .loaded(let value):
             return value.description
         case .errored(let error):
