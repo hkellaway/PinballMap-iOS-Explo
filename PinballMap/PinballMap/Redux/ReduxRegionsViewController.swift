@@ -42,10 +42,8 @@ final class ReduxRegionsViewController: RegionsViewController, StoreSubscriber {
     
     func newState(state: State) {
         guard let regionList = state.regionList else {
-            view.hideActivityIndicator()
-            self.regions = []
-            updateTitle(withRegions: regions)
-            tableView.reloadData()
+            let noRegions = RegionList(regions: [])
+            displayRegions(noRegions)
             return
         }
         
@@ -53,14 +51,18 @@ final class ReduxRegionsViewController: RegionsViewController, StoreSubscriber {
         case .loading:
             view.showActivityIndicator()
         case .loaded(let regionList):
-            view.hideActivityIndicator()
-            self.regions = regionList.alphabetized
-            updateTitle(withRegions: regions)
-            tableView.reloadData()
+            displayRegions(regionList)
         case .errored(let error):
             view.hideActivityIndicator()
             displayError(error)
         }
+    }
+    
+    private func displayRegions(_ regionList: RegionList) {
+        view.hideActivityIndicator()
+        self.regions = regionList.alphabetized
+        updateTitle(withRegions: regions)
+        tableView.reloadData()
     }
     
 }
