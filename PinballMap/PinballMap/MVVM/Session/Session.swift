@@ -13,9 +13,11 @@ final class Session {
     static var shared = Session()
     
     var currentRegion: Region?
+    var currenLocation: Location?
     
     func clear() {
         currentRegion = nil
+        currenLocation = nil
     }
     
 }

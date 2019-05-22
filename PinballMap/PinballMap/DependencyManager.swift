@@ -81,7 +81,11 @@ final class DependencyManager: ViewBuilder {
         switch architecture {
         case .mvvm:
             let view = MVVMLocationsViewController()
+            let viewModel = LocationsViewModel(httpClient: httpClient(),
+                                               navigator: navigator())
             view.region = region
+            view.viewModel = viewModel
+            viewModel.view = view
             return view
         case .redux:
             let view = ReduxLocationsViewController()

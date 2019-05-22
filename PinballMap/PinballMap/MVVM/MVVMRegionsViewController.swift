@@ -62,6 +62,10 @@ extension MVVMRegionsViewController: UITableViewDataSource {
 
 extension MVVMRegionsViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.isSelected = viewModel.isCurrentRegion(atIndex: indexPath)
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectRegion(atIndex: indexPath)
     }

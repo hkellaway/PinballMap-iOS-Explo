@@ -41,6 +41,11 @@ final class RegionsViewModel {
         }
     }
     
+    func isCurrentRegion(atIndex indexPath: IndexPath) -> Bool {
+        let region = regions[indexPath.row]
+        return session.currentRegion == region
+    }
+    
     func didSelectRegion(atIndex indexPath: IndexPath) {
         let region = regions[indexPath.row]
         session.currentRegion = region

@@ -30,14 +30,14 @@ final class MVVMStateVisualizerViewController: StateVisualizerViewController {
         
         if let regions = locationsViewModel?.regions {
             return State(selectedRegion: session.currentRegion,
-                         selectedLocation: nil,
+                         selectedLocation: session.currenLocation,
                          selectedMachine: nil,
                          regionList: .loaded(success: RegionList(regions: regions)),
                          locationList: nil,
                          machineList: nil)
         } else {
             return State(selectedRegion: session.currentRegion,
-                         selectedLocation: nil,
+                         selectedLocation: session.currenLocation,
                          selectedMachine: nil,
                          regionList: nil,
                          locationList: nil,
