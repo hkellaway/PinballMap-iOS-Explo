@@ -47,6 +47,7 @@ final class MVVMMachinesViewController: MachinesViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     
@@ -108,6 +109,7 @@ extension MVVMMachinesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let machine = viewModel.machines[indexPath.row]
+        session.selectedMachine = machine
         navigator.navigateToMachineDetail(forMachine: machine)
     }
     
