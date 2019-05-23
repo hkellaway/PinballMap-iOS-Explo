@@ -14,10 +14,12 @@ final class Session {
     
     var currentRegion: Region?
     var currenLocation: Location?
+    var currentMachine: Machine?
     
     func clear() {
         currentRegion = nil
         currenLocation = nil
+        currentMachine = nil
     }
     
 }

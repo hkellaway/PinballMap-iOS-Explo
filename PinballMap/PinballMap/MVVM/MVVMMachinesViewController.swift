@@ -31,16 +31,22 @@ final class MVVMMachinesViewController: MachinesViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        updateTitle(withRegion: session.currentRegion)
-    }
-    
     deinit {
         notificationCenter.removeObserver(self,
                                           name: .regionUpdated,
                                           object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        updateTitle(withRegion: session.currentRegion)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.dataSource = self
     }
     
     
@@ -48,6 +54,7 @@ final class MVVMMachinesViewController: MachinesViewController {
         view.hideActivityIndicator()
         navigator.setTabBadge(tab: .machines,
                               value: viewModel.machines.count)
+        tableView.reloadData()
     }
     
     func errorOccurred(_ error: Error) {
@@ -63,6 +70,45 @@ final class MVVMMachinesViewController: MachinesViewController {
         navigator.setTabBadge(tab: .machines, value: 0)
         view.showActivityIndicator()
         viewModel.load(forRegion: region)
+    }
+    
+}
+
+// MARK: - Protocol conformance
+
+// MARK: UITableViewDataSource
+
+extension MVVMMachinesViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.machines.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let machine = viewModel.machines[indexPath.row]
+        cell.textLabel?.text = machine.name
+        return cell
+    }
+    
+}
+
+// MARK: UITableViewDelegate
+
+extension MVVMMachinesViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let machine = viewModel.machines[indexPath.row]
+        cell.isSelected = session.currentMachine == machine
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let machine = viewModel.machines[indexPath.row]
+        navigator.navigateToMachineDetail(forMachine: machine)
     }
     
 }
