@@ -108,9 +108,7 @@ extension MVVMMachinesViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let machine = viewModel.machines[indexPath.row]
-        session.selectedMachine = machine
-        navigator.navigateToMachineDetail(forMachine: machine)
+        viewModel.didSelectMachine(atIndex: indexPath)
     }
     
 }

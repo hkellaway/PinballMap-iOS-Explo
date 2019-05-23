@@ -11,5 +11,6 @@ import Foundation
 extension Notification.Name {
     
     static var regionUpdated = Notification.Name(rawValue: "PinballMapRegionUpdated")
+    static var machineSelected = Notification.Name(rawValue: "PinballMapMachineSelected")
     
 }

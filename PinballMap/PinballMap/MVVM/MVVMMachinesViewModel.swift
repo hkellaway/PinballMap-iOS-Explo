@@ -14,6 +14,9 @@ final class MachinesViewModel {
     
     weak var view: MVVMMachinesViewController?
     let httpClient: HTTPClient
+    let navigator: Navigator
+    let session: Session = Session.shared
+    let notificationCenter: NotificationCenter = .default
     
     // State
     
@@ -21,8 +24,9 @@ final class MachinesViewModel {
     
     // MARK: -
     
-    init(httpClient: HTTPClient) {
+    init(httpClient: HTTPClient, navigator: Navigator) {
         self.httpClient = httpClient
+        self.navigator = navigator
     }
     
     func load(forRegion region: Region) {
@@ -35,6 +39,14 @@ final class MachinesViewModel {
                 self?.view?.errorOccurred(error)
             }
         }
+    }
+    
+    func didSelectMachine(atIndex indexPath: IndexPath) {
+        let machine = machines[indexPath.row]
+        session.selectedMachine = machine
+        notificationCenter.post(name: .machineSelected,
+                                object: machine)
+        navigator.navigateToMachineDetail(forMachine: machine)
     }
     
 }
