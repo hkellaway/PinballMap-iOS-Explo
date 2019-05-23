@@ -80,4 +80,8 @@ extension MVVMLocationDetailViewController: UITableViewDelegate {
         cell.isSelected = session.selectedMachine == machine
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectMachine(atIndex: indexPath)
+    }
+    
 }

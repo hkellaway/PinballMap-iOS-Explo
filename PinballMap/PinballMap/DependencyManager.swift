@@ -102,7 +102,8 @@ final class DependencyManager: ViewBuilder {
         switch architecture {
         case .mvvm:
             let view = MVVMLocationDetailViewController()
-            let viewModel = LocationDetailViewModel(httpClient: httpClient())
+            let viewModel = LocationDetailViewModel(httpClient: httpClient(),
+                                                    navigator: navigator())
             view.location = location
             view.viewModel = viewModel
             viewModel.view = view

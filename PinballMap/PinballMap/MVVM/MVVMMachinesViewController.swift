@@ -41,6 +41,7 @@ final class MVVMMachinesViewController: MachinesViewController {
         super.viewWillAppear(animated)
         
         updateTitle(withRegion: session.selectedRegion)
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {

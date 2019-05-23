@@ -49,6 +49,8 @@ final class RegionsViewModel {
     func didSelectRegion(atIndex indexPath: IndexPath) {
         let region = regions[indexPath.row]
         session.selectedRegion = region
+        session.selectedLocation = nil
+        session.selectedMachine = nil
         notificationCenter.post(name: .regionUpdated,
                                 object: region)
         navigator.navigateToLocations(forRegion: region)
