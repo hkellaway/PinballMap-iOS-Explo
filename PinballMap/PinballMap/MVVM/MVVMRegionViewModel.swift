@@ -43,12 +43,12 @@ final class RegionsViewModel {
     
     func isCurrentRegion(atIndex indexPath: IndexPath) -> Bool {
         let region = regions[indexPath.row]
-        return session.currentRegion == region
+        return session.selectedRegion == region
     }
     
     func didSelectRegion(atIndex indexPath: IndexPath) {
         let region = regions[indexPath.row]
-        session.currentRegion = region
+        session.selectedRegion = region
         notificationCenter.post(name: .regionUpdated,
                                 object: region)
         navigator.navigateToLocations(forRegion: region)

@@ -40,7 +40,7 @@ final class MVVMMachinesViewController: MachinesViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        updateTitle(withRegion: session.currentRegion)
+        updateTitle(withRegion: session.selectedRegion)
     }
     
     override func viewDidLoad() {
@@ -103,7 +103,7 @@ extension MVVMMachinesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let machine = viewModel.machines[indexPath.row]
-        cell.isSelected = session.currentMachine == machine
+        cell.isSelected = session.selectedMachine == machine
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

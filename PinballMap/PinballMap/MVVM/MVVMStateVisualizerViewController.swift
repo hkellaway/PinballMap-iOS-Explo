@@ -25,8 +25,9 @@ final class MVVMStateVisualizerViewController: StateVisualizerViewController {
         
         // Get selectedRegion and selectedLocation from shared Session:
         
-        let selectedRegion: Region? = Session.shared.currentRegion
-        let selectedLocation: Location? = Session.shared.currenLocation
+        let selectedRegion: Region? = Session.shared.selectedRegion
+        let selectedLocation: Location? = Session.shared.selectedLocation
+        let selectedMachine: Machine? = Session.shared.selectedMachine
         
         // Get Regions from RegionsViewModel:
         
@@ -63,7 +64,7 @@ final class MVVMStateVisualizerViewController: StateVisualizerViewController {
         
         return State(selectedRegion: selectedRegion,
                      selectedLocation: selectedLocation,
-                     selectedMachine: nil,
+                     selectedMachine: selectedMachine,
                      regionList: regionList,
                      locationList: locationList,
                      machineList: machineList)

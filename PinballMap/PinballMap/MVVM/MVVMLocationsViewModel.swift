@@ -41,12 +41,12 @@ final class LocationsViewModel {
     
     func isCurrentLocation(atIndex indexPath: IndexPath) -> Bool {
         let location = locations[indexPath.row]
-        return session.currenLocation == location
+        return session.selectedLocation == location
     }
     
     func didSelectLocation(atIndex indexPath: IndexPath) {
         let location = locations[indexPath.row]
-        session.currenLocation = location
+        session.selectedLocation = location
     }
 
 }
