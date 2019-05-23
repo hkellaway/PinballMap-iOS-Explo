@@ -15,6 +15,7 @@ final class LocationDetailViewModel {
     weak var view: MVVMLocationDetailViewController?
     let httpClient: HTTPClient
     let session: Session = Session.shared
+    let notificationCenter: NotificationCenter = .default
     
     // State
     
@@ -29,6 +30,17 @@ final class LocationDetailViewModel {
     
     init(httpClient: HTTPClient) {
         self.httpClient = httpClient
+        
+        notificationCenter.addObserver(self,
+                                       selector: #selector(machineSelected(notification:)),
+                                       name: .machineSelected,
+                                       object: nil)
+    }
+    
+    deinit {
+        notificationCenter.removeObserver(self,
+                                          name: .machineSelected,
+                                          object: nil)
     }
     
     func load() {
@@ -46,6 +58,13 @@ final class LocationDetailViewModel {
                 self?.view?.errorOccurred(error)
             }
         }
+    }
+    
+    @objc private func machineSelected(notification: Notification) {
+        guard let machine = notification.object as? Machine else {
+            return
+        }
+        view?.notifyMachineSelected()
     }
     
 }
