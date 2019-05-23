@@ -14,6 +14,8 @@ final class LocationsViewModel {
     
     weak var view: MVVMLocationsViewController?
     let httpClient: HTTPClient
+    let navigator: Navigator
+    let notificationCenter: NotificationCenter = .default
     let session = Session.shared
     
     // State
@@ -25,6 +27,12 @@ final class LocationsViewModel {
     init(httpClient: HTTPClient,
          navigator: Navigator) {
         self.httpClient = httpClient
+        self.navigator = navigator
+        
+        notificationCenter.addObserver(self,
+                                       selector: #selector(machineSelected(notification:)),
+                                       name: .machineSelected,
+                                       object: nil)
     }
     
     func load(forRegion region: Region) {
@@ -47,6 +55,11 @@ final class LocationsViewModel {
     func didSelectLocation(atIndex indexPath: IndexPath) {
         let location = locations[indexPath.row]
         session.selectedLocation = location
+        navigator.navigateToLocationDetail(forLocation: location)
+    }
+    
+    @objc private func machineSelected(notification: Notification) {
+        view?.notifyMachineSelected()
     }
 
 }

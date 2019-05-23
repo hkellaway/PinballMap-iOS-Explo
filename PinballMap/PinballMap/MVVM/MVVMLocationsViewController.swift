@@ -27,6 +27,10 @@ final class MVVMLocationsViewController: LocationsViewController {
         tableView.reloadData()
     }
     
+    func notifyMachineSelected() {
+        tableView.reloadData()
+    }
+    
     func errorOccurred(_ error: Error) {
         view.hideActivityIndicator()
         displayError(error)
