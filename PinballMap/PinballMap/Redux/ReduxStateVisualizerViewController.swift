@@ -11,8 +11,6 @@ import UIKit
 
 final class ReduxStateVisualizerViewController: StateVisualizerViewController, StoreSubscriber {
     
-    var store: Store<State>!
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         store.subscribe(self)

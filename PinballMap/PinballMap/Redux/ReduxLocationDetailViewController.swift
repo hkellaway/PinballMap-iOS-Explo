@@ -11,7 +11,6 @@ import UIKit
 
 final class ReduxLocationDetailViewController: LocationDetailViewController, StoreSubscriber {
     
-    var store: Store<State>!
     var navigator: Navigator!
     
     private var machines: [Machine] = []

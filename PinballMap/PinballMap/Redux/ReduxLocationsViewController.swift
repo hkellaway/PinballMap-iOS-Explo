@@ -12,7 +12,6 @@ import UIKit
 final class ReduxLocationsViewController: LocationsViewController, StoreSubscriber {
     
     var apiActions: APIActions!
-    var store: Store<State>!
     var navigator: Navigator!
     
     private var locations: [Location] = []

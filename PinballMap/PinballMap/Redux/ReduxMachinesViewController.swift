@@ -11,13 +11,11 @@ import UIKit
 
 final class ReduxMachinesViewController: MachinesViewController, StoreSubscriber {
     
-    let store: Store<State>
     let navigator: Navigator
     
     private var machines: [Machine] = []
     
-    init(store: Store<State>, navigator: Navigator) {
-        self.store = store
+    init(navigator: Navigator) {
         self.navigator = navigator
         
         super.init(nibName: nil, bundle: nil)

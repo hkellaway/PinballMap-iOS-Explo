@@ -69,7 +69,7 @@ extension AppDelegate {
         
         switch currentArchitecture {
         case .redux:
-            dependencyManager.store().dispatch(Clear())
+            store.dispatch(Clear())
         case .mvvm:
             Session.shared.clear()
         }

@@ -12,7 +12,6 @@ import UIKit
 final class ReduxRegionsViewController: RegionsViewController, StoreSubscriber {
     
     var apiActions: APIActions!
-    var store: Store<State>!
     var navigator: Navigator!
     
     private var regions: [Region] = []

@@ -16,12 +16,7 @@ final class DependencyManager: ViewBuilder {
     
     var architecture: Architecture = .mvvm {
         didSet {
-            switch architecture {
-            case .redux:
-                navigator().store = store()
-            default:
-                navigator().store = nil
-            }
+            navigator().architecture = architecture
         }
     }
     weak var architectureSwitcher: ArchitectureSwitcher?
@@ -35,12 +30,6 @@ final class DependencyManager: ViewBuilder {
     }
     
     // MARK: - Dependencies
-    
-    // MARK: Redux-specific
-    
-    func store() -> Store<State> {
-        return MyStore.shared
-    }
     
     // MARK: Shared
     
@@ -69,9 +58,7 @@ final class DependencyManager: ViewBuilder {
             return view
         case .redux:
             let view = ReduxRegionsViewController()
-            view.apiActions = APIActions(httpClient: httpClient(),
-                                         store: store())
-            view.store = store()
+            view.apiActions = APIActions(httpClient: httpClient())
             view.navigator = navigator()
             return view
         }
@@ -90,9 +77,7 @@ final class DependencyManager: ViewBuilder {
         case .redux:
             let view = ReduxLocationsViewController()
             view.region = region
-            view.apiActions = APIActions(httpClient: httpClient(),
-                                         store: store())
-            view.store = store()
+            view.apiActions = APIActions(httpClient: httpClient())
             view.navigator = navigator()
             return view
         }
@@ -111,7 +96,6 @@ final class DependencyManager: ViewBuilder {
         case .redux:
             let view = ReduxLocationDetailViewController()
             view.location = location
-            view.store = store()
             view.navigator = navigator()
             return view
         }
@@ -127,8 +111,7 @@ final class DependencyManager: ViewBuilder {
             viewModel.view = view
             return view
         case .redux:
-            let view = ReduxMachinesViewController(store: store(),
-                                                   navigator: navigator())
+            let view = ReduxMachinesViewController(navigator: navigator())
             return view
         }
     }
@@ -155,7 +138,6 @@ final class DependencyManager: ViewBuilder {
         case .redux:
             let view = ReduxStateVisualizerViewController()
             view.architectureSwitcher = architectureSwitcher
-            view.store = store()
             return view
         }
     }

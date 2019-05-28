@@ -15,8 +15,7 @@ final class Navigator {
     
     weak var viewBuilder: ViewBuilder?
     var rootWindow: UIWindow?
-    var architectureSwitcher: ArchitectureSwitcher?
-    var store: Store<State>?
+    var architecture: Architecture = .mvvm
     
     var rootTabBar: RootTabBarController?
     private var locationsNavigatonController: UINavigationController?
@@ -99,7 +98,9 @@ final class Navigator {
             return false
         }
         
-        store?.dispatch(SelectRegion(region: region))
+        if case .redux = architecture {
+            store.dispatch(SelectRegion(region: region))
+        }
         
         navController.pushViewController(view, animated: true)
         return true
@@ -113,7 +114,7 @@ final class Navigator {
                 return false
         }
         
-        store?.dispatch(SelectLocation(location: location))
+        store.dispatch(SelectLocation(location: location))
         
         navController.pushViewController(view, animated: true)
         return true
@@ -130,7 +131,7 @@ final class Navigator {
         
         switch selectedTab {
         case .machines:
-            store?.dispatch(SelectMachine(machine: machine))
+            store.dispatch(SelectMachine(machine: machine))
             navController.pushViewController(view, animated: true)
         default:
             navController.popToRootViewController(animated: false)
