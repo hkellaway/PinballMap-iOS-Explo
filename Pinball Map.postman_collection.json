@@ -1,0 +1,415 @@
+{
+	"info": {
+		"_postman_id": "8c928193-a6f3-b8e8-b377-fe3a62baafca",
+		"name": "Pinball Map",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Location - All in Region",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/region/{{REGION_NAME_NYC}}/locations.json",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"region",
+						"{{REGION_NAME_NYC}}",
+						"locations.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Location - By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/region/{{REGION_NAME_NYC}}/locations.json",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"region",
+						"{{REGION_NAME_NYC}}",
+						"locations.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Machine - All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/machines.json",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"machines.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Machine - All in Region",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/region/{{REGION_NAME_NYC}}/locations.json",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"region",
+						"{{REGION_NAME_NYC}}",
+						"locations.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Machine - By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/machines.json?region_id={{REGION_ID_NYC}}",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"machines.json"
+					],
+					"query": [
+						{
+							"key": "region_id",
+							"value": "{{REGION_ID_NYC}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region - All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/regions.json",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"regions.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region - By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/regions/{{REGION_ID_NYC}}.json",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"regions",
+						"{{REGION_ID_NYC}}.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region - All Closest by Lat/Lon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/regions/closest_by_lat_lon.json?lat={{LATITUDE_WORK}}&lon={{LONGITUDE_WORK}}",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"regions",
+						"closest_by_lat_lon.json"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "{{LATITUDE_WORK}}"
+						},
+						{
+							"key": "lon",
+							"value": "{{LONGITUDE_WORK}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region - Does Exist, By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/regions/does_region_exist.json?name={{REGION_NAME_NYC}}",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"regions",
+						"does_region_exist.json"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{REGION_NAME_NYC}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region - Total Num Locations and Machines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/regions/location_and_machine_counts.json",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"regions",
+						"location_and_machine_counts.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region - Num Locations and Machines, By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/regions/location_and_machine_counts.json?region_name={{REGION_NAME_NYC}}",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"regions",
+						"location_and_machine_counts.json"
+					],
+					"query": [
+						{
+							"key": "region_name",
+							"value": "{{REGION_NAME_NYC}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region - Suggest New",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/regions/suggest.json?region_name=test1&comments=hello world",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"regions",
+						"suggest.json"
+					],
+					"query": [
+						{
+							"key": "region_name",
+							"value": "test1"
+						},
+						{
+							"key": "comments",
+							"value": "hello world"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region - Contact Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/regions/contact.json?message=hello world&region_id={{REGION_ID_NYC}}&lat={{LATITUDE_WORK}}&lon={{LONGITUDE_WORK}}&name=Jane Doe&email=jane@doe.co",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"regions",
+						"contact.json"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "hello world"
+						},
+						{
+							"key": "region_id",
+							"value": "{{REGION_ID_NYC}}"
+						},
+						{
+							"key": "lat",
+							"value": "{{LATITUDE_WORK}}"
+						},
+						{
+							"key": "lon",
+							"value": "{{LONGITUDE_WORK}}"
+						},
+						{
+							"key": "name",
+							"value": "Jane Doe"
+						},
+						{
+							"key": "email",
+							"value": "jane@doe.co"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Region - App Feedback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/regions/contact.json?message=hello world&region_id={{REGION_ID_NYC}}&name=Jane Doe&email=jane@doe.co&os=&os_version=&device_info=&app_version=",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"regions",
+						"contact.json"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "hello world"
+						},
+						{
+							"key": "region_id",
+							"value": "{{REGION_ID_NYC}}"
+						},
+						{
+							"key": "name",
+							"value": "Jane Doe"
+						},
+						{
+							"key": "email",
+							"value": "jane@doe.co"
+						},
+						{
+							"key": "os",
+							"value": ""
+						},
+						{
+							"key": "os_version",
+							"value": ""
+						},
+						{
+							"key": "device_info",
+							"value": ""
+						},
+						{
+							"key": "app_version",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
