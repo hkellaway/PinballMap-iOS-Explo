@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView : View {
     var body: some View {
-        Text("Hello World")
+        Text("Hello " + Region(id: 1, name: "region-1", fullName: "Region1").fullName)
     }
 }
 
