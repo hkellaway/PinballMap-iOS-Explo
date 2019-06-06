@@ -20,6 +20,7 @@
 		DC0B9EC122A9A29A00349B2B /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EBB22A9A29A00349B2B /* Region.swift */; };
 		DC0B9EC222A9A29A00349B2B /* RegionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EBC22A9A29A00349B2B /* RegionList.swift */; };
 		DC0B9EC622A9A40F00349B2B /* Region+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EC522A9A40F00349B2B /* Region+Identifiable.swift */; };
+		DC0B9ECA22A9A54F00349B2B /* RegionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EC922A9A54F00349B2B /* RegionRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		DC0B9EBB22A9A29A00349B2B /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		DC0B9EBC22A9A29A00349B2B /* RegionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionList.swift; sourceTree = "<group>"; };
 		DC0B9EC522A9A40F00349B2B /* Region+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Region+Identifiable.swift"; sourceTree = "<group>"; };
+		DC0B9EC922A9A54F00349B2B /* RegionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				DC0B9EA122A9A25100349B2B /* AppDelegate.swift */,
 				DC0B9EA322A9A25100349B2B /* SceneDelegate.swift */,
 				DC0B9EA522A9A25100349B2B /* ContentView.swift */,
+				DC0B9EC922A9A54F00349B2B /* RegionRowView.swift */,
 				DC0B9EB622A9A29A00349B2B /* Models */,
 				DC0B9EC322A9A40000349B2B /* Utility */,
 				DC0B9EA722A9A25300349B2B /* Assets.xcassets */,
@@ -199,6 +202,7 @@
 				DC0B9EC122A9A29A00349B2B /* Region.swift in Sources */,
 				DC0B9EBE22A9A29A00349B2B /* Location.swift in Sources */,
 				DC0B9EBD22A9A29A00349B2B /* LocationList.swift in Sources */,
+				DC0B9ECA22A9A54F00349B2B /* RegionRowView.swift in Sources */,
 				DC0B9EA622A9A25100349B2B /* ContentView.swift in Sources */,
 				DC0B9EC222A9A29A00349B2B /* RegionList.swift in Sources */,
 				DC0B9EBF22A9A29A00349B2B /* Machine.swift in Sources */,
