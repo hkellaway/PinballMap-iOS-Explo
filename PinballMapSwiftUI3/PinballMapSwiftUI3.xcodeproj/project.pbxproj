@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC0B9F8122A9BD3500349B2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F8022A9BD3500349B2B /* AppDelegate.swift */; };
+		DC0B9F8322A9BD3500349B2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F8222A9BD3500349B2B /* SceneDelegate.swift */; };
+		DC0B9F8522A9BD3500349B2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F8422A9BD3500349B2B /* ContentView.swift */; };
+		DC0B9F8722A9BD3700349B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0B9F8622A9BD3700349B2B /* Assets.xcassets */; };
+		DC0B9F8A22A9BD3700349B2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0B9F8922A9BD3700349B2B /* Preview Assets.xcassets */; };
+		DC0B9F8D22A9BD3700349B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0B9F8B22A9BD3700349B2B /* LaunchScreen.storyboard */; };
+		DC0B9F9522A9BD4D00349B2B /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F9422A9BD4C00349B2B /* State.swift */; };
+		DC0B9F9D22A9BD7800349B2B /* LocationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F9722A9BD7800349B2B /* LocationList.swift */; };
+		DC0B9F9E22A9BD7800349B2B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F9822A9BD7800349B2B /* Location.swift */; };
+		DC0B9F9F22A9BD7800349B2B /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F9922A9BD7800349B2B /* Machine.swift */; };
+		DC0B9FA022A9BD7800349B2B /* MachineList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F9A22A9BD7800349B2B /* MachineList.swift */; };
+		DC0B9FA122A9BD7800349B2B /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F9B22A9BD7800349B2B /* Region.swift */; };
+		DC0B9FA222A9BD7800349B2B /* RegionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F9C22A9BD7800349B2B /* RegionList.swift */; };
+		DC0B9FB622A9BDA200349B2B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DC0B9FA622A9BDA200349B2B /* LICENSE */; };
+		DC0B9FB722A9BDA200349B2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DC0B9FA722A9BDA200349B2B /* README.md */; };
+		DC0B9FB822A9BDA200349B2B /* DefaultJSONHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FA922A9BDA200349B2B /* DefaultJSONHTTPClient.swift */; };
+		DC0B9FB922A9BDA200349B2B /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FAA22A9BDA200349B2B /* HTTPClientError.swift */; };
+		DC0B9FBA22A9BDA200349B2B /* JSONHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FAB22A9BDA200349B2B /* JSONHTTPClient.swift */; };
+		DC0B9FBB22A9BDA200349B2B /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FAC22A9BDA200349B2B /* HTTPRequest.swift */; };
+		DC0B9FBC22A9BDA200349B2B /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FAD22A9BDA200349B2B /* JSON.swift */; };
+		DC0B9FBD22A9BDA200349B2B /* HTTPResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FAE22A9BDA200349B2B /* HTTPResource.swift */; };
+		DC0B9FBE22A9BDA200349B2B /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FAF22A9BDA200349B2B /* HTTPClient.swift */; };
+		DC0B9FBF22A9BDA200349B2B /* HottPotatoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FB022A9BDA200349B2B /* HottPotatoError.swift */; };
+		DC0B9FC022A9BDA200349B2B /* HottPotato.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FB122A9BDA200349B2B /* HottPotato.swift */; };
+		DC0B9FC122A9BDA200349B2B /* JSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FB222A9BDA200349B2B /* JSONError.swift */; };
+		DC0B9FC222A9BDA200349B2B /* PinballMapHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FB322A9BDA200349B2B /* PinballMapHTTPClient.swift */; };
+		DC0B9FC322A9BDA200349B2B /* PinballMapHTTPResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FB422A9BDA200349B2B /* PinballMapHTTPResource.swift */; };
+		DC0B9FC422A9BDA200349B2B /* APIResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FB522A9BDA200349B2B /* APIResponseStatus.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DC0B9F7D22A9BD3500349B2B /* PinballMapSwiftUI3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinballMapSwiftUI3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC0B9F8022A9BD3500349B2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC0B9F8222A9BD3500349B2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DC0B9F8422A9BD3500349B2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DC0B9F8622A9BD3700349B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC0B9F8922A9BD3700349B2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DC0B9F8C22A9BD3700349B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC0B9F8E22A9BD3700349B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC0B9F9422A9BD4C00349B2B /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = State.swift; path = ../../PinballMap/PinballMap/State.swift; sourceTree = "<group>"; };
+		DC0B9F9722A9BD7800349B2B /* LocationList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationList.swift; sourceTree = "<group>"; };
+		DC0B9F9822A9BD7800349B2B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DC0B9F9922A9BD7800349B2B /* Machine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
+		DC0B9F9A22A9BD7800349B2B /* MachineList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineList.swift; sourceTree = "<group>"; };
+		DC0B9F9B22A9BD7800349B2B /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		DC0B9F9C22A9BD7800349B2B /* RegionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionList.swift; sourceTree = "<group>"; };
+		DC0B9FA622A9BDA200349B2B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DC0B9FA722A9BDA200349B2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DC0B9FA922A9BDA200349B2B /* DefaultJSONHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultJSONHTTPClient.swift; sourceTree = "<group>"; };
+		DC0B9FAA22A9BDA200349B2B /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
+		DC0B9FAB22A9BDA200349B2B /* JSONHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHTTPClient.swift; sourceTree = "<group>"; };
+		DC0B9FAC22A9BDA200349B2B /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		DC0B9FAD22A9BDA200349B2B /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		DC0B9FAE22A9BDA200349B2B /* HTTPResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResource.swift; sourceTree = "<group>"; };
+		DC0B9FAF22A9BDA200349B2B /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		DC0B9FB022A9BDA200349B2B /* HottPotatoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HottPotatoError.swift; sourceTree = "<group>"; };
+		DC0B9FB122A9BDA200349B2B /* HottPotato.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HottPotato.swift; sourceTree = "<group>"; };
+		DC0B9FB222A9BDA200349B2B /* JSONError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONError.swift; sourceTree = "<group>"; };
+		DC0B9FB322A9BDA200349B2B /* PinballMapHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinballMapHTTPClient.swift; sourceTree = "<group>"; };
+		DC0B9FB422A9BDA200349B2B /* PinballMapHTTPResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinballMapHTTPResource.swift; sourceTree = "<group>"; };
+		DC0B9FB522A9BDA200349B2B /* APIResponseStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponseStatus.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC0B9F7A22A9BD3500349B2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC0B9F7422A9BD3500349B2B = {
+			isa = PBXGroup;
+			children = (
+				DC0B9F7F22A9BD3500349B2B /* PinballMapSwiftUI3 */,
+				DC0B9F7E22A9BD3500349B2B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC0B9F7E22A9BD3500349B2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9F7D22A9BD3500349B2B /* PinballMapSwiftUI3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC0B9F7F22A9BD3500349B2B /* PinballMapSwiftUI3 */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9F8022A9BD3500349B2B /* AppDelegate.swift */,
+				DC0B9F8222A9BD3500349B2B /* SceneDelegate.swift */,
+				DC0B9F9422A9BD4C00349B2B /* State.swift */,
+				DC0B9F8422A9BD3500349B2B /* ContentView.swift */,
+				DC0B9F9622A9BD7800349B2B /* Models */,
+				DC0B9FA322A9BD9400349B2B /* Utility */,
+				DC0B9F8622A9BD3700349B2B /* Assets.xcassets */,
+				DC0B9F8B22A9BD3700349B2B /* LaunchScreen.storyboard */,
+				DC0B9F8E22A9BD3700349B2B /* Info.plist */,
+				DC0B9F8822A9BD3700349B2B /* Preview Content */,
+			);
+			path = PinballMapSwiftUI3;
+			sourceTree = "<group>";
+		};
+		DC0B9F8822A9BD3700349B2B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9F8922A9BD3700349B2B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DC0B9F9622A9BD7800349B2B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9F9722A9BD7800349B2B /* LocationList.swift */,
+				DC0B9F9822A9BD7800349B2B /* Location.swift */,
+				DC0B9F9922A9BD7800349B2B /* Machine.swift */,
+				DC0B9F9A22A9BD7800349B2B /* MachineList.swift */,
+				DC0B9F9B22A9BD7800349B2B /* Region.swift */,
+				DC0B9F9C22A9BD7800349B2B /* RegionList.swift */,
+			);
+			name = Models;
+			path = ../../PinballMap/PinballMap/Shared/Models;
+			sourceTree = "<group>";
+		};
+		DC0B9FA322A9BD9400349B2B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9FA422A9BDA200349B2B /* Networking */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		DC0B9FA422A9BDA200349B2B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9FA522A9BDA200349B2B /* HottPotato */,
+				DC0B9FB322A9BDA200349B2B /* PinballMapHTTPClient.swift */,
+				DC0B9FB422A9BDA200349B2B /* PinballMapHTTPResource.swift */,
+				DC0B9FB522A9BDA200349B2B /* APIResponseStatus.swift */,
+			);
+			name = Networking;
+			path = ../../../PinballMap/PinballMap/Shared/Networking;
+			sourceTree = "<group>";
+		};
+		DC0B9FA522A9BDA200349B2B /* HottPotato */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9FA622A9BDA200349B2B /* LICENSE */,
+				DC0B9FA722A9BDA200349B2B /* README.md */,
+				DC0B9FA822A9BDA200349B2B /* Sources */,
+			);
+			path = HottPotato;
+			sourceTree = "<group>";
+		};
+		DC0B9FA822A9BDA200349B2B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9FA922A9BDA200349B2B /* DefaultJSONHTTPClient.swift */,
+				DC0B9FAA22A9BDA200349B2B /* HTTPClientError.swift */,
+				DC0B9FAB22A9BDA200349B2B /* JSONHTTPClient.swift */,
+				DC0B9FAC22A9BDA200349B2B /* HTTPRequest.swift */,
+				DC0B9FAD22A9BDA200349B2B /* JSON.swift */,
+				DC0B9FAE22A9BDA200349B2B /* HTTPResource.swift */,
+				DC0B9FAF22A9BDA200349B2B /* HTTPClient.swift */,
+				DC0B9FB022A9BDA200349B2B /* HottPotatoError.swift */,
+				DC0B9FB122A9BDA200349B2B /* HottPotato.swift */,
+				DC0B9FB222A9BDA200349B2B /* JSONError.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC0B9F7C22A9BD3500349B2B /* PinballMapSwiftUI3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC0B9F9122A9BD3700349B2B /* Build configuration list for PBXNativeTarget "PinballMapSwiftUI3" */;
+			buildPhases = (
+				DC0B9F7922A9BD3500349B2B /* Sources */,
+				DC0B9F7A22A9BD3500349B2B /* Frameworks */,
+				DC0B9F7B22A9BD3500349B2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PinballMapSwiftUI3;
+			productName = PinballMapSwiftUI3;
+			productReference = DC0B9F7D22A9BD3500349B2B /* PinballMapSwiftUI3.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC0B9F7522A9BD3500349B2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Harlan Kellaway";
+				TargetAttributes = {
+					DC0B9F7C22A9BD3500349B2B = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = DC0B9F7822A9BD3500349B2B /* Build configuration list for PBXProject "PinballMapSwiftUI3" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC0B9F7422A9BD3500349B2B;
+			productRefGroup = DC0B9F7E22A9BD3500349B2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC0B9F7C22A9BD3500349B2B /* PinballMapSwiftUI3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC0B9F7B22A9BD3500349B2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC0B9F8D22A9BD3700349B2B /* LaunchScreen.storyboard in Resources */,
+				DC0B9F8A22A9BD3700349B2B /* Preview Assets.xcassets in Resources */,
+				DC0B9FB722A9BDA200349B2B /* README.md in Resources */,
+				DC0B9FB622A9BDA200349B2B /* LICENSE in Resources */,
+				DC0B9F8722A9BD3700349B2B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC0B9F7922A9BD3500349B2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC0B9FB822A9BDA200349B2B /* DefaultJSONHTTPClient.swift in Sources */,
+				DC0B9FC022A9BDA200349B2B /* HottPotato.swift in Sources */,
+				DC0B9FA122A9BD7800349B2B /* Region.swift in Sources */,
+				DC0B9FBE22A9BDA200349B2B /* HTTPClient.swift in Sources */,
+				DC0B9F8122A9BD3500349B2B /* AppDelegate.swift in Sources */,
+				DC0B9FC222A9BDA200349B2B /* PinballMapHTTPClient.swift in Sources */,
+				DC0B9FBA22A9BDA200349B2B /* JSONHTTPClient.swift in Sources */,
+				DC0B9F8322A9BD3500349B2B /* SceneDelegate.swift in Sources */,
+				DC0B9FBD22A9BDA200349B2B /* HTTPResource.swift in Sources */,
+				DC0B9F9F22A9BD7800349B2B /* Machine.swift in Sources */,
+				DC0B9FBC22A9BDA200349B2B /* JSON.swift in Sources */,
+				DC0B9FC122A9BDA200349B2B /* JSONError.swift in Sources */,
+				DC0B9F8522A9BD3500349B2B /* ContentView.swift in Sources */,
+				DC0B9FBF22A9BDA200349B2B /* HottPotatoError.swift in Sources */,
+				DC0B9FA222A9BD7800349B2B /* RegionList.swift in Sources */,
+				DC0B9FC322A9BDA200349B2B /* PinballMapHTTPResource.swift in Sources */,
+				DC0B9F9522A9BD4D00349B2B /* State.swift in Sources */,
+				DC0B9FA022A9BD7800349B2B /* MachineList.swift in Sources */,
+				DC0B9FB922A9BDA200349B2B /* HTTPClientError.swift in Sources */,
+				DC0B9FBB22A9BDA200349B2B /* HTTPRequest.swift in Sources */,
+				DC0B9F9E22A9BD7800349B2B /* Location.swift in Sources */,
+				DC0B9F9D22A9BD7800349B2B /* LocationList.swift in Sources */,
+				DC0B9FC422A9BDA200349B2B /* APIResponseStatus.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DC0B9F8B22A9BD3700349B2B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC0B9F8C22A9BD3700349B2B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC0B9F8F22A9BD3700349B2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC0B9F9022A9BD3700349B2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC0B9F9222A9BD3700349B2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "PinballMapSwiftUI3/Preview\\ Content";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PinballMapSwiftUI3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.harlankellaway.PinballMapSwiftUI3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DC0B9F9322A9BD3700349B2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "PinballMapSwiftUI3/Preview\\ Content";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PinballMapSwiftUI3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.harlankellaway.PinballMapSwiftUI3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC0B9F7822A9BD3500349B2B /* Build configuration list for PBXProject "PinballMapSwiftUI3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC0B9F8F22A9BD3700349B2B /* Debug */,
+				DC0B9F9022A9BD3700349B2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC0B9F9122A9BD3700349B2B /* Build configuration list for PBXNativeTarget "PinballMapSwiftUI3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC0B9F9222A9BD3700349B2B /* Debug */,
+				DC0B9F9322A9BD3700349B2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC0B9F7522A9BD3500349B2B /* Project object */;
+}
