@@ -19,6 +19,7 @@
 		DC0B9EC022A9A29A00349B2B /* MachineList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EBA22A9A29A00349B2B /* MachineList.swift */; };
 		DC0B9EC122A9A29A00349B2B /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EBB22A9A29A00349B2B /* Region.swift */; };
 		DC0B9EC222A9A29A00349B2B /* RegionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EBC22A9A29A00349B2B /* RegionList.swift */; };
+		DC0B9EC622A9A40F00349B2B /* Region+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EC522A9A40F00349B2B /* Region+Identifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DC0B9EBA22A9A29A00349B2B /* MachineList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineList.swift; sourceTree = "<group>"; };
 		DC0B9EBB22A9A29A00349B2B /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		DC0B9EBC22A9A29A00349B2B /* RegionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionList.swift; sourceTree = "<group>"; };
+		DC0B9EC522A9A40F00349B2B /* Region+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Region+Identifiable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				DC0B9EA322A9A25100349B2B /* SceneDelegate.swift */,
 				DC0B9EA522A9A25100349B2B /* ContentView.swift */,
 				DC0B9EB622A9A29A00349B2B /* Models */,
+				DC0B9EC322A9A40000349B2B /* Utility */,
 				DC0B9EA722A9A25300349B2B /* Assets.xcassets */,
 				DC0B9EAC22A9A25300349B2B /* LaunchScreen.storyboard */,
 				DC0B9EAF22A9A25300349B2B /* Info.plist */,
@@ -100,6 +103,22 @@
 			);
 			name = Models;
 			path = ../../PinballMap/PinballMap/Shared/Models;
+			sourceTree = "<group>";
+		};
+		DC0B9EC322A9A40000349B2B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9EC422A9A40000349B2B /* Extensions */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		DC0B9EC422A9A40000349B2B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9EC522A9A40F00349B2B /* Region+Identifiable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0B9EC022A9A29A00349B2B /* MachineList.swift in Sources */,
+				DC0B9EC622A9A40F00349B2B /* Region+Identifiable.swift in Sources */,
 				DC0B9EA222A9A25100349B2B /* AppDelegate.swift in Sources */,
 				DC0B9EA422A9A25100349B2B /* SceneDelegate.swift in Sources */,
 				DC0B9EC122A9A29A00349B2B /* Region.swift in Sources */,
