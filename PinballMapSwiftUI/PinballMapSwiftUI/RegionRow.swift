@@ -16,14 +16,18 @@ struct RegionRow : View {
     // MARK: Body
     
     var body: some View {
-        Text("Hello \(region.fullName)")
+        Text("\(region.fullName)")
     }
 }
 
 #if DEBUG
 struct RegionRow_Previews : PreviewProvider {
     static var previews: some View {
-        RegionRow(region: regionsData.alphabetized[0])
+        Group {
+            RegionRow(region: regionsData.alphabetized[0])
+            RegionRow(region: regionsData.alphabetized[1])
+        }
+        .previewLayout(.fixed(width: 300, height: 70))
     }
 }
 #endif

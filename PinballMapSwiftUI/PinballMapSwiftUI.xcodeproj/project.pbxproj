@@ -22,6 +22,7 @@
 		DC0B9E5722A88EFF00349B2B /* RegionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9E5622A88EFF00349B2B /* RegionRow.swift */; };
 		DC0B9E5C22A8917900349B2B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9E5B22A8917900349B2B /* Data.swift */; };
 		DC0B9E5F22A891A200349B2B /* regionsData.json in Resources */ = {isa = PBXBuildFile; fileRef = DC0B9E5E22A891A200349B2B /* regionsData.json */; };
+		DC0B9E6322A893EF00349B2B /* RegionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9E6222A893EF00349B2B /* RegionListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		DC0B9E5622A88EFF00349B2B /* RegionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionRow.swift; sourceTree = "<group>"; };
 		DC0B9E5B22A8917900349B2B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		DC0B9E5E22A891A200349B2B /* regionsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = regionsData.json; sourceTree = "<group>"; };
+		DC0B9E6222A893EF00349B2B /* RegionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				DC0B9E3522A88D6900349B2B /* AppDelegate.swift */,
 				DC0B9E3722A88D6900349B2B /* SceneDelegate.swift */,
 				DC0B9E3922A88D6900349B2B /* ContentView.swift */,
+				DC0B9E6222A893EF00349B2B /* RegionListView.swift */,
 				DC0B9E5622A88EFF00349B2B /* RegionRow.swift */,
 				DC0B9E4922A88E7200349B2B /* Models */,
 				DC0B9E5A22A8916E00349B2B /* Utility */,
@@ -201,6 +204,7 @@
 			files = (
 				DC0B9E5322A88E7200349B2B /* MachineList.swift in Sources */,
 				DC0B9E3622A88D6900349B2B /* AppDelegate.swift in Sources */,
+				DC0B9E6322A893EF00349B2B /* RegionListView.swift in Sources */,
 				DC0B9E3822A88D6900349B2B /* SceneDelegate.swift in Sources */,
 				DC0B9E5422A88E7200349B2B /* Region.swift in Sources */,
 				DC0B9E5C22A8917900349B2B /* Data.swift in Sources */,
