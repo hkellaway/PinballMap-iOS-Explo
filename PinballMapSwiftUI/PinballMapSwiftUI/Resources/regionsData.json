@@ -1,0 +1,14 @@
+{
+    "regions": [
+        {
+            "id": 1,
+            "name": "nyc",
+            "full_name": "New York City",
+        },
+        {
+            "id": 2,
+            "name": "region-2",
+            "full_name": "Region 2",
+        }
+    ]
+}

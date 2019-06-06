@@ -19,6 +19,9 @@
 		DC0B9E5322A88E7200349B2B /* MachineList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9E4D22A88E7200349B2B /* MachineList.swift */; };
 		DC0B9E5422A88E7200349B2B /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9E4E22A88E7200349B2B /* Region.swift */; };
 		DC0B9E5522A88E7200349B2B /* RegionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9E4F22A88E7200349B2B /* RegionList.swift */; };
+		DC0B9E5722A88EFF00349B2B /* RegionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9E5622A88EFF00349B2B /* RegionRow.swift */; };
+		DC0B9E5C22A8917900349B2B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9E5B22A8917900349B2B /* Data.swift */; };
+		DC0B9E5F22A891A200349B2B /* regionsData.json in Resources */ = {isa = PBXBuildFile; fileRef = DC0B9E5E22A891A200349B2B /* regionsData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		DC0B9E4D22A88E7200349B2B /* MachineList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineList.swift; sourceTree = "<group>"; };
 		DC0B9E4E22A88E7200349B2B /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		DC0B9E4F22A88E7200349B2B /* RegionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionList.swift; sourceTree = "<group>"; };
+		DC0B9E5622A88EFF00349B2B /* RegionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionRow.swift; sourceTree = "<group>"; };
+		DC0B9E5B22A8917900349B2B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		DC0B9E5E22A891A200349B2B /* regionsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = regionsData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +77,10 @@
 				DC0B9E3522A88D6900349B2B /* AppDelegate.swift */,
 				DC0B9E3722A88D6900349B2B /* SceneDelegate.swift */,
 				DC0B9E3922A88D6900349B2B /* ContentView.swift */,
+				DC0B9E5622A88EFF00349B2B /* RegionRow.swift */,
 				DC0B9E4922A88E7200349B2B /* Models */,
+				DC0B9E5A22A8916E00349B2B /* Utility */,
+				DC0B9E5D22A891A200349B2B /* Resources */,
 				DC0B9E3B22A88D6B00349B2B /* Assets.xcassets */,
 				DC0B9E4022A88D6B00349B2B /* LaunchScreen.storyboard */,
 				DC0B9E4322A88D6B00349B2B /* Info.plist */,
@@ -100,6 +109,22 @@
 			);
 			name = Models;
 			path = ../../PinballMap/PinballMap/Shared/Models;
+			sourceTree = "<group>";
+		};
+		DC0B9E5A22A8916E00349B2B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9E5B22A8917900349B2B /* Data.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		DC0B9E5D22A891A200349B2B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9E5E22A891A200349B2B /* regionsData.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0B9E4222A88D6B00349B2B /* LaunchScreen.storyboard in Resources */,
+				DC0B9E5F22A891A200349B2B /* regionsData.json in Resources */,
 				DC0B9E3F22A88D6B00349B2B /* Preview Assets.xcassets in Resources */,
 				DC0B9E3C22A88D6B00349B2B /* Assets.xcassets in Resources */,
 			);
@@ -177,6 +203,8 @@
 				DC0B9E3622A88D6900349B2B /* AppDelegate.swift in Sources */,
 				DC0B9E3822A88D6900349B2B /* SceneDelegate.swift in Sources */,
 				DC0B9E5422A88E7200349B2B /* Region.swift in Sources */,
+				DC0B9E5C22A8917900349B2B /* Data.swift in Sources */,
+				DC0B9E5722A88EFF00349B2B /* RegionRow.swift in Sources */,
 				DC0B9E5122A88E7200349B2B /* Location.swift in Sources */,
 				DC0B9E5022A88E7200349B2B /* LocationList.swift in Sources */,
 				DC0B9E3A22A88D6900349B2B /* ContentView.swift in Sources */,
