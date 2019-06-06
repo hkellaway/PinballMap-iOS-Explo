@@ -12,8 +12,13 @@ extension Region: Identifiable { }
 
 struct RegionListView : View {
     var body: some View {
-        List(mockRegionList.alphabetized) { region in
-            RegionRow(region: region)
+        NavigationView {
+            List(mockRegionList.alphabetized) { region in
+                NavigationButton(destination: LocationDetailView()) {
+                    RegionRow(region: region)
+                }
+            }
+            .navigationBarTitle(Text("Regions"))
         }
     }
 }
