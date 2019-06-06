@@ -9,15 +9,18 @@
 import SwiftUI
 
 struct LocationDetailView : View {
+    var location: Location?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        Text(location?.name ?? ":(")
+            .navigationBarTitle(Text(location?.name ?? ":("), displayMode: .inline)
     }
 }
 
 #if DEBUG
 struct LocationDetailView_Previews : PreviewProvider {
     static var previews: some View {
-        LocationDetailView()
+        LocationDetailView(location: mockLocationList.alphabetized[0])
     }
 }
 #endif

@@ -9,6 +9,15 @@
 import Foundation
 
 let mockRegionList: RegionList = load("MockRegionList.json")
+let mockLocationList = LocationList(locations: [
+    Location(id: 1, name: "Empire State Building", street: "34th St Herald Sq", locationMachineXrefs: [
+        Location.MachineXRef(machineId: 123)
+        ]),
+    Location(id: 1, name: "Location 2", street: "123 ABC St", locationMachineXrefs: [
+        Location.MachineXRef(machineId: 234)
+        ])
+    ]
+)
 
 func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
     let data: Data

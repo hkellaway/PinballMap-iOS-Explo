@@ -8,13 +8,13 @@
 
 import SwiftUI
 
-extension Region: Identifiable { }
-
 struct RegionListView : View {
+    var regionList: RegionList
+    
     var body: some View {
         NavigationView {
-            List(mockRegionList.alphabetized) { region in
-                NavigationButton(destination: LocationDetailView()) {
+            List(regionList.alphabetized) { region in
+                NavigationButton(destination: LocationDetailView(location: nil)) {
                     RegionRow(region: region)
                 }
             }
@@ -26,7 +26,7 @@ struct RegionListView : View {
 #if DEBUG
 struct RegionListView_Previews : PreviewProvider {
     static var previews: some View {
-        RegionListView()
+        RegionListView(regionList: mockRegionList)
     }
 }
 #endif
