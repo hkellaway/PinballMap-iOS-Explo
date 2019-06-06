@@ -35,18 +35,35 @@ final class UserData: BindableObject  {
 }
 
 struct RegionRow : View {
+    
+    // MARK: - Properties
+    
     // MARK: Stored properties
     
     var region: Region
     var isSelected: Bool
     
+    // MARK: Calculated properties
+    
+    var backgroundColor: Color {
+        return self.isSelected ? Color.yellow : Color.white
+    }
+    
     // MARK: Body
     
     var body: some View {
-        Text("\(region.fullName)")
-            .foregroundColor(self.isSelected ? .red : .black)
+        HStack {
+            VStack {
+                Spacer()
+                Text("\(region.fullName)")
+                Spacer()
+            }.padding(.leading, 8)
+            Spacer()
+        }.background(backgroundColor)
     }
 }
+
+// MARK: - Previews
 
 #if DEBUG
 struct RegionRow_Previews : PreviewProvider {

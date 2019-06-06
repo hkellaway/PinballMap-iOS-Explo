@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+// TODO: Update UserData when Region is selected
+
 struct RegionListView : View {
     @EnvironmentObject var userData: UserData
     
