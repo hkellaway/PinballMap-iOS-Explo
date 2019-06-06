@@ -24,8 +24,8 @@ struct RegionRow : View {
 struct RegionRow_Previews : PreviewProvider {
     static var previews: some View {
         Group {
-            RegionRow(region: regionsData.alphabetized[0])
-            RegionRow(region: regionsData.alphabetized[1])
+            RegionRow(region: mockRegionList.alphabetized[0])
+            RegionRow(region: mockRegionList.alphabetized[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

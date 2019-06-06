@@ -8,11 +8,12 @@
 
 import SwiftUI
 
+extension Region: Identifiable { }
+
 struct RegionListView : View {
     var body: some View {
-        List {
-            RegionRow(region: regionsData.alphabetized[0])
-            RegionRow(region: regionsData.alphabetized[1])
+        List(mockRegionList.alphabetized) { region in
+            RegionRow(region: region)
         }
     }
 }

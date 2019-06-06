@@ -8,7 +8,7 @@
 
 import Foundation
 
-let regionsData: RegionList = load("regionsData.json")
+let mockRegionList: RegionList = load("MockRegionList.json")
 
 func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
     let data: Data
