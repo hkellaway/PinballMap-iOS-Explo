@@ -17,6 +17,7 @@ struct RegionRow : View {
     
     var body: some View {
         Text("\(region.fullName)")
+            .foregroundColor(region.isSelected ? .red : .black)
     }
 }
 
