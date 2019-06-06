@@ -9,13 +9,16 @@
 import SwiftUI
 
 struct RegionListView : View {
+    @EnvironmentObject var userData: UserData
+    
     var regionList: RegionList
     
     var body: some View {
         NavigationView {
             List(regionList.alphabetized) { region in
                 NavigationButton(destination: LocationDetailView(location: nil)) {
-                    RegionRow(region: region)
+                    RegionRow(region: region,
+                              isSelected: self.userData.isRegionSelected(region))
                 }
             }
             .navigationBarTitle(Text("Regions"))
@@ -26,11 +29,8 @@ struct RegionListView : View {
 #if DEBUG
 struct RegionListView_Previews : PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE", "iPhone XS Max"].identified(by: \.self)) { deviceName in
-            RegionListView(regionList: mockRegionList)
-                .previewDevice(PreviewDevice(rawValue: deviceName))
-                .previewDisplayName(deviceName)
-        }
+        RegionListView(regionList: mockRegionList)
+            .environmentObject(UserData())
     }
 }
 #endif
