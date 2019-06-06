@@ -21,6 +21,7 @@
 		DC0B9EC222A9A29A00349B2B /* RegionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EBC22A9A29A00349B2B /* RegionList.swift */; };
 		DC0B9EC622A9A40F00349B2B /* Region+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EC522A9A40F00349B2B /* Region+Identifiable.swift */; };
 		DC0B9ECA22A9A54F00349B2B /* RegionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EC922A9A54F00349B2B /* RegionRowView.swift */; };
+		DC0B9ECC22A9A8E900349B2B /* RegionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9ECB22A9A8E900349B2B /* RegionListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		DC0B9EBC22A9A29A00349B2B /* RegionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionList.swift; sourceTree = "<group>"; };
 		DC0B9EC522A9A40F00349B2B /* Region+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Region+Identifiable.swift"; sourceTree = "<group>"; };
 		DC0B9EC922A9A54F00349B2B /* RegionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionRowView.swift; sourceTree = "<group>"; };
+		DC0B9ECB22A9A8E900349B2B /* RegionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				DC0B9EA122A9A25100349B2B /* AppDelegate.swift */,
 				DC0B9EA322A9A25100349B2B /* SceneDelegate.swift */,
 				DC0B9EA522A9A25100349B2B /* ContentView.swift */,
+				DC0B9ECB22A9A8E900349B2B /* RegionListView.swift */,
 				DC0B9EC922A9A54F00349B2B /* RegionRowView.swift */,
 				DC0B9EB622A9A29A00349B2B /* Models */,
 				DC0B9EC322A9A40000349B2B /* Utility */,
@@ -197,6 +200,7 @@
 			files = (
 				DC0B9EC022A9A29A00349B2B /* MachineList.swift in Sources */,
 				DC0B9EC622A9A40F00349B2B /* Region+Identifiable.swift in Sources */,
+				DC0B9ECC22A9A8E900349B2B /* RegionListView.swift in Sources */,
 				DC0B9EA222A9A25100349B2B /* AppDelegate.swift in Sources */,
 				DC0B9EA422A9A25100349B2B /* SceneDelegate.swift in Sources */,
 				DC0B9EC122A9A29A00349B2B /* Region.swift in Sources */,
