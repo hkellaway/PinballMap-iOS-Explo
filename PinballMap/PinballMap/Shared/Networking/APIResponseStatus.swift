@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import HottPotato
 
 enum APIResponseStatus<T: Decodable & Equatable & CustomStringConvertible>: CustomStringConvertible {
     case loading
@@ -47,7 +46,7 @@ func ==<T>(lhs: APIResponseStatus<T>, rhs: APIResponseStatus<T>) -> Bool {
     case (.loaded(let value1), .loaded(let value2)):
         return value1 == value2
     case (.errored(let error1), .errored(let error2)):
-        return error1 == error2
+        return error1.localizedDescription == error2.localizedDescription
     default:
         return false
     }

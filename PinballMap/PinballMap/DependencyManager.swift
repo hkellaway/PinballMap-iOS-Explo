@@ -6,7 +6,6 @@
 //  Copyright © 2019 Harlan Kellaway. All rights reserved.
 //
 
-import HottPotato
 import ReSwift
 import UIKit
 
@@ -33,8 +32,8 @@ final class DependencyManager: ViewBuilder {
     
     // MARK: Shared
     
-    func httpClient() -> HTTPClient {
-        return HTTPClient.shared
+    func httpClient() -> PinballMapHTTPClient {
+        return PinballMapHTTPClient.shared
     }
     
     func navigator() -> Navigator {

@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0B9ED022A9ABA600349B2B /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9ECF22A9ABA600349B2B /* State.swift */; };
+		DC0B9ED222A9ABBA00349B2B /* State+ReSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9ED122A9ABBA00349B2B /* State+ReSwift.swift */; };
+		DC0B9EED22A9B10F00349B2B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DC0B9EE022A9B10F00349B2B /* LICENSE */; };
+		DC0B9EEE22A9B10F00349B2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DC0B9EE122A9B10F00349B2B /* README.md */; };
+		DC0B9EEF22A9B10F00349B2B /* DefaultJSONHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EE322A9B10F00349B2B /* DefaultJSONHTTPClient.swift */; };
+		DC0B9EF022A9B10F00349B2B /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EE422A9B10F00349B2B /* HTTPClientError.swift */; };
+		DC0B9EF122A9B10F00349B2B /* JSONHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EE522A9B10F00349B2B /* JSONHTTPClient.swift */; };
+		DC0B9EF222A9B10F00349B2B /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EE622A9B10F00349B2B /* HTTPRequest.swift */; };
+		DC0B9EF322A9B10F00349B2B /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EE722A9B10F00349B2B /* JSON.swift */; };
+		DC0B9EF422A9B10F00349B2B /* HTTPResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EE822A9B10F00349B2B /* HTTPResource.swift */; };
+		DC0B9EF522A9B10F00349B2B /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EE922A9B10F00349B2B /* HTTPClient.swift */; };
+		DC0B9EF622A9B10F00349B2B /* HottPotatoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EEA22A9B10F00349B2B /* HottPotatoError.swift */; };
+		DC0B9EF722A9B10F00349B2B /* HottPotato.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EEB22A9B10F00349B2B /* HottPotato.swift */; };
+		DC0B9EF822A9B10F00349B2B /* JSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EEC22A9B10F00349B2B /* JSONError.swift */; };
 		DC381E5C228F5AFC0041D46F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E5B228F5AFC0041D46F /* AppDelegate.swift */; };
 		DC381E63228F5AFF0041D46F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC381E62228F5AFF0041D46F /* Assets.xcassets */; };
 		DC381E66228F5AFF0041D46F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC381E64228F5AFF0041D46F /* LaunchScreen.storyboard */; };
@@ -14,7 +28,6 @@
 		DC381E72228F622A0041D46F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC381E71228F622A0041D46F /* Main.storyboard */; };
 		DC381E7A228F63210041D46F /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E79228F63210041D46F /* Navigator.swift */; };
 		DC381E83228F679D0041D46F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E82228F679D0041D46F /* Store.swift */; };
-		DC381E85228F67A70041D46F /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E84228F67A70041D46F /* State.swift */; };
 		DC381E89228F68090041D46F /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E88228F68090041D46F /* AppReducer.swift */; };
 		DC381E8F229302300041D46F /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E8E229302300041D46F /* RootTabBarController.swift */; };
 		DC381E91229303350041D46F /* RegionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381E90229303350041D46F /* RegionsViewController.swift */; };
@@ -30,7 +43,7 @@
 		DC381EA722930FB00041D46F /* ArchitectureSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EA622930FB00041D46F /* ArchitectureSwitcher.swift */; };
 		DC381EAB229329030041D46F /* RegionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EAA229329030041D46F /* RegionList.swift */; };
 		DC381EAD229329100041D46F /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EAC229329100041D46F /* Region.swift */; };
-		DC381EAF229329A10041D46F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EAE229329A10041D46F /* HTTPClient.swift */; };
+		DC381EAF229329A10041D46F /* PinballMapHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EAE229329A10041D46F /* PinballMapHTTPClient.swift */; };
 		DC381EB122932F350041D46F /* MVVMRegionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB022932F350041D46F /* MVVMRegionViewModel.swift */; };
 		DC381EB3229330EB0041D46F /* PinballMapHTTPResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB2229330EB0041D46F /* PinballMapHTTPResource.swift */; };
 		DC381EB5229334470041D46F /* LoadRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC381EB4229334470041D46F /* LoadRegions.swift */; };
@@ -76,6 +89,20 @@
 		35C37D399303B6FC12619040 /* Pods-PinballMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinballMap.release.xcconfig"; path = "Target Support Files/Pods-PinballMap/Pods-PinballMap.release.xcconfig"; sourceTree = "<group>"; };
 		7B13F0E9C157E4717153C6C9 /* Pods_PinballMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PinballMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA10085353DE5456FAA46FE9 /* Pods-PinballMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PinballMap.debug.xcconfig"; path = "Target Support Files/Pods-PinballMap/Pods-PinballMap.debug.xcconfig"; sourceTree = "<group>"; };
+		DC0B9ECF22A9ABA600349B2B /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		DC0B9ED122A9ABBA00349B2B /* State+ReSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "State+ReSwift.swift"; sourceTree = "<group>"; };
+		DC0B9EE022A9B10F00349B2B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DC0B9EE122A9B10F00349B2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DC0B9EE322A9B10F00349B2B /* DefaultJSONHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultJSONHTTPClient.swift; sourceTree = "<group>"; };
+		DC0B9EE422A9B10F00349B2B /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
+		DC0B9EE522A9B10F00349B2B /* JSONHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHTTPClient.swift; sourceTree = "<group>"; };
+		DC0B9EE622A9B10F00349B2B /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		DC0B9EE722A9B10F00349B2B /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		DC0B9EE822A9B10F00349B2B /* HTTPResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResource.swift; sourceTree = "<group>"; };
+		DC0B9EE922A9B10F00349B2B /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		DC0B9EEA22A9B10F00349B2B /* HottPotatoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HottPotatoError.swift; sourceTree = "<group>"; };
+		DC0B9EEB22A9B10F00349B2B /* HottPotato.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HottPotato.swift; sourceTree = "<group>"; };
+		DC0B9EEC22A9B10F00349B2B /* JSONError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONError.swift; sourceTree = "<group>"; };
 		DC381E58228F5AFB0041D46F /* PinballMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinballMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC381E5B228F5AFC0041D46F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC381E62228F5AFF0041D46F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,7 +112,6 @@
 		DC381E71228F622A0041D46F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DC381E79228F63210041D46F /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		DC381E82228F679D0041D46F /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		DC381E84228F67A70041D46F /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		DC381E88228F68090041D46F /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		DC381E8E229302300041D46F /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		DC381E90229303350041D46F /* RegionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +127,7 @@
 		DC381EA622930FB00041D46F /* ArchitectureSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureSwitcher.swift; sourceTree = "<group>"; };
 		DC381EAA229329030041D46F /* RegionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionList.swift; sourceTree = "<group>"; };
 		DC381EAC229329100041D46F /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
-		DC381EAE229329A10041D46F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		DC381EAE229329A10041D46F /* PinballMapHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinballMapHTTPClient.swift; sourceTree = "<group>"; };
 		DC381EB022932F350041D46F /* MVVMRegionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMRegionViewModel.swift; sourceTree = "<group>"; };
 		DC381EB2229330EB0041D46F /* PinballMapHTTPResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinballMapHTTPResource.swift; sourceTree = "<group>"; };
 		DC381EB4229334470041D46F /* LoadRegions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadRegions.swift; sourceTree = "<group>"; };
@@ -162,6 +188,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DC0B9EDF22A9B10F00349B2B /* HottPotato */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9EE022A9B10F00349B2B /* LICENSE */,
+				DC0B9EE122A9B10F00349B2B /* README.md */,
+				DC0B9EE222A9B10F00349B2B /* Sources */,
+			);
+			path = HottPotato;
+			sourceTree = "<group>";
+		};
+		DC0B9EE222A9B10F00349B2B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9EE322A9B10F00349B2B /* DefaultJSONHTTPClient.swift */,
+				DC0B9EE422A9B10F00349B2B /* HTTPClientError.swift */,
+				DC0B9EE522A9B10F00349B2B /* JSONHTTPClient.swift */,
+				DC0B9EE622A9B10F00349B2B /* HTTPRequest.swift */,
+				DC0B9EE722A9B10F00349B2B /* JSON.swift */,
+				DC0B9EE822A9B10F00349B2B /* HTTPResource.swift */,
+				DC0B9EE922A9B10F00349B2B /* HTTPClient.swift */,
+				DC0B9EEA22A9B10F00349B2B /* HottPotatoError.swift */,
+				DC0B9EEB22A9B10F00349B2B /* HottPotato.swift */,
+				DC0B9EEC22A9B10F00349B2B /* JSONError.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		DC381E4F228F5AFB0041D46F = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +240,7 @@
 				DC381EA42293099E0041D46F /* Architecture.swift */,
 				DC381EA622930FB00041D46F /* ArchitectureSwitcher.swift */,
 				DC381E6D228F5E030041D46F /* DependencyManager.swift */,
+				DC0B9ECF22A9ABA600349B2B /* State.swift */,
 				DC381E76228F62F60041D46F /* MVVM */,
 				DC381E74228F62F60041D46F /* Redux */,
 				DC381E75228F62F60041D46F /* Shared */,
@@ -272,7 +326,7 @@
 				DC381E87228F67F20041D46F /* Actions */,
 				DC381E86228F67F20041D46F /* Reducers */,
 				DC381E82228F679D0041D46F /* Store.swift */,
-				DC381E84228F67A70041D46F /* State.swift */,
+				DC0B9ED122A9ABBA00349B2B /* State+ReSwift.swift */,
 			);
 			path = ReSwift;
 			sourceTree = "<group>";
@@ -309,7 +363,8 @@
 		DC381EA8229328C60041D46F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				DC381EAE229329A10041D46F /* HTTPClient.swift */,
+				DC0B9EDF22A9B10F00349B2B /* HottPotato */,
+				DC381EAE229329A10041D46F /* PinballMapHTTPClient.swift */,
 				DC381EB2229330EB0041D46F /* PinballMapHTTPResource.swift */,
 				DC381EF52294C8400041D46F /* APIResponseStatus.swift */,
 			);
@@ -425,6 +480,8 @@
 			files = (
 				DC381E72228F622A0041D46F /* Main.storyboard in Resources */,
 				DC381E66228F5AFF0041D46F /* LaunchScreen.storyboard in Resources */,
+				DC0B9EEE22A9B10F00349B2B /* README.md in Resources */,
+				DC0B9EED22A9B10F00349B2B /* LICENSE in Resources */,
 				DC381E63228F5AFF0041D46F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,10 +536,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC381EB722933BB00041D46F /* APIActions.swift in Sources */,
+				DC0B9EF322A9B10F00349B2B /* JSON.swift in Sources */,
 				DC381E99229303AB0041D46F /* ReduxRegionsViewController.swift in Sources */,
+				DC0B9ED022A9ABA600349B2B /* State.swift in Sources */,
 				DC381EA3229304530041D46F /* ReduxStateVisualizerViewController.swift in Sources */,
 				DC381E97229303910041D46F /* MVVMRegionsViewController.swift in Sources */,
+				DC0B9EF522A9B10F00349B2B /* HTTPClient.swift in Sources */,
 				DC381EDE229488310041D46F /* Machine.swift in Sources */,
+				DC0B9ED222A9ABBA00349B2B /* State+ReSwift.swift in Sources */,
 				DC381F2D229D88950041D46F /* SelectedRegionReducer.swift in Sources */,
 				DC381ED422947D730041D46F /* LocationDetailViewController.swift in Sources */,
 				DC381EF92294CCC60041D46F /* UIView+PinballMap.swift in Sources */,
@@ -497,9 +558,11 @@
 				DC381F2B229D88660041D46F /* MachineListReducer.swift in Sources */,
 				DC381EC42293779D0041D46F /* Location.swift in Sources */,
 				DC381E932293034F0041D46F /* MachinesViewController.swift in Sources */,
-				DC381EAF229329A10041D46F /* HTTPClient.swift in Sources */,
+				DC0B9EF222A9B10F00349B2B /* HTTPRequest.swift in Sources */,
+				DC381EAF229329A10041D46F /* PinballMapHTTPClient.swift in Sources */,
 				DC381EB3229330EB0041D46F /* PinballMapHTTPResource.swift in Sources */,
 				DC381E9B229303BC0041D46F /* MVVMMachinesViewController.swift in Sources */,
+				DC0B9EEF22A9B10F00349B2B /* DefaultJSONHTTPClient.swift in Sources */,
 				DC381EA722930FB00041D46F /* ArchitectureSwitcher.swift in Sources */,
 				DC381EDC2294803B0041D46F /* SelectLocation.swift in Sources */,
 				DC381F01229603C80041D46F /* MVVMMachinesViewModel.swift in Sources */,
@@ -520,20 +583,25 @@
 				DC381EE022948AAB0041D46F /* LoadMachines.swift in Sources */,
 				DC381E95229303670041D46F /* StateVisualizerViewController.swift in Sources */,
 				DC381F29229D88490041D46F /* SelectedMachineReducer.swift in Sources */,
+				DC0B9EF022A9B10F00349B2B /* HTTPClientError.swift in Sources */,
 				DC381F21229749290041D46F /* MVVMLocationDetailViewModel.swift in Sources */,
+				DC0B9EF822A9B10F00349B2B /* JSONError.swift in Sources */,
 				DC381EC6229377CE0041D46F /* LocationList.swift in Sources */,
 				DC381EFF2295FA630041D46F /* MVVMLocationsViewModel.swift in Sources */,
 				DC381ECE22937AA90041D46F /* LocationsViewController.swift in Sources */,
 				DC381ED222937C020041D46F /* ReduxLocationsViewController.swift in Sources */,
 				DC381EFB2294CCDF0041D46F /* UIViewController+PinballMap.swift in Sources */,
-				DC381E85228F67A70041D46F /* State.swift in Sources */,
+				DC0B9EF122A9B10F00349B2B /* JSONHTTPClient.swift in Sources */,
 				DC381EAD229329100041D46F /* Region.swift in Sources */,
 				DC381E8F229302300041D46F /* RootTabBarController.swift in Sources */,
+				DC0B9EF722A9B10F00349B2B /* HottPotato.swift in Sources */,
 				DC381EFD2294D04A0041D46F /* Clear.swift in Sources */,
 				DC381EF62294C8400041D46F /* APIResponseStatus.swift in Sources */,
+				DC0B9EF422A9B10F00349B2B /* HTTPResource.swift in Sources */,
 				DC381F2F229D88B70041D46F /* RegionListReducer.swift in Sources */,
 				DC381ECA229379D30041D46F /* Notifications.swift in Sources */,
 				DC381E91229303350041D46F /* RegionsViewController.swift in Sources */,
+				DC0B9EF622A9B10F00349B2B /* HottPotatoError.swift in Sources */,
 				DC381EEE2294B5BC0041D46F /* MachineDetailViewController.swift in Sources */,
 				DC381EE222948ADD0041D46F /* MachineList.swift in Sources */,
 				DC381EB122932F350041D46F /* MVVMRegionViewModel.swift in Sources */,

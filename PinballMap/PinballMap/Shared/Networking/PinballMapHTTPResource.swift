@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import HottPotato
 
 final class PinballMapHTTPResource<T: Decodable>: HTTPResource<T> {
     

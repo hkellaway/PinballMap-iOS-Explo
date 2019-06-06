@@ -11,9 +11,9 @@ import ReSwift
 
 final class APIActions {
     
-    let httpClient: HTTPClient
+    let httpClient: PinballMapHTTPClient
     
-    init(httpClient: HTTPClient) {
+    init(httpClient: PinballMapHTTPClient) {
         self.httpClient = httpClient
     }
     

@@ -13,7 +13,7 @@ final class RegionsViewModel {
     // Dependencies
     
     weak var view: MVVMRegionsViewController?
-    let httpClient: HTTPClient
+    let httpClient: PinballMapHTTPClient
     let session = Session.shared
     let notificationCenter: NotificationCenter = .default
     let navigator: Navigator
@@ -24,7 +24,7 @@ final class RegionsViewModel {
     
     // MARK -
     
-    init(httpClient: HTTPClient, navigator: Navigator) {
+    init(httpClient: PinballMapHTTPClient, navigator: Navigator) {
         self.httpClient = httpClient
         self.navigator = navigator
     }

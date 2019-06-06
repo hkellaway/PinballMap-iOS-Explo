@@ -1,5 +1,5 @@
 //
-//  HTTPClient.swift
+//  PinballMapHTTPClient.swift
 //  PinballMap
 //
 //  Created by Harlan Kellaway on 5/20/19.
@@ -7,11 +7,10 @@
 //
 
 import Foundation
-import HottPotato
 
-final class HTTPClient {
+final class PinballMapHTTPClient {
     
-    static var shared = HTTPClient()
+    static var shared = PinballMapHTTPClient()
     
     private let hottPotato: HottPotato
     

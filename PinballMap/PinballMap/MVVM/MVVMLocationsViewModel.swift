@@ -13,7 +13,7 @@ final class LocationsViewModel {
     // Dependencies
     
     weak var view: MVVMLocationsViewController?
-    let httpClient: HTTPClient
+    let httpClient: PinballMapHTTPClient
     let navigator: Navigator
     let notificationCenter: NotificationCenter = .default
     let session = Session.shared
@@ -24,7 +24,7 @@ final class LocationsViewModel {
     
     // MARK: -
     
-    init(httpClient: HTTPClient,
+    init(httpClient: PinballMapHTTPClient,
          navigator: Navigator) {
         self.httpClient = httpClient
         self.navigator = navigator

@@ -22,6 +22,22 @@
 		DC0B9EC622A9A40F00349B2B /* Region+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EC522A9A40F00349B2B /* Region+Identifiable.swift */; };
 		DC0B9ECA22A9A54F00349B2B /* RegionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EC922A9A54F00349B2B /* RegionRowView.swift */; };
 		DC0B9ECC22A9A8E900349B2B /* RegionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9ECB22A9A8E900349B2B /* RegionListView.swift */; };
+		DC0B9ED422A9ABD800349B2B /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9ED322A9ABD800349B2B /* State.swift */; };
+		DC0B9F0B22A9B1C900349B2B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = DC0B9EFB22A9B1C900349B2B /* LICENSE */; };
+		DC0B9F0C22A9B1C900349B2B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DC0B9EFC22A9B1C900349B2B /* README.md */; };
+		DC0B9F0D22A9B1C900349B2B /* DefaultJSONHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EFE22A9B1C900349B2B /* DefaultJSONHTTPClient.swift */; };
+		DC0B9F0E22A9B1C900349B2B /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9EFF22A9B1C900349B2B /* HTTPClientError.swift */; };
+		DC0B9F0F22A9B1C900349B2B /* JSONHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F0022A9B1C900349B2B /* JSONHTTPClient.swift */; };
+		DC0B9F1022A9B1C900349B2B /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F0122A9B1C900349B2B /* HTTPRequest.swift */; };
+		DC0B9F1122A9B1C900349B2B /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F0222A9B1C900349B2B /* JSON.swift */; };
+		DC0B9F1222A9B1C900349B2B /* HTTPResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F0322A9B1C900349B2B /* HTTPResource.swift */; };
+		DC0B9F1322A9B1C900349B2B /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F0422A9B1C900349B2B /* HTTPClient.swift */; };
+		DC0B9F1422A9B1C900349B2B /* HottPotatoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F0522A9B1C900349B2B /* HottPotatoError.swift */; };
+		DC0B9F1522A9B1C900349B2B /* HottPotato.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F0622A9B1C900349B2B /* HottPotato.swift */; };
+		DC0B9F1622A9B1C900349B2B /* JSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F0722A9B1C900349B2B /* JSONError.swift */; };
+		DC0B9F1722A9B1C900349B2B /* PinballMapHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F0822A9B1C900349B2B /* PinballMapHTTPClient.swift */; };
+		DC0B9F1822A9B1C900349B2B /* PinballMapHTTPResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F0922A9B1C900349B2B /* PinballMapHTTPResource.swift */; };
+		DC0B9F1922A9B1C900349B2B /* APIResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9F0A22A9B1C900349B2B /* APIResponseStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +58,22 @@
 		DC0B9EC522A9A40F00349B2B /* Region+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Region+Identifiable.swift"; sourceTree = "<group>"; };
 		DC0B9EC922A9A54F00349B2B /* RegionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionRowView.swift; sourceTree = "<group>"; };
 		DC0B9ECB22A9A8E900349B2B /* RegionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListView.swift; sourceTree = "<group>"; };
+		DC0B9ED322A9ABD800349B2B /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = State.swift; path = ../../PinballMap/PinballMap/State.swift; sourceTree = "<group>"; };
+		DC0B9EFB22A9B1C900349B2B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DC0B9EFC22A9B1C900349B2B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DC0B9EFE22A9B1C900349B2B /* DefaultJSONHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultJSONHTTPClient.swift; sourceTree = "<group>"; };
+		DC0B9EFF22A9B1C900349B2B /* HTTPClientError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
+		DC0B9F0022A9B1C900349B2B /* JSONHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHTTPClient.swift; sourceTree = "<group>"; };
+		DC0B9F0122A9B1C900349B2B /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		DC0B9F0222A9B1C900349B2B /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		DC0B9F0322A9B1C900349B2B /* HTTPResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResource.swift; sourceTree = "<group>"; };
+		DC0B9F0422A9B1C900349B2B /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		DC0B9F0522A9B1C900349B2B /* HottPotatoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HottPotatoError.swift; sourceTree = "<group>"; };
+		DC0B9F0622A9B1C900349B2B /* HottPotato.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HottPotato.swift; sourceTree = "<group>"; };
+		DC0B9F0722A9B1C900349B2B /* JSONError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONError.swift; sourceTree = "<group>"; };
+		DC0B9F0822A9B1C900349B2B /* PinballMapHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinballMapHTTPClient.swift; sourceTree = "<group>"; };
+		DC0B9F0922A9B1C900349B2B /* PinballMapHTTPResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinballMapHTTPResource.swift; sourceTree = "<group>"; };
+		DC0B9F0A22A9B1C900349B2B /* APIResponseStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponseStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +108,7 @@
 			children = (
 				DC0B9EA122A9A25100349B2B /* AppDelegate.swift */,
 				DC0B9EA322A9A25100349B2B /* SceneDelegate.swift */,
+				DC0B9ED322A9ABD800349B2B /* State.swift */,
 				DC0B9EA522A9A25100349B2B /* ContentView.swift */,
 				DC0B9ECB22A9A8E900349B2B /* RegionListView.swift */,
 				DC0B9EC922A9A54F00349B2B /* RegionRowView.swift */,
@@ -115,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0B9EC422A9A40000349B2B /* Extensions */,
+				DC0B9EF922A9B1C900349B2B /* Networking */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -125,6 +159,45 @@
 				DC0B9EC522A9A40F00349B2B /* Region+Identifiable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DC0B9EF922A9B1C900349B2B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9EFA22A9B1C900349B2B /* HottPotato */,
+				DC0B9F0822A9B1C900349B2B /* PinballMapHTTPClient.swift */,
+				DC0B9F0922A9B1C900349B2B /* PinballMapHTTPResource.swift */,
+				DC0B9F0A22A9B1C900349B2B /* APIResponseStatus.swift */,
+			);
+			name = Networking;
+			path = ../../../PinballMap/PinballMap/Shared/Networking;
+			sourceTree = "<group>";
+		};
+		DC0B9EFA22A9B1C900349B2B /* HottPotato */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9EFB22A9B1C900349B2B /* LICENSE */,
+				DC0B9EFC22A9B1C900349B2B /* README.md */,
+				DC0B9EFD22A9B1C900349B2B /* Sources */,
+			);
+			path = HottPotato;
+			sourceTree = "<group>";
+		};
+		DC0B9EFD22A9B1C900349B2B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DC0B9EFE22A9B1C900349B2B /* DefaultJSONHTTPClient.swift */,
+				DC0B9EFF22A9B1C900349B2B /* HTTPClientError.swift */,
+				DC0B9F0022A9B1C900349B2B /* JSONHTTPClient.swift */,
+				DC0B9F0122A9B1C900349B2B /* HTTPRequest.swift */,
+				DC0B9F0222A9B1C900349B2B /* JSON.swift */,
+				DC0B9F0322A9B1C900349B2B /* HTTPResource.swift */,
+				DC0B9F0422A9B1C900349B2B /* HTTPClient.swift */,
+				DC0B9F0522A9B1C900349B2B /* HottPotatoError.swift */,
+				DC0B9F0622A9B1C900349B2B /* HottPotato.swift */,
+				DC0B9F0722A9B1C900349B2B /* JSONError.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +260,8 @@
 			files = (
 				DC0B9EAE22A9A25300349B2B /* LaunchScreen.storyboard in Resources */,
 				DC0B9EAB22A9A25300349B2B /* Preview Assets.xcassets in Resources */,
+				DC0B9F0C22A9B1C900349B2B /* README.md in Resources */,
+				DC0B9F0B22A9B1C900349B2B /* LICENSE in Resources */,
 				DC0B9EA822A9A25300349B2B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,15 +276,29 @@
 				DC0B9EC022A9A29A00349B2B /* MachineList.swift in Sources */,
 				DC0B9EC622A9A40F00349B2B /* Region+Identifiable.swift in Sources */,
 				DC0B9ECC22A9A8E900349B2B /* RegionListView.swift in Sources */,
+				DC0B9F1122A9B1C900349B2B /* JSON.swift in Sources */,
 				DC0B9EA222A9A25100349B2B /* AppDelegate.swift in Sources */,
+				DC0B9F1522A9B1C900349B2B /* HottPotato.swift in Sources */,
 				DC0B9EA422A9A25100349B2B /* SceneDelegate.swift in Sources */,
+				DC0B9F1322A9B1C900349B2B /* HTTPClient.swift in Sources */,
 				DC0B9EC122A9A29A00349B2B /* Region.swift in Sources */,
 				DC0B9EBE22A9A29A00349B2B /* Location.swift in Sources */,
 				DC0B9EBD22A9A29A00349B2B /* LocationList.swift in Sources */,
+				DC0B9F0F22A9B1C900349B2B /* JSONHTTPClient.swift in Sources */,
+				DC0B9F0D22A9B1C900349B2B /* DefaultJSONHTTPClient.swift in Sources */,
+				DC0B9F1622A9B1C900349B2B /* JSONError.swift in Sources */,
 				DC0B9ECA22A9A54F00349B2B /* RegionRowView.swift in Sources */,
+				DC0B9F1422A9B1C900349B2B /* HottPotatoError.swift in Sources */,
+				DC0B9ED422A9ABD800349B2B /* State.swift in Sources */,
 				DC0B9EA622A9A25100349B2B /* ContentView.swift in Sources */,
+				DC0B9F0E22A9B1C900349B2B /* HTTPClientError.swift in Sources */,
+				DC0B9F1922A9B1C900349B2B /* APIResponseStatus.swift in Sources */,
+				DC0B9F1022A9B1C900349B2B /* HTTPRequest.swift in Sources */,
+				DC0B9F1822A9B1C900349B2B /* PinballMapHTTPResource.swift in Sources */,
+				DC0B9F1722A9B1C900349B2B /* PinballMapHTTPClient.swift in Sources */,
 				DC0B9EC222A9A29A00349B2B /* RegionList.swift in Sources */,
 				DC0B9EBF22A9A29A00349B2B /* Machine.swift in Sources */,
+				DC0B9F1222A9B1C900349B2B /* HTTPResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

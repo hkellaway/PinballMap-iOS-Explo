@@ -13,7 +13,7 @@ final class MachinesViewModel {
     // Dependencies
     
     weak var view: MVVMMachinesViewController?
-    let httpClient: HTTPClient
+    let httpClient: PinballMapHTTPClient
     let navigator: Navigator
     let session: Session = Session.shared
     let notificationCenter: NotificationCenter = .default
@@ -24,7 +24,7 @@ final class MachinesViewModel {
     
     // MARK: -
     
-    init(httpClient: HTTPClient, navigator: Navigator) {
+    init(httpClient: PinballMapHTTPClient, navigator: Navigator) {
         self.httpClient = httpClient
         self.navigator = navigator
     }

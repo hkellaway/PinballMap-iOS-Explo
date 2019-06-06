@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import ReSwift
 
-struct State: StateType {
+struct State {
     let selectedRegion: Region?
     let selectedLocation: Location?
     let selectedMachine: Machine?
