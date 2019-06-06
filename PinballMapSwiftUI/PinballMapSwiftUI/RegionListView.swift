@@ -26,7 +26,11 @@ struct RegionListView : View {
 #if DEBUG
 struct RegionListView_Previews : PreviewProvider {
     static var previews: some View {
-        RegionListView(regionList: mockRegionList)
+        ForEach(["iPhone SE", "iPhone XS Max"].identified(by: \.self)) { deviceName in
+            RegionListView(regionList: mockRegionList)
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+                .previewDisplayName(deviceName)
+        }
     }
 }
 #endif
