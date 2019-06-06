@@ -10,6 +10,10 @@ import Foundation
 
 struct RegionList: Codable {
     
+    static var empty: RegionList {
+        return RegionList(regions: [])
+    }
+    
     var alphabetized: [Region] {
         return regions.sorted {
             return $0.fullName < $1.fullName

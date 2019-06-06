@@ -35,6 +35,7 @@
 		DC0B9FC222A9BDA200349B2B /* PinballMapHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FB322A9BDA200349B2B /* PinballMapHTTPClient.swift */; };
 		DC0B9FC322A9BDA200349B2B /* PinballMapHTTPResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FB422A9BDA200349B2B /* PinballMapHTTPResource.swift */; };
 		DC0B9FC422A9BDA200349B2B /* APIResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FB522A9BDA200349B2B /* APIResponseStatus.swift */; };
+		DC0B9FC622A9BDE800349B2B /* SwiftUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B9FC522A9BDE800349B2B /* SwiftUIState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		DC0B9FB322A9BDA200349B2B /* PinballMapHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinballMapHTTPClient.swift; sourceTree = "<group>"; };
 		DC0B9FB422A9BDA200349B2B /* PinballMapHTTPResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinballMapHTTPResource.swift; sourceTree = "<group>"; };
 		DC0B9FB522A9BDA200349B2B /* APIResponseStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponseStatus.swift; sourceTree = "<group>"; };
+		DC0B9FC522A9BDE800349B2B /* SwiftUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				DC0B9F8022A9BD3500349B2B /* AppDelegate.swift */,
 				DC0B9F8222A9BD3500349B2B /* SceneDelegate.swift */,
+				DC0B9FC522A9BDE800349B2B /* SwiftUIState.swift */,
 				DC0B9F9422A9BD4C00349B2B /* State.swift */,
 				DC0B9F8422A9BD3500349B2B /* ContentView.swift */,
 				DC0B9F9622A9BD7800349B2B /* Models */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0B9FB822A9BDA200349B2B /* DefaultJSONHTTPClient.swift in Sources */,
+				DC0B9FC622A9BDE800349B2B /* SwiftUIState.swift in Sources */,
 				DC0B9FC022A9BDA200349B2B /* HottPotato.swift in Sources */,
 				DC0B9FA122A9BD7800349B2B /* Region.swift in Sources */,
 				DC0B9FBE22A9BDA200349B2B /* HTTPClient.swift in Sources */,

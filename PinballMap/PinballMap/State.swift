@@ -9,6 +9,16 @@
 import Foundation
 
 struct State {
+    
+    static var empty: State {
+        return State(selectedRegion: nil,
+                     selectedLocation: nil,
+                     selectedMachine: nil,
+                     regionList: .loaded(success: .empty),
+                     locationList: nil,
+                     machineList: nil)
+    }
+    
     let selectedRegion: Region?
     let selectedLocation: Location?
     let selectedMachine: Machine?

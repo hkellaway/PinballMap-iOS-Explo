@@ -9,4 +9,4 @@
 import Foundation
 import ReSwift
 
-var store = Store(reducer: appReducer, state: nil)
+var store = Store(reducer: appReducer, state: State.empty)
