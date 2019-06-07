@@ -9,8 +9,17 @@
 import SwiftUI
 
 struct ContentView : View {
+    
+    @EnvironmentObject var state: SwiftUIState
+    
+    var regionName: String {
+        return (state.value.selectedRegion == nil)
+        ? "N/A"
+        : state.value.selectedRegion!.fullName
+    }
+    
     var body: some View {
-        Text("Hello World")
+        Text("Selected Region: \(regionName)")
     }
 }
 
