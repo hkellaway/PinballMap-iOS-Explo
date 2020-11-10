@@ -3,7 +3,7 @@ platform :ios, '12.0'
 
 target 'PinballMap' do
 
-pod 'ReSwift', '4.1.1'
+pod 'ReSwift'
 pod 'HottPotato', :git => 'https://github.com/hkellaway/HottPotato.git', :commit => 'ea6f8015f7a80ce2d9cf7929fb1d5255f6c5b6e1'
 pod 'TinyConstraints', '4.0.0'
 
